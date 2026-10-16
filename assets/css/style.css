@@ -467,11 +467,10 @@ body.modal-biaya-open {
   z-index: 2;
 }
 
-/* Breadcrumb di sudut kanan atas pada desktop, di tengah bawah judul pada mobile & tablet */
+/* Breadcrumb di bawah judul, rata tengah — semua ukuran layar */
 .subpage-header nav[aria-label="breadcrumb"] {
-  position: absolute;
-  top: 22px;
-  right: clamp(16px, 2vw, 32px);
+  margin-top: 12px;
+  position: static;
   z-index: 10;
 }
 
@@ -505,7 +504,7 @@ body.modal-biaya-open {
   padding: 0;
   margin: 0;
   font-size: 0.9rem;
-  justify-content: flex-end;
+  justify-content: center;
   position: relative;
   z-index: 10;
 }
@@ -550,18 +549,6 @@ body.modal-biaya-open {
   color: #ffffff;
   font-weight: 500;
   padding: 4px 6px;
-}
-
-/* Di layar tablet & mobile (< 992px): Letakkan breadcrumb di tengah agar mudah disentuh */
-@media (max-width: 991.98px) {
-  .subpage-header nav[aria-label="breadcrumb"] {
-    position: static !important;
-    margin-top: 14px !important;
-  }
-
-  .breadcrumb-custom {
-    justify-content: center !important;
-  }
 }
 
 /* =====================================================
