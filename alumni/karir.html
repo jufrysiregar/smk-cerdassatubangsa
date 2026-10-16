@@ -2354,11 +2354,14 @@
   overflow: hidden;
 }
 .karir-breadcrumb-nav {
-  position: absolute;
-  top: 22px;
-  right: clamp(16px, 2vw, 32px);
+  position: static;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 0;
   z-index: 5;
 }
+
 @media (max-width: 768px) {
   .karir-breadcrumb-nav {
     position: static;
