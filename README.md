@@ -136,6 +136,22 @@ Jika PHP sudah terpasang di komputer Anda:
 
 ---
 
+### Cara 3: Deployment ke Vercel (Static CDN)
+Website ini telah dikonfigurasi untuk dapat di-deploy secara instan di **Vercel** sebagai Static Site berkecepatan tinggi:
+1. Setiap kali Anda selesai mengedit file `.php` secara lokal, jalankan script generator:
+   ```bash
+   php build.php
+   ```
+2. Commit dan push ke repository GitHub:
+   ```bash
+   git add -A
+   git commit -m "update konten"
+   git push origin main
+   ```
+3. Vercel akan otomatis mendeteksi pembaruan dan menayangkannya langsung di domain Anda (misal: `https://smk-cerdassatubangsa.vercel.app/`).
+
+---
+
 ## 6. 📖 Cara Penggunaan & Konfigurasi (Usage Guide)
 
 ### A. Konfigurasi Database & Domain (`koneksi.php`)
