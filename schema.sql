@@ -1,0 +1,74 @@
+-- Database schema for website-utama (sekolah_db)
+
+CREATE TABLE IF NOT EXISTS `berita` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `judul` VARCHAR(255) NOT NULL,
+  `slug` VARCHAR(255) NOT NULL,
+  `isi` TEXT NOT NULL,
+  `gambar` VARCHAR(255) DEFAULT NULL,
+  `tanggal` DATE NOT NULL,
+  `penulis` VARCHAR(100) DEFAULT 'Admin',
+  `status` ENUM('published', 'draft') DEFAULT 'published',
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `galeri` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `judul` VARCHAR(255) NOT NULL,
+  `gambar` VARCHAR(255) NOT NULL,
+  `kategori` VARCHAR(100) DEFAULT 'Kegiatan',
+  `tanggal` DATE NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `ppdb_pendaftar` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `nama` VARCHAR(150) NOT NULL,
+  `nisn` VARCHAR(30) NOT NULL,
+  `asal_sekolah` VARCHAR(150) NOT NULL,
+  `jurusan_pilihan` VARCHAR(50) NOT NULL,
+  `no_hp` VARCHAR(20) NOT NULL,
+  `email` VARCHAR(100) DEFAULT NULL,
+  `alamat` TEXT NOT NULL,
+  `status` ENUM('Menunggu', 'Lulus', 'Tidak Lulus', 'Cadangan') DEFAULT 'Menunggu',
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `kontak_pesan` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `nama` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `subjek` VARCHAR(200) NOT NULL,
+  `pesan` TEXT NOT NULL,
+  `tanggal` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `profil_sekolah` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `key_name` VARCHAR(100) NOT NULL UNIQUE,
+  `value_text` TEXT NOT NULL,
+  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `alumni` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `nama` VARCHAR(150) NOT NULL,
+  `tahun_lulus` YEAR NOT NULL,
+  `jurusan` VARCHAR(50) NOT NULL,
+  `pekerjaan` VARCHAR(150) NOT NULL,
+  `perusahaan` VARCHAR(150) NOT NULL,
+  `kontak` VARCHAR(100) DEFAULT NULL,
+  `foto` VARCHAR(255) DEFAULT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `karir` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `judul` VARCHAR(200) NOT NULL,
+  `deskripsi` TEXT NOT NULL,
+  `perusahaan` VARCHAR(150) NOT NULL,
+  `lokasi` VARCHAR(150) NOT NULL,
+  `tanggal_posting` DATE NOT NULL,
+  `deadline` DATE NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
