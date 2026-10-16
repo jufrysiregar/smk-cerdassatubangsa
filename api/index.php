@@ -1,14 +1,15 @@
 <?php
 // api/index.php — Vercel Serverless Function Bridge & Router
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 
-// Set working directory to website-utama root
-chdir(dirname(__DIR__));
+$base_dir = dirname(__DIR__);
+chdir($base_dir);
 
 // Parse request path
 $uri  = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 $path = trim($uri, '/');
-
-$base_dir = dirname(__DIR__);
 
 // 1. Root / index
 if ($path === '' || $path === 'index.php') {

@@ -26,27 +26,53 @@ if (!defined('BASE_URL')) {
 $base_url = BASE_URL;
 
 // 2. Database Connection
-$host_db = "localhost";
-$user_db = "root";
-$pass_db = "";
-$name_db = "sekolah_db";
+$is_vercel = !empty($_SERVER['VERCEL']) 
+          || !empty($_ENV['VERCEL']) 
+          || (isset($_SERVER['HTTP_HOST']) && strpos($_SERVER['HTTP_HOST'], 'vercel.app') !== false);
 
-mysqli_report(MYSQLI_REPORT_OFF);
+$host_db = getenv('DB_HOST') ?: "localhost";
+$user_db = getenv('DB_USER') ?: "root";
+$pass_db = getenv('DB_PASS') !== false ? getenv('DB_PASS') : "";
+$name_db = getenv('DB_NAME') ?: "sekolah_db";
+$port_db = getenv('DB_PORT') ? (int)getenv('DB_PORT') : 3306;
 
-$conn = @mysqli_connect($host_db, $user_db, $pass_db, $name_db);
+if (function_exists('mysqli_report')) {
+    mysqli_report(MYSQLI_REPORT_OFF);
+}
 
-if (!$conn) {
+// Di Vercel serverless, jika belum ada DB_HOST cloud, lewati koneksi agar tidak timeout
+if ($is_vercel && ($host_db === 'localhost' || $host_db === '127.0.0.1')) {
+    $conn = false;
     $db_connected = false;
-    $db_error = mysqli_connect_error();
+    $db_error = "Database localhost tidak tersedia di environment serverless Vercel.";
+} elseif (function_exists('mysqli_init')) {
+    $conn = mysqli_init();
+    if ($conn) {
+        mysqli_options($conn, MYSQLI_OPT_CONNECT_TIMEOUT, 3);
+        $connected = @mysqli_real_connect($conn, $host_db, $user_db, $pass_db, $name_db, $port_db);
+        if (!$connected) {
+            $conn = false;
+            $db_connected = false;
+            $db_error = mysqli_connect_error();
+        } else {
+            $db_connected = true;
+            mysqli_set_charset($conn, "utf8mb4");
+        }
+    } else {
+        $conn = false;
+        $db_connected = false;
+        $db_error = "Gagal inisialisasi mysqli";
+    }
 } else {
-    $db_connected = true;
-    mysqli_set_charset($conn, "utf8mb4");
+    $conn = false;
+    $db_connected = false;
+    $db_error = "Ekstensi mysqli tidak tersedia";
 }
 
 // Function helper for safe query execution
 function query_db($sql) {
     global $conn, $db_connected;
-    if (!$db_connected) return false;
+    if (!$db_connected || !$conn) return false;
     $result = @mysqli_query($conn, $sql);
     if (!$result) return false;
     $data = [];
