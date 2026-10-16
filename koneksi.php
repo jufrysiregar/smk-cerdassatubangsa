@@ -3,18 +3,22 @@
 
 // 1. Definisikan BASE_URL Absolut
 if (!defined('BASE_URL')) {
-    $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
+    $is_https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+                || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https');
+    $scheme = $is_https ? 'https://' : 'http://';
     $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
     
-    // Deteksi subfolder website-utama
+    // Deteksi subfolder website-utama jika di localhost Laragon/XAMPP
     $script_dir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? ''));
     $pos = strpos($script_dir, '/website-utama');
     
     if ($pos !== false) {
         $path = substr($script_dir, 0, $pos + strlen('/website-utama')) . '/';
         define('BASE_URL', $scheme . $host . $path);
-    } else {
+    } elseif (strpos($_SERVER['REQUEST_URI'] ?? '', '/sekolah-management/website-utama') !== false) {
         define('BASE_URL', 'http://localhost/sekolah-management/website-utama/');
+    } else {
+        define('BASE_URL', $scheme . $host . '/');
     }
 }
 
