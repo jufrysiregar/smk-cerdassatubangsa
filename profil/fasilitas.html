@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fasilitas Sekolah – SMK Cerdas Satu Bangsa</title>
+  <meta name="description" content="Website Resmi SMK Cerdas Satu Bangsa – Sekolah Kejuruan Unggul, Berkarakter & Berprestasi.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/logo/logo.png">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- AOS – Animate on Scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <!-- Google Fonts (Poppins & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS Utama -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<!-- ─── MAIN NAVBAR ──────────────────────────────────────────── -->
+<nav class="navbar custom-navbar sticky-top" id="main-navbar" aria-label="Navigasi Utama">
+  <div class="container-fluid px-3 px-md-4 px-lg-5 d-flex align-items-center justify-content-between">
+
+    <!-- POJOK KIRI: Logo Sekolah + Nama & Slogan -->
+    <div class="navbar-brand-wrapper d-flex align-items-center gap-2 gap-sm-3 m-0 p-0" style="cursor: default; user-select: none;">
+      <img src="/assets/img/logo/logo.png"
+           onerror="this.onerror=null; this.src='/src/logos/logo22.png';"
+           alt="Logo SMK Cerdas Satu Bangsa"
+           class="navbar-brand-logo">
+      <div class="d-flex flex-column justify-content-center">
+        <span class="brand-school-name">SMK CERDAS SATU BANGSA</span>
+        <span class="brand-school-slogan">Siap Bertalenta dan Kerja</span>
+      </div>
+    </div>
+
+    <!-- POJOK KANAN: Tombol Daftar PPDB + Hamburger -->
+    <div class="d-flex align-items-center gap-3 ms-auto">
+      <!-- Tombol Daftar PPDB -->
+      <a href="/ppdb/formulir.html"
+         class="btn btn-ppdb-header rounded-pill px-3 py-2 text-nowrap d-inline-flex align-items-center">
+        <i class="fas fa-book-open me-2"></i>
+        <span class="raindrop-text">
+          <span class="drop-char" style="--i:0;">D</span><span class="drop-char" style="--i:1;">a</span><span class="drop-char" style="--i:2;">f</span><span class="drop-char" style="--i:3;">t</span><span class="drop-char" style="--i:4;">a</span><span class="drop-char" style="--i:5;">r</span><span class="drop-space">&nbsp;</span><span class="drop-char" style="--i:7;">P</span><span class="drop-char" style="--i:8;">P</span><span class="drop-char" style="--i:9;">D</span><span class="drop-char" style="--i:10;">B</span><span class="drop-space">&nbsp;</span><span class="drop-char" style="--i:12;">O</span><span class="drop-char" style="--i:13;">n</span><span class="drop-char" style="--i:14;">l</span><span class="drop-char" style="--i:15;">i</span><span class="drop-char" style="--i:16;">n</span><span class="drop-char" style="--i:17;">e</span>
+        </span>
+      </a>
+
+      <!-- Tombol menu tiga garis -->
+      <button id="hamburger-btn"
+              class="hamburger-custom border-0 bg-transparent p-0"
+              type="button"
+              aria-expanded="false"
+              aria-label="Buka Menu Navigasi"
+              title="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- End Navbar -->
+
+<!-- ─── SIDE PANEL MENU — PREMIUM 3D REDESIGN ─── -->
+<div id="side-menu-panel" aria-label="Menu Navigasi" role="dialog" aria-modal="true">
+
+  <!-- ── HEADER dengan background gelap premium ── -->
+  <div class="side-panel-header">
+    <div class="d-flex align-items-center gap-2" style="user-select:none; -webkit-user-select:none;">
+      <div class="sp-logo-ring">
+        <img src="/assets/img/logo/logo.png"
+             onerror="this.onerror=null; this.src='/src/logos/logo22.png';"
+             alt="Logo">
+      </div>
+      <div style="line-height:1.25;">
+        <div class="sp-school-name">SMK CERDAS SATU BANGSA</div>
+        <div class="sp-school-slogan">Siap Bertalenta dan Kerja</div>
+      </div>
+    </div>
+    <button id="side-panel-close" class="side-panel-close-btn" type="button" aria-label="Tutup Menu">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- ── BODY ── -->
+  <div class="side-panel-body">
+    <nav aria-label="Menu Navigasi">
+      <ul class="side-nav-list list-unstyled m-0 p-0">
+
+        <!-- 1. Beranda -->
+        <li class="side-nav-item">
+          <a class="sp-menu-card " href="/index.html">
+            <div class="sp-card-icon sp-icon-home">
+              <i class="fas fa-home"></i>
+            </div>
+            <span class="sp-card-title flex-grow-1">Beranda</span>
+            <div class="sp-card-arrow"><i class="fas fa-chevron-right"></i></div>
+          </a>
+        </li>
+
+        <!-- 2. Profil [+] -->
+        <li class="side-nav-item has-sub expanded">
+          <div class="side-nav-row">
+            <div class="sp-menu-card flex-grow-1 active" style="cursor:pointer;">
+              <div class="sp-card-icon sp-icon-profil">
+                <i class="fas fa-university"></i>
+              </div>
+              <span class="sp-card-title flex-grow-1">Profil</span>
+              <span class="sp-sub-sign">−</span>
+            </div>
+          </div>
+          <div class="side-submenu-panel">
+            <ul class="list-unstyled mb-0 sp-submenu">
+              <li><a class="sp-sub-link " href="/profil/sejarah.html"><i class="fas fa-landmark sp-sub-dot"></i>Sejarah Sekolah</a></li>
+              <li><a class="sp-sub-link " href="/profil/visi-misi.html"><i class="fas fa-star sp-sub-dot"></i>Visi &amp; Misi</a></li>
+              <li><a class="sp-sub-link " href="/profil/struktur.html"><i class="fas fa-sitemap sp-sub-dot"></i>Struktur Organisasi</a></li>
+              <li><a class="sp-sub-link active" href="/profil/fasilitas.html"><i class="fas fa-building sp-sub-dot"></i>Fasilitas</a></li>
+              <li><a class="sp-sub-link " href="/profil/sertifikasi.html"><i class="fas fa-certificate sp-sub-dot"></i>Akreditasi</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 3. Program Keahlian [+] -->
+        <li class="side-nav-item has-sub ">
+          <div class="side-nav-row">
+            <div class="sp-menu-card flex-grow-1 " style="cursor:pointer;">
+              <div class="sp-card-icon sp-icon-program">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <span class="sp-card-title flex-grow-1">Program Keahlian</span>
+              <span class="sp-sub-sign">+</span>
+            </div>
+          </div>
+          <div class="side-submenu-panel">
+            <ul class="list-unstyled mb-0 sp-submenu">
+              <li><a class="sp-sub-link " href="/program/tkj.html"><i class="fas fa-network-wired sp-sub-dot"></i>Teknik Komputer &amp; Jaringan</a></li>
+              <li><a class="sp-sub-link " href="/program/rpl.html"><i class="fas fa-code sp-sub-dot"></i>Rekayasa Perangkat Lunak</a></li>
+              <li><a class="sp-sub-link " href="/program/tav.html"><i class="fas fa-tv sp-sub-dot"></i>Teknik Audio Video</a></li>
+              <li><a class="sp-sub-link " href="/program/dkv.html"><i class="fas fa-paint-brush sp-sub-dot"></i>Desain Komunikasi Visual</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 4. Berita & Artikel -->
+        <li class="side-nav-item">
+          <a class="sp-menu-card " href="/berita.html">
+            <div class="sp-card-icon sp-icon-berita">
+              <i class="fas fa-newspaper"></i>
+            </div>
+            <span class="sp-card-title flex-grow-1">Berita &amp; Artikel</span>
+            <div class="sp-card-arrow"><i class="fas fa-chevron-right"></i></div>
+          </a>
+        </li>
+
+        <!-- 5. Galeri -->
+        <li class="side-nav-item">
+          <a class="sp-menu-card " href="/galeri.html">
+            <div class="sp-card-icon sp-icon-galeri">
+              <i class="fas fa-images"></i>
+            </div>
+            <span class="sp-card-title flex-grow-1">Galeri</span>
+            <div class="sp-card-arrow"><i class="fas fa-chevron-right"></i></div>
+          </a>
+        </li>
+
+        <!-- 6. PPDB [+] -->
+        <li class="side-nav-item has-sub ">
+          <div class="side-nav-row">
+            <div class="sp-menu-card flex-grow-1 " style="cursor:pointer;">
+              <div class="sp-card-icon sp-icon-ppdb">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <span class="sp-card-title flex-grow-1">PPDB</span>
+              <span class="sp-sub-sign">+</span>
+            </div>
+          </div>
+          <div class="side-submenu-panel">
+            <ul class="list-unstyled mb-0 sp-submenu">
+              <li><a class="sp-sub-link " href="/ppdb/informasi.html"><i class="fas fa-info-circle sp-sub-dot"></i>Informasi &amp; Alur PPDB</a></li>
+              <li><a class="sp-sub-link " href="/ppdb/formulir.html"><i class="fas fa-file-signature sp-sub-dot"></i>Formulir Pendaftaran</a></li>
+              <li><a class="sp-sub-link " href="/ppdb/pengumuman.html"><i class="fas fa-bullhorn sp-sub-dot"></i>Pengumuman Hasil</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 7. Kontak -->
+        <li class="side-nav-item">
+          <a class="sp-menu-card " href="/kontak.html">
+            <div class="sp-card-icon sp-icon-kontak">
+              <i class="fas fa-headset"></i>
+            </div>
+            <span class="sp-card-title flex-grow-1">Kontak</span>
+            <div class="sp-card-arrow"><i class="fas fa-chevron-right"></i></div>
+          </a>
+        </li>
+
+        <!-- 8. Alumni & Karir [+] -->
+        <li class="side-nav-item has-sub ">
+          <div class="side-nav-row">
+            <div class="sp-menu-card flex-grow-1 " style="cursor:pointer;">
+              <div class="sp-card-icon sp-icon-alumni">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <span class="sp-card-title flex-grow-1">Alumni &amp; Karir</span>
+              <span class="sp-sub-sign">+</span>
+            </div>
+          </div>
+          <div class="side-submenu-panel">
+            <ul class="list-unstyled mb-0 sp-submenu">
+              <li><a class="sp-sub-link " href="/alumni/alumni.html"><i class="fas fa-users sp-sub-dot"></i>Alumni</a></li>
+              <li><a class="sp-sub-link " href="/alumni/karir.html"><i class="fas fa-briefcase sp-sub-dot"></i>Pengembangan Karir</a></li>
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+  </div><!-- /.side-panel-body -->
+
+  <!-- ── FOOTER ── -->
+  <div class="side-panel-footer">
+    <a href="/ppdb/formulir.html" class="side-btn-ppdb">
+      <i class="fas fa-book-open me-2"></i>
+      <span>Daftar PPDB Online</span>
+      <i class="fas fa-arrow-right ms-auto sp-ppdb-arrow"></i>
+    </a>
+  </div><!-- /.side-panel-footer -->
+
+</div><!-- /#side-menu-panel -->
+
+<!-- ─── WRAPPER KONTEN WEBSITE (SEMUA KONTEN UTAMA & FOOTER ADA DI DALAM SINI) ─── -->
+<div id="page-content-wrapper">
+
+<!-- Header Banner -->
+<section class="subpage-header">
+  <div class="container text-center">
+    <h1 class="subpage-title">Fasilitas Sekolah</h1>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb breadcrumb-custom justify-content-center">
+        <li class="breadcrumb-item"><a href="/index.html">Beranda</a></li>
+        <li class="breadcrumb-item"><a href="#">Profil</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Fasilitas</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="text-center max-w-700 mx-auto mb-5">
+      <h2 class="section-title">Fasilitas Penunjang Pembelajaran Berstandar Industri</h2>
+    </div>
+
+    <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+        <div class="card-custom h-100">
+          <div class="card-img-wrapper">
+            <span class="badge-category">Praktikum TKJ & RPL</span>
+            <img src="/assets/img/fasilitas/lab-komputer.jpg" alt="Laboratorium Komputer & Jaringan (Lab TKJ & RPL)">
+          </div>
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 font-poppins text-dark">Laboratorium Komputer & Jaringan (Lab TKJ & RPL)</h5>
+            <p class="text-muted small mb-3">Ruang laboratorium terpadu yang dirancang untuk menunjang kegiatan praktik pemrograman (RPL) sekaligus instalasi dan konfigurasi jaringan (TKJ). Ruangan ini dilengkapi dengan deretan unit PC siap pakai, pendingin udara untuk menjaga suhu perangkat, serta area khusus (networking workbench) di bagian belakang untuk praktik hardware dan perangkat jaringan.</p>
+            
+            <h6 class="fw-bold fs-7 text-emerald mb-2" style="color:#059669;">Fasilitas Ruangan :</h6>
+            <ul class="list-unstyled fs-7 text-muted mb-0">
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> 30 PC Client & 1 PC Server</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> MikroTik Router & Switch Board</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Kit Alat Crimping & LAN Tester</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Server Rack Mini & Patch Panel</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Proyektor & Ruangan Ber-AC</li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+            <div class="col-md-6 col-lg-4">
+        <div class="card-custom h-100">
+          <div class="card-img-wrapper">
+            <span class="badge-category">Praktikum DKV</span>
+            <img src="/assets/img/fasilitas/lab-dkv.jpg" alt="Studio Desain & Pascaproduksi DKV">
+          </div>
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 font-poppins text-dark">Studio Desain & Pascaproduksi DKV</h5>
+            <p class="text-muted small mb-3">Ruang praktik kreatif terpadu yang dirancang untuk mendukung proses pembuatan karya visual, mulai dari ilustrasi digital, fotografi, videografi, hingga tahap editing dan rendering. Ruangan ini mengombinasikan area kerja komputer performa tinggi dengan area mini studio produksi.</p>
+            
+            <h6 class="fw-bold fs-7 text-emerald mb-2" style="color:#059669;">Fasilitas Ruangan :</h6>
+            <ul class="list-unstyled fs-7 text-muted mb-0">
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> 25 PC Graphic Workstation & Pen Tablet</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Studio Mini Fotografi & Set Lighting</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Layar Green Screen & Stand Kamera</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Kamera DSLR / Mirrorless & Video Kit</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Proyektor HD & Ruangan Ber-AC</li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+            <div class="col-md-6 col-lg-4">
+        <div class="card-custom h-100">
+          <div class="card-img-wrapper">
+            <span class="badge-category">Praktikum TAV</span>
+            <img src="/assets/img/fasilitas/lab-tav.jpg" alt="Bengkel & Studio Audio Video (TAV)">
+          </div>
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 font-poppins text-dark">Bengkel & Studio Audio Video (TAV)</h5>
+            <p class="text-muted small mb-3">Ruang praktik teknis terpadu yang memadukan area perakitan dan perbaikan perangkat elektronika dengan studio pengujian tata suara (audio mixing). Dirancang khusus untuk melatih siswa dalam pemeliharaan perangkat audio-video, teknik soldering dan perakitan PCB, serta pengoperasian sistem tata suara profesional.</p>
+            
+            <h6 class="fw-bold fs-7 text-emerald mb-2" style="color:#059669;">Fasilitas Ruangan :</h6>
+            <ul class="list-unstyled fs-7 text-muted mb-0">
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Meja Kerja Perakitan & Solder Station</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Digital Oscilloscope & Signal Generator</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Multimeter Digital & Kit Pengukuran Elektronika</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Studio Kedap Suara & Audio Mixer Console</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Set Perbaikan Display TV & Perangkat Sound System</li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+            <div class="col-md-6 col-lg-4">
+        <div class="card-custom h-100">
+          <div class="card-img-wrapper">
+            <span class="badge-category">Fasilitas Olahraga</span>
+            <img src="/assets/img/fasilitas/locker.jpg" alt="Ruang Ganti & Locker Room">
+          </div>
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 font-poppins text-dark">Ruang Ganti & Locker Room</h5>
+            <p class="text-muted small mb-3">Fasilitas pendukung olahraga yang bersih, aman, dan nyaman untuk siswa berganti pakaian sebelum dan sesudah kegiatan PJOK atau ekstrakurikuler. Dirancang dengan tata letak efisien, sirkulasi udara yang baik, serta area penyimpanan pribadi yang aman.</p>
+            
+            <h6 class="fw-bold fs-7 text-emerald mb-2" style="color:#059669;">Fasilitas Ruangan :</h6>
+            <ul class="list-unstyled fs-7 text-muted mb-0">
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Loker Penyimpanan Individu & Kunci Keamanan</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Bangku Panjang Ruang Ganti (Bench Area)</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Kamar Ruang Ganti Privat</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Cermin Dinding & Wastafel</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Sistem Ventilasi Exhaust & Ruangan Wangi/Bersih</li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+            <div class="col-md-6 col-lg-4">
+        <div class="card-custom h-100">
+          <div class="card-img-wrapper">
+            <span class="badge-category">Fasilitas Olahraga</span>
+            <img src="/assets/img/fasilitas/basket.jpg" alt="Lapangan Basket">
+          </div>
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 font-poppins text-dark">Lapangan Basket</h5>
+            <p class="text-muted small mb-3">Fasilitas olahraga dalam ruangan (indoor) yang dirancang khusus untuk mendukung kegiatan praktik olahraga, turnamen basket, serta berbagai aktivitas ekstrakurikuler sekolah. Memiliki kualitas lantai dan pencahayaan standar untuk memastikan kenyamanan serta keselamatan siswa saat beraktivitas fisik.</p>
+            
+            <h6 class="fw-bold fs-7 text-emerald mb-2" style="color:#059669;">Fasilitas Ruangan :</h6>
+            <ul class="list-unstyled fs-7 text-muted mb-0">
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Lapangan Basket Standar (Interlock / Parquet & Marka Jelas)</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Ring Basket Hidrolik / Portabel dengan Papan Pantul Tempered Glass</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Tribun Penonton Tingkat (Bleachers) di Sisi Lapangan</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Skor Digital (Electronic Scoreboard) & Sistem Suara (Sound System)</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Pagar Pengaman & Jaring Pembatas di Belakang Ring</li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+            <div class="col-md-6 col-lg-4">
+        <div class="card-custom h-100">
+          <div class="card-img-wrapper">
+            <span class="badge-category">Fasilitas Olahraga</span>
+            <img src="/assets/img/fasilitas/badminton.jpg" alt="Lapangan Bulu Tangkis (Badminton)">
+          </div>
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 font-poppins text-dark">Lapangan Bulu Tangkis (Badminton)</h5>
+            <p class="text-muted small mb-3">Fasilitas lapangan olahraga dalam ruangan (indoor) yang dirancang untuk mendukung kegiatan pembelajaran PJOK, latihan rutin, serta turnamen bulu tangkis antar-siswa. Menggunakan permukaan lantai non-licin dengan garis marka standar untuk menjamin keamanan dan kenyamanan saat bertanding.</p>
+            
+            <h6 class="fw-bold fs-7 text-emerald mb-2" style="color:#059669;">Fasilitas Ruangan :</h6>
+            <ul class="list-unstyled fs-7 text-muted mb-0">
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Lapangan Standar dengan Garis Marka Ganda (Tunggal & Ganda)</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Tiang & Jaring Net Portabel</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Pencahayaan Lampu Gantung Sorot (Anti-Silau)</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Bangku Panjang Penonton & Pemain di Sisi Lapangan</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Area Gudang Penyimpanan Raket, Kok, & Alat Olahraga</li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+            <div class="col-md-6 col-lg-4">
+        <div class="card-custom h-100">
+          <div class="card-img-wrapper">
+            <span class="badge-category">Fasilitas Kolaborasi</span>
+            <img src="/assets/img/fasilitas/room-1.jpg" alt="Ruang Diskusi & Rapat Siswa (Student Meeting Room)">
+          </div>
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 font-poppins text-dark">Ruang Diskusi & Rapat Siswa (Student Meeting Room)</h5>
+            <p class="text-muted small mb-3">Fasilitas ruang pertemuan modern yang dirancang menyerupai ruang rapat profesional untuk melatih keterampilan presentasi, komunikasi, dan kerja sama tim antar-siswa. Ruangan ini digunakan untuk diskusi proyek antar-jurusan, rapat organisasi siswa (OSIS), serta simulasi meeting bisnis skala industri.</p>
+            
+            <h6 class="fw-bold fs-7 text-emerald mb-2" style="color:#059669;">Fasilitas Ruangan :</h6>
+            <ul class="list-unstyled fs-7 text-muted mb-0">
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Meja Konferensi U-Shape / Boardroom Table Performa Tinggi</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Kursi Rapat Ergonomis Beroda (Office Ergonomic Chairs)</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Smart TV Display / Interactive Whiteboard untuk Presentasi</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Perangkat Video Conference & Microphones</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Papan Tulis Glassboard & Ruangan Ber-AC</li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+            <div class="col-md-6 col-lg-4">
+        <div class="card-custom h-100">
+          <div class="card-img-wrapper">
+            <span class="badge-category">Fasilitas Pertemuan</span>
+            <img src="/assets/img/fasilitas/room-2.jpg" alt="Aula & Ruang Pertemuan Serbaguna">
+          </div>
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 font-poppins text-dark">Aula & Ruang Pertemuan Serbaguna</h5>
+            <p class="text-muted small mb-3">Fasilitas pertemuan berskala besar yang dirancang multi-fungsi untuk mendukung berbagai kegiatan sekolah, mulai dari rapat koordinasi, seminar, hingga presentasi proyek besar. Ruangan ini memiliki tata letak yang fleksibel dengan kapasitas luas dan didukung oleh sistem visual yang memadai.</p>
+            
+            <h6 class="fw-bold fs-7 text-emerald mb-2" style="color:#059669;">Fasilitas Ruangan :</h6>
+            <ul class="list-unstyled fs-7 text-muted mb-0">
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Meja Pertemuan Panjang & Fleksibel (Heavy-Duty Conference Table)</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Kursi Kerja Besi dengan Sandaran Jaring (Mesh Office Chairs)</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Proyektor Plafon HD (Ceiling-Mounted Projector) & Layar Lebar</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Layar Smart TV Interaktif Tambahan di Sisi Depan</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Peralatan Pendukung (Sistem Audio, AC Sentral, & Dispenser Air)</li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+            <div class="col-md-6 col-lg-4">
+        <div class="card-custom h-100">
+          <div class="card-img-wrapper">
+            <span class="badge-category">Literasi & Riset</span>
+            <img src="/assets/img/fasilitas/library.jpg" alt="Perpustakaan & Pusat Sumber Belajar Modern">
+          </div>
+          <div class="p-4">
+            <h5 class="fw-bold mb-2 font-poppins text-dark">Perpustakaan & Pusat Sumber Belajar Modern</h5>
+            <p class="text-muted small mb-3">Fasilitas perpustakaan sekolah yang didesain luas, tenang, dan nyaman sebagai pusat literasi dan riset bagi siswa serta guru. Memiliki daya tarik visual utama berupa globe raksasa di tengah ruangan yang melambangkan wawasan global dan eksplorasi ilmu pengetahuan.</p>
+            
+            <h6 class="fw-bold fs-7 text-emerald mb-2" style="color:#059669;">Fasilitas Ruangan :</h6>
+            <ul class="list-unstyled fs-7 text-muted mb-0">
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Globe Raksasa Interaktif di Centerpiece Ruangan</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Rak Buku Kayu Bertingkat & Koleksi Referensi Lengkap</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Area Meja Baca Kelompok & Kursi Belajar Mandiri</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Sudut Baca Santai (Reading Lounge)</li>
+                              <li class="mb-1"><i class="fas fa-check-circle text-success me-2 fs-8"></i> Sistem Katalog Digital & Ruangan Ber-AC yang Tenang</li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+          </div>
+  </div>
+</section>
+
+
+  <!-- ─── MAIN FOOTER ───────────────────────────────────────── -->
+  <footer class="main-footer">
+    <div class="container-fluid px-3 px-md-4 px-lg-5">
+      <div class="row justify-content-between g-4">
+
+        <!-- Column 1: School Identity (Pojok Kiri) -->
+        <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="0">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img src="/assets/img/logo/logo.png"
+                 onerror="this.onerror=null; this.src='/src/logos/logo22.png';"
+                 alt="Logo SMK Cerdas Satu Bangsa"
+                 style="height: 54px; width: auto; object-fit: contain;">
+            <div class="d-flex flex-column justify-content-center">
+              <span class="fw-bold text-white font-poppins" style="font-size: 1.15rem; letter-spacing: 0.5px; line-height: 1.2;">SMK CERDAS SATU BANGSA</span>
+              <span style="color: #38bdf8; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.3px; margin-top: 3px;">Siap Bertalenta dan Kerja</span>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <p class="mb-2" style="color: #cbd5e1; font-size: 0.92rem; font-weight: 500;">
+              Temukan kami di platform lainnya :
+            </p>
+            <div class="d-flex gap-2 flex-wrap">
+              <!-- Facebook (Warna Asli) -->
+              <button type="button" class="social-btn social-btn-fb" title="Facebook" onclick="showSosmedUnavailable('Facebook')">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+              <!-- Instagram (Warna Gradasi Asli) -->
+              <button type="button" class="social-btn social-btn-ig" title="Instagram" onclick="showSosmedUnavailable('Instagram')">
+                <i class="fab fa-instagram"></i>
+              </button>
+              <!-- YouTube (Warna Merah Asli) -->
+              <button type="button" class="social-btn social-btn-yt" title="YouTube" onclick="showSosmedUnavailable('YouTube')">
+                <i class="fab fa-youtube"></i>
+              </button>
+              <!-- TikTok (Warna Hitam + Aksen Neon Asli) -->
+              <button type="button" class="social-btn social-btn-tk" title="TikTok" onclick="showSosmedUnavailable('TikTok')">
+                <i class="fab fa-tiktok"></i>
+              </button>
+            </div>
+            <p class="mb-0 mt-3" style="color:#94a3b8; font-size:0.82rem;">
+              &copy; 2026              <strong style="color:#cbd5e1;">SMK Cerdas Satu Bangsa</strong>.
+              Hak Cipta Dilindungi Undang-Undang.
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 2 & 3: Tautan Cepat & Kontak Kami (Pojok Kanan) -->
+        <div class="col-lg-6 col-md-12">
+          <div class="row justify-content-lg-end g-4">
+
+            <!-- Column: Quick Links -->
+            <div class="col-sm-6 col-12 col-lg-5" data-aos="fade-up" data-aos-delay="80">
+              <h5 class="footer-title">Tautan Cepat</h5>
+              <ul class="footer-links">
+                <li><a href="/profil/sejarah.html"><i class="fas fa-chevron-right me-1 small"></i> Sejarah Sekolah</a></li>
+                <li><a href="/profil/visi-misi.html"><i class="fas fa-chevron-right me-1 small"></i> Visi &amp; Misi</a></li>
+                <li><a href="/profil/fasilitas.html"><i class="fas fa-chevron-right me-1 small"></i> Fasilitas</a></li>
+                <li><a href="/profil/sertifikasi.html"><i class="fas fa-chevron-right me-1 small"></i> Akreditasi</a></li>
+                <li><a href="/berita.html"><i class="fas fa-chevron-right me-1 small"></i> Berita Terbaru</a></li>
+              </ul>
+            </div>
+
+            <!-- Column: Contact Us -->
+            <div class="col-sm-6 col-12 col-lg-7" data-aos="fade-up" data-aos-delay="160">
+              <h5 class="footer-title">Kontak Kami</h5>
+              <ul class="footer-links">
+                <li class="d-flex align-items-start gap-2 mb-3">
+                  <i class="fas fa-map-marker-alt mt-1" style="color:#34d399;"></i>
+                  <span>Jl. Cirebon No.1, Pasar Baru, Medan Kota, Kota Medan, Sumatera Utara 20212</span>
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="fas fa-phone-alt" style="color:#34d399;"></i>
+                  <span>(061) 1234567</span>
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="fab fa-whatsapp" style="color:#34d399;"></i>
+                  <span>WhatsApp Hotline: 081234567890</span>
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <i class="fas fa-envelope" style="color:#34d399;"></i>
+                  <span>info@smkcerdassatubangsa.sch.id</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container-fluid -->
+  </footer>
+
+  <!-- ─── MODAL DI TENGAH LAYAR: NOTIFIKASI SOSMED BELUM TERSEDIA ─ -->
+  <div id="sosmed-modal-overlay" onclick="closeSosmedModal()" hidden>
+    <div class="sosmed-modal-box" onclick="event.stopPropagation()">
+      <!-- Baris Atas: Icon berdampingan dengan Tulisan Pemberitahuan -->
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <div class="sosmed-modal-icon">
+          <i class="fas fa-info-circle"></i>
+        </div>
+        <h6 class="fw-bold text-dark font-poppins mb-0" style="font-size: 1.05rem;">Pemberitahuan</h6>
+      </div>
+      <!-- Baris Bawah: Rata Kiri -->
+      <p id="sosmed-modal-text" class="text-muted text-start mb-0" style="font-size: 0.9rem; line-height: 1.5;">
+        saat ini belum tersedia...
+      </p>
+    </div>
+  </div>
+
+  <!-- ─── SCRIPTS ──────────────────────────────────────────── -->
+</div><!-- /#page-content-wrapper -->
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS – Animate on Scroll -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Custom JS Utama -->
+  <script src="/assets/js/script.js"></script>
+
+  <!-- Inline Styles & Scripts for Social Media Modal -->
+  <style>
+    /* ─── Tombol Media Sosial Minimalis & Sederhana ────────── */
+    .social-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: #ffffff !important;
+      font-size: 0.82rem;
+      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .social-btn:hover {
+      transform: translateY(-2px) !important;
+      opacity: 0.9;
+    }
+
+    /* Facebook */
+    .social-btn-fb {
+      background: #1877f2 !important;
+    }
+
+    /* Instagram */
+    .social-btn-ig {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+    }
+
+    /* YouTube */
+    .social-btn-yt {
+      background: #ff0000 !important;
+    }
+
+    /* TikTok */
+    .social-btn-tk {
+      background: #000000 !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+
+    /* ─── Modal Popup di Tengah Layar (Kompak & Modern) ─────── */
+    #sosmed-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    /* Mencegah popup sosial sempat terlihat saat HTML halaman baru pertama dimuat. */
+    #sosmed-modal-overlay[hidden] {
+      display: none !important;
+    }
+
+    #sosmed-modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    body.sosmed-modal-open {
+      overflow: hidden;
+    }
+
+    .sosmed-modal-box {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px 24px;
+      width: 90%;
+      max-width: 360px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+      transform: scale(0.88);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+    }
+
+    #sosmed-modal-overlay.active .sosmed-modal-box {
+      transform: scale(1);
+    }
+
+    .sosmed-modal-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #ecfdf5;
+      color: #059669;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+  </style>
+
+  <script>
+    let sosmedTimeout;
+    let sosmedHideTimeout;
+
+    function showSosmedUnavailable(platformName) {
+      const overlay = document.getElementById('sosmed-modal-overlay');
+      const textEl = document.getElementById('sosmed-modal-text');
+      if (textEl) {
+        textEl.innerHTML = platformName 
+          ? `Akun <strong>${platformName}</strong> saat ini belum tersedia...`
+          : `saat ini belum tersedia...`;
+      }
+      if (overlay) {
+        // Footer berada dalam pembungkus halaman. Pindahkan overlay ke body
+        // agar position: fixed selalu mengacu ke viewport yang sedang dilihat.
+        if (overlay.parentElement !== document.body) {
+          document.body.appendChild(overlay);
+        }
+        clearTimeout(sosmedHideTimeout);
+        overlay.hidden = false;
+        document.body.classList.add('sosmed-modal-open');
+        requestAnimationFrame(() => overlay.classList.add('active'));
+        clearTimeout(sosmedTimeout);
+        // Otomatis menghilang setelah 3 detik
+        sosmedTimeout = setTimeout(() => {
+          closeSosmedModal();
+        }, 3000);
+      }
+    }
+
+    function closeSosmedModal() {
+      const overlay = document.getElementById('sosmed-modal-overlay');
+      if (overlay) {
+        overlay.classList.remove('active');
+        document.body.classList.remove('sosmed-modal-open');
+        clearTimeout(sosmedTimeout);
+        clearTimeout(sosmedHideTimeout);
+        sosmedHideTimeout = setTimeout(() => {
+          if (!overlay.classList.contains('active')) overlay.hidden = true;
+        }, 260);
+      }
+    }
+
+    // Browser dapat memulihkan halaman dari cache (back/forward). Pastikan
+    // notifikasi lama tidak ikut muncul kembali pada halaman yang dipulihkan.
+    window.addEventListener('pageshow', closeSosmedModal);
+  </script>
+
+</body>
+</html>

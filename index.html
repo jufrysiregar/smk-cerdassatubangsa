@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda – SMK Cerdas Satu Bangsa</title>
+  <meta name="description" content="Website Resmi SMK Cerdas Satu Bangsa – Sekolah Kejuruan Unggul, Berkarakter & Berprestasi.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/logo/logo.png">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- AOS – Animate on Scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <!-- Google Fonts (Poppins & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS Utama -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<!-- ─── MAIN NAVBAR ──────────────────────────────────────────── -->
+<nav class="navbar custom-navbar sticky-top" id="main-navbar" aria-label="Navigasi Utama">
+  <div class="container-fluid px-3 px-md-4 px-lg-5 d-flex align-items-center justify-content-between">
+
+    <!-- POJOK KIRI: Logo Sekolah + Nama & Slogan -->
+    <div class="navbar-brand-wrapper d-flex align-items-center gap-2 gap-sm-3 m-0 p-0" style="cursor: default; user-select: none;">
+      <img src="/assets/img/logo/logo.png"
+           onerror="this.onerror=null; this.src='/src/logos/logo22.png';"
+           alt="Logo SMK Cerdas Satu Bangsa"
+           class="navbar-brand-logo">
+      <div class="d-flex flex-column justify-content-center">
+        <span class="brand-school-name">SMK CERDAS SATU BANGSA</span>
+        <span class="brand-school-slogan">Siap Bertalenta dan Kerja</span>
+      </div>
+    </div>
+
+    <!-- POJOK KANAN: Tombol Daftar PPDB + Hamburger -->
+    <div class="d-flex align-items-center gap-3 ms-auto">
+      <!-- Tombol Daftar PPDB -->
+      <a href="/ppdb/formulir.html"
+         class="btn btn-ppdb-header rounded-pill px-3 py-2 text-nowrap d-inline-flex align-items-center">
+        <i class="fas fa-book-open me-2"></i>
+        <span class="raindrop-text">
+          <span class="drop-char" style="--i:0;">D</span><span class="drop-char" style="--i:1;">a</span><span class="drop-char" style="--i:2;">f</span><span class="drop-char" style="--i:3;">t</span><span class="drop-char" style="--i:4;">a</span><span class="drop-char" style="--i:5;">r</span><span class="drop-space">&nbsp;</span><span class="drop-char" style="--i:7;">P</span><span class="drop-char" style="--i:8;">P</span><span class="drop-char" style="--i:9;">D</span><span class="drop-char" style="--i:10;">B</span><span class="drop-space">&nbsp;</span><span class="drop-char" style="--i:12;">O</span><span class="drop-char" style="--i:13;">n</span><span class="drop-char" style="--i:14;">l</span><span class="drop-char" style="--i:15;">i</span><span class="drop-char" style="--i:16;">n</span><span class="drop-char" style="--i:17;">e</span>
+        </span>
+      </a>
+
+      <!-- Tombol menu tiga garis -->
+      <button id="hamburger-btn"
+              class="hamburger-custom border-0 bg-transparent p-0"
+              type="button"
+              aria-expanded="false"
+              aria-label="Buka Menu Navigasi"
+              title="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- End Navbar -->
+
+<!-- ─── SIDE PANEL MENU — PREMIUM 3D REDESIGN ─── -->
+<div id="side-menu-panel" aria-label="Menu Navigasi" role="dialog" aria-modal="true">
+
+  <!-- ── HEADER dengan background gelap premium ── -->
+  <div class="side-panel-header">
+    <div class="d-flex align-items-center gap-2" style="user-select:none; -webkit-user-select:none;">
+      <div class="sp-logo-ring">
+        <img src="/assets/img/logo/logo.png"
+             onerror="this.onerror=null; this.src='/src/logos/logo22.png';"
+             alt="Logo">
+      </div>
+      <div style="line-height:1.25;">
+        <div class="sp-school-name">SMK CERDAS SATU BANGSA</div>
+        <div class="sp-school-slogan">Siap Bertalenta dan Kerja</div>
+      </div>
+    </div>
+    <button id="side-panel-close" class="side-panel-close-btn" type="button" aria-label="Tutup Menu">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- ── BODY ── -->
+  <div class="side-panel-body">
+    <nav aria-label="Menu Navigasi">
+      <ul class="side-nav-list list-unstyled m-0 p-0">
+
+        <!-- 1. Beranda -->
+        <li class="side-nav-item">
+          <a class="sp-menu-card active" href="/index.html">
+            <div class="sp-card-icon sp-icon-home">
+              <i class="fas fa-home"></i>
+            </div>
+            <span class="sp-card-title flex-grow-1">Beranda</span>
+            <div class="sp-card-arrow"><i class="fas fa-chevron-right"></i></div>
+          </a>
+        </li>
+
+        <!-- 2. Profil [+] -->
+        <li class="side-nav-item has-sub ">
+          <div class="side-nav-row">
+            <div class="sp-menu-card flex-grow-1 " style="cursor:pointer;">
+              <div class="sp-card-icon sp-icon-profil">
+                <i class="fas fa-university"></i>
+              </div>
+              <span class="sp-card-title flex-grow-1">Profil</span>
+              <span class="sp-sub-sign">+</span>
+            </div>
+          </div>
+          <div class="side-submenu-panel">
+            <ul class="list-unstyled mb-0 sp-submenu">
+              <li><a class="sp-sub-link " href="/profil/sejarah.html"><i class="fas fa-landmark sp-sub-dot"></i>Sejarah Sekolah</a></li>
+              <li><a class="sp-sub-link " href="/profil/visi-misi.html"><i class="fas fa-star sp-sub-dot"></i>Visi &amp; Misi</a></li>
+              <li><a class="sp-sub-link " href="/profil/struktur.html"><i class="fas fa-sitemap sp-sub-dot"></i>Struktur Organisasi</a></li>
+              <li><a class="sp-sub-link " href="/profil/fasilitas.html"><i class="fas fa-building sp-sub-dot"></i>Fasilitas</a></li>
+              <li><a class="sp-sub-link " href="/profil/sertifikasi.html"><i class="fas fa-certificate sp-sub-dot"></i>Akreditasi</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 3. Program Keahlian [+] -->
+        <li class="side-nav-item has-sub ">
+          <div class="side-nav-row">
+            <div class="sp-menu-card flex-grow-1 " style="cursor:pointer;">
+              <div class="sp-card-icon sp-icon-program">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <span class="sp-card-title flex-grow-1">Program Keahlian</span>
+              <span class="sp-sub-sign">+</span>
+            </div>
+          </div>
+          <div class="side-submenu-panel">
+            <ul class="list-unstyled mb-0 sp-submenu">
+              <li><a class="sp-sub-link " href="/program/tkj.html"><i class="fas fa-network-wired sp-sub-dot"></i>Teknik Komputer &amp; Jaringan</a></li>
+              <li><a class="sp-sub-link " href="/program/rpl.html"><i class="fas fa-code sp-sub-dot"></i>Rekayasa Perangkat Lunak</a></li>
+              <li><a class="sp-sub-link " href="/program/tav.html"><i class="fas fa-tv sp-sub-dot"></i>Teknik Audio Video</a></li>
+              <li><a class="sp-sub-link " href="/program/dkv.html"><i class="fas fa-paint-brush sp-sub-dot"></i>Desain Komunikasi Visual</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 4. Berita & Artikel -->
+        <li class="side-nav-item">
+          <a class="sp-menu-card " href="/berita.html">
+            <div class="sp-card-icon sp-icon-berita">
+              <i class="fas fa-newspaper"></i>
+            </div>
+            <span class="sp-card-title flex-grow-1">Berita &amp; Artikel</span>
+            <div class="sp-card-arrow"><i class="fas fa-chevron-right"></i></div>
+          </a>
+        </li>
+
+        <!-- 5. Galeri -->
+        <li class="side-nav-item">
+          <a class="sp-menu-card " href="/galeri.html">
+            <div class="sp-card-icon sp-icon-galeri">
+              <i class="fas fa-images"></i>
+            </div>
+            <span class="sp-card-title flex-grow-1">Galeri</span>
+            <div class="sp-card-arrow"><i class="fas fa-chevron-right"></i></div>
+          </a>
+        </li>
+
+        <!-- 6. PPDB [+] -->
+        <li class="side-nav-item has-sub ">
+          <div class="side-nav-row">
+            <div class="sp-menu-card flex-grow-1 " style="cursor:pointer;">
+              <div class="sp-card-icon sp-icon-ppdb">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <span class="sp-card-title flex-grow-1">PPDB</span>
+              <span class="sp-sub-sign">+</span>
+            </div>
+          </div>
+          <div class="side-submenu-panel">
+            <ul class="list-unstyled mb-0 sp-submenu">
+              <li><a class="sp-sub-link " href="/ppdb/informasi.html"><i class="fas fa-info-circle sp-sub-dot"></i>Informasi &amp; Alur PPDB</a></li>
+              <li><a class="sp-sub-link " href="/ppdb/formulir.html"><i class="fas fa-file-signature sp-sub-dot"></i>Formulir Pendaftaran</a></li>
+              <li><a class="sp-sub-link " href="/ppdb/pengumuman.html"><i class="fas fa-bullhorn sp-sub-dot"></i>Pengumuman Hasil</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 7. Kontak -->
+        <li class="side-nav-item">
+          <a class="sp-menu-card " href="/kontak.html">
+            <div class="sp-card-icon sp-icon-kontak">
+              <i class="fas fa-headset"></i>
+            </div>
+            <span class="sp-card-title flex-grow-1">Kontak</span>
+            <div class="sp-card-arrow"><i class="fas fa-chevron-right"></i></div>
+          </a>
+        </li>
+
+        <!-- 8. Alumni & Karir [+] -->
+        <li class="side-nav-item has-sub ">
+          <div class="side-nav-row">
+            <div class="sp-menu-card flex-grow-1 " style="cursor:pointer;">
+              <div class="sp-card-icon sp-icon-alumni">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <span class="sp-card-title flex-grow-1">Alumni &amp; Karir</span>
+              <span class="sp-sub-sign">+</span>
+            </div>
+          </div>
+          <div class="side-submenu-panel">
+            <ul class="list-unstyled mb-0 sp-submenu">
+              <li><a class="sp-sub-link " href="/alumni/alumni.html"><i class="fas fa-users sp-sub-dot"></i>Alumni</a></li>
+              <li><a class="sp-sub-link " href="/alumni/karir.html"><i class="fas fa-briefcase sp-sub-dot"></i>Pengembangan Karir</a></li>
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+  </div><!-- /.side-panel-body -->
+
+  <!-- ── FOOTER ── -->
+  <div class="side-panel-footer">
+    <a href="/ppdb/formulir.html" class="side-btn-ppdb">
+      <i class="fas fa-book-open me-2"></i>
+      <span>Daftar PPDB Online</span>
+      <i class="fas fa-arrow-right ms-auto sp-ppdb-arrow"></i>
+    </a>
+  </div><!-- /.side-panel-footer -->
+
+</div><!-- /#side-menu-panel -->
+
+<!-- ─── WRAPPER KONTEN WEBSITE (SEMUA KONTEN UTAMA & FOOTER ADA DI DALAM SINI) ─── -->
+<div id="page-content-wrapper">
+
+<!-- Hero Section -->
+<section class="hero-section text-center d-flex align-items-center">
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-9">
+        <h1 class="hero-title text-white" data-aos="fade-up" data-aos-delay="150">
+          SMK CERDAS SATU BANGSA
+        </h1>
+        <p class="hero-subtitle text-light mb-0" data-aos="fade-up" data-aos-delay="250">
+          Mentransformasi potensi bangsa melalui pendidikan berbasis teknologi yang cerdas, aman, dan terintegrasi untuk mencetak generasi terbaik bagi masa depan Indonesia.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sambutan Kepala Sekolah -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 text-center" data-aos="fade-right">
+        <div class="position-relative d-inline-block img-hover-zoom" style="max-width: 380px; width: 100%;">
+          <img src="/assets/img/organisasi/kepsek.jpg"
+               alt="H. Drs. Muhtadin Magfirotun Innas, M. Pd - Kepala Sekolah"
+               class="img-fluid rounded-4 shadow-md w-100"
+               style="max-height: 460px; object-fit: cover;">
+          <div class="bg-emerald text-white text-center py-2 px-3 rounded-3 shadow position-absolute"
+               style="background: #059669; bottom: 14px; left: 14px; right: 14px;">
+            <div class="fw-bold font-poppins text-white" style="font-size: 0.92rem; line-height: 1.3;">
+              H. Drs. Muhtadin Magfirotun Innas, M. Pd            </div>
+            <div class="text-white small mt-1" style="font-size: 0.8rem; font-weight: 500; opacity: 0.95;">
+              Kepala Sekolah SMK Cerdas Satu Bangsa
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7" data-aos="fade-left" data-aos-delay="100">
+        <span class="section-subtitle">Sambutan Kepala Sekolah</span>
+        <h2 class="section-title">Selamat Datang di Portal Resmi SMK Cerdas Satu Bangsa</h2>
+        <div class="title-line-left"></div>
+        <p class="lead text-dark font-poppins fw-medium">
+          "Pendidikan vokasi adalah kunci pembuka pintu masa depan emas bangsa indonesia."
+        </p>
+        <p class="text-muted">
+          Assalamu'alaikum Warahmatullahi Wabarakatuh. Selamat datang di portal resmi SMK Cerdas Satu Bangsa. Kami berkomitmen menyelenggarakan pendidikan kejuruan yang responsif terhadap dinamika industri modern 4.0.
+        </p>
+        <p class="text-muted">
+          Dengan fasilitas laboratorium terakreditasi, kurikulum berbasis project (PBL), serta sinergi erat dengan lebih dari 50 perusahaan mitra nasional, kami memastikan setiap lulusan memiliki kompetensi teknis unggul dan integritas spiritual yang kokoh.
+        </p>
+        <a href="/profil/visi-misi.html" class="btn btn-outline-custom mt-2">
+          Baca Selengkapnya <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Program Keahlian Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center max-w-700 mx-auto mb-5">
+      <h2 class="section-title">Program Jurusan Sekolah</h2>
+      <p class="text-muted">Kami menyediakan 4 program keahlian yang disesuaikan dengan kebutuhan pasar kerja dan perkembangan teknologi terkini.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- TKJ -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="dept-modern-card h-100 d-flex flex-column">
+          <!-- Card Header & Floating Emblem -->
+          <div class="dept-card-header">
+            <span class="dept-pill-tag">Unggulan</span>
+            <div class="dept-badge-floating">
+              <img src="/assets/img/smk/TKJ.jpg" alt="Logo Jurusan TKJ">
+            </div>
+          </div>
+          <!-- Card Body -->
+          <div class="dept-card-body d-flex flex-column flex-grow-1">
+            <div class="d-flex align-items-baseline justify-content-between mb-1">
+              <h3 class="dept-code mb-0">TKJ</h3>
+              <span class="dept-num">01</span>
+            </div>
+            <div class="dept-name mb-3">Teknik Komputer &amp; Jaringan</div>
+            <p class="dept-desc flex-grow-1">
+              Fokus pada administrasi jaringan server, Mikrotik, Cisco, Cloud Computing, dan Cyber Security.
+            </p>
+            <!-- Card Footer (Sudut Kanan Bawah) -->
+            <div class="dept-card-footer d-flex justify-content-end align-items-center pt-3">
+              <a href="/program/tkj.html" class="dept-action-btn">
+                <span>Detail Jurusan</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RPL -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="dept-modern-card h-100 d-flex flex-column">
+          <!-- Card Header & Floating Emblem -->
+          <div class="dept-card-header">
+            <span class="dept-pill-tag">Unggulan</span>
+            <div class="dept-badge-floating">
+              <img src="/assets/img/smk/RPL.jpg" alt="Logo Jurusan RPL">
+            </div>
+          </div>
+          <!-- Card Body -->
+          <div class="dept-card-body d-flex flex-column flex-grow-1">
+            <div class="d-flex align-items-baseline justify-content-between mb-1">
+              <h3 class="dept-code mb-0">RPL</h3>
+              <span class="dept-num">02</span>
+            </div>
+            <div class="dept-name mb-3">Rekayasa Perangkat Lunak</div>
+            <p class="dept-desc flex-grow-1">
+              Menguasai pemograman web, pengembangan aplikasi mobile, database admin, dan UI/UX design.
+            </p>
+            <!-- Card Footer (Sudut Kanan Bawah) -->
+            <div class="dept-card-footer d-flex justify-content-end align-items-center pt-3">
+              <a href="/program/rpl.html" class="dept-action-btn">
+                <span>Detail Jurusan</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAV -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="dept-modern-card h-100 d-flex flex-column">
+          <!-- Card Header & Floating Emblem -->
+          <div class="dept-card-header">
+            <span class="dept-pill-tag">Unggulan</span>
+            <div class="dept-badge-floating">
+              <img src="/assets/img/smk/TAV.jpg" alt="Logo Jurusan TAV">
+            </div>
+          </div>
+          <!-- Card Body -->
+          <div class="dept-card-body d-flex flex-column flex-grow-1">
+            <div class="d-flex align-items-baseline justify-content-between mb-1">
+              <h3 class="dept-code mb-0">TAV</h3>
+              <span class="dept-num">03</span>
+            </div>
+            <div class="dept-name mb-3">Teknik Audio Video</div>
+            <p class="dept-desc flex-grow-1">
+              Mempelajari sistem akustik, broadcasting, perekayasaan audio digital, dan perawatan peralatan audio video.
+            </p>
+            <!-- Card Footer (Sudut Kanan Bawah) -->
+            <div class="dept-card-footer d-flex justify-content-end align-items-center pt-3">
+              <a href="/program/tav.html" class="dept-action-btn">
+                <span>Detail Jurusan</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DKV -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="dept-modern-card h-100 d-flex flex-column">
+          <!-- Card Header & Floating Emblem -->
+          <div class="dept-card-header">
+            <span class="dept-pill-tag">Unggulan</span>
+            <div class="dept-badge-floating">
+              <img src="/assets/img/smk/DKV.jpg" alt="Logo Jurusan DKV">
+            </div>
+          </div>
+          <!-- Card Body -->
+          <div class="dept-card-body d-flex flex-column flex-grow-1">
+            <div class="d-flex align-items-baseline justify-content-between mb-1">
+              <h3 class="dept-code mb-0">DKV</h3>
+              <span class="dept-num">04</span>
+            </div>
+            <div class="dept-name mb-3">Desain Komunikasi Visual</div>
+            <p class="dept-desc flex-grow-1">
+              Mencetak desainer grafis, videografer, fotografer profesional, animator 3D, dan content creator.
+            </p>
+            <!-- Card Footer (Sudut Kanan Bawah) -->
+            <div class="dept-card-footer d-flex justify-content-end align-items-center pt-3">
+              <a href="/program/dkv.html" class="dept-action-btn">
+                <span>Detail Jurusan</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Berita Terbaru Section -->
+<section class="py-5 beranda-berita-section">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-end justify-content-between mb-4">
+      <div>
+        <h2 class="section-title mb-0">Berita &amp; Informasi Sekolah</h2>
+      </div>
+      <a href="/berita.html" class="btn btn-outline-custom mt-3 mt-md-0">
+        Lihat Semua Berita <i class="fas fa-arrow-right ms-2"></i>
+      </a>
+    </div>
+
+    <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="card-custom">
+          <div class="card-img-wrapper">
+            <span class="badge-category">Pengumuman</span>
+                          <span class="badge-terbaru">Terbaru</span>
+                        <img src="/assets/img/berita-artikel/berita-7.jpg" alt="Penerimaan Peserta Didik Baru (PPDB) SMK Cerdas Satu Bangsa T.A. 2026/2027 Resmi Dibuka!">
+          </div>
+          <div class="p-4">
+            <div class="text-muted small mb-2">
+              <i class="far fa-calendar-alt me-1 text-emerald"></i> Rabu, 01 Oktober 2026              <span class="mx-2">•</span>
+              <i class="far fa-user me-1 text-emerald"></i> Panitia PPDB            </div>
+            <h5 class="fw-bold mb-3 text-dark">
+                Penerimaan Peserta Didik Baru (PPDB) SMK Cerdas Satu Bangsa T.A. 2026/2027 Resmi Dibuka!            </h5>
+            <p class="beranda-berita-ringkasan">
+              SMK Cerdas Satu Bangsa resmi membuka PPDB Tahun Ajaran 2026/2027 dengan 4 program keahlian unggulan berstandar industri.... <a href="/berita-detail.html?id=7" class="beranda-baca-link">Baca Selengkapnya</a>            </p>
+          </div>
+        </div>
+      </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-custom">
+          <div class="card-img-wrapper">
+            <span class="badge-category">Akademik</span>
+                        <img src="/assets/img/berita-artikel/berita-5.jpg" alt="Terobosan Teknologi! Tim TAV Sukses Unjuk Gigi Ciptakan Ekosistem Smart Home Berbasis Sensor dan Raih Sertifikasi BNSP">
+          </div>
+          <div class="p-4">
+            <div class="text-muted small mb-2">
+              <i class="far fa-calendar-alt me-1 text-emerald"></i> Selasa, 18 November 2025              <span class="mx-2">•</span>
+              <i class="far fa-user me-1 text-emerald"></i> Kaprodi TAV            </div>
+            <h5 class="fw-bold mb-3 text-dark">
+                Terobosan Teknologi! Tim TAV Sukses Unjuk Gigi Ciptakan Ekosistem Smart Home Berbasis Sensor dan Raih Sertifikasi BNSP            </h5>
+            <p class="beranda-berita-ringkasan">
+              Kelompok siswa jurusan TAV berhasil mengembangkan prototipe miniatur Smart Home berbasis IoT dan sensor otomatisasi, yan... <a href="/berita-detail.html?id=5" class="beranda-baca-link">Baca Selengkapnya</a>            </p>
+          </div>
+        </div>
+      </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-custom">
+          <div class="card-img-wrapper">
+            <span class="badge-category">Kesiswaan</span>
+                        <img src="/assets/img/berita-artikel/berita-2.jpg" alt="Gemilang Prestasi! Tim Cerdas Cermat Pelajar Raih Juara 1 Tingkat Nasional 2026">
+          </div>
+          <div class="p-4">
+            <div class="text-muted small mb-2">
+              <i class="far fa-calendar-alt me-1 text-emerald"></i> Kamis, 15 Oktober 2025              <span class="mx-2">•</span>
+              <i class="far fa-user me-1 text-emerald"></i> Panitia Kesiswaan            </div>
+            <h5 class="fw-bold mb-3 text-dark">
+                Gemilang Prestasi! Tim Cerdas Cermat Pelajar Raih Juara 1 Tingkat Nasional 2026            </h5>
+            <p class="beranda-berita-ringkasan">
+              Tim pelajar berhasil menyabet trofi Juara 1 Olimpiade Cerdas Cermat Sekolah Tingkat Nasional 2026. Kemenangan dramatis i... <a href="/berita-detail.html?id=2" class="beranda-baca-link">Baca Selengkapnya</a>            </p>
+          </div>
+        </div>
+      </div>
+          </div>
+  </div>
+</section>
+
+<!-- Highlight Sekolah Kami (Media-Driven Cards Section) -->
+<section class="py-5 stats-slider-section position-relative">
+  <div class="container position-relative" style="z-index: 2;">
+    <div class="text-center max-w-700 mx-auto mb-4" data-aos="fade-up">
+      <h2 class="media-highlight-title mb-3">Highlight Sekolah Kami</h2>
+      <p class="media-highlight-desc mb-0">
+        Bukti nyata komitmen SMK Cerdas Satu Bangsa dalam menghadirkan ekosistem pendidikan vokasi berkualitas, terakreditasi, dan terserap luas di industri modern.
+      </p>
+    </div>
+
+    <!-- Slider Wrapper with Side Nav Buttons -->
+    <div class="stats-slider-wrapper position-relative d-flex align-items-center">
+      <!-- Tombol Navigasi Kiri (<) -->
+      <button id="stats-prev-btn" class="stats-nav-btn stats-nav-prev" type="button" aria-label="Sebelumnya" title="Geser ke Kiri" disabled>
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <!-- Carousel Slider Track -->
+      <div class="stats-slider-container flex-grow-1" id="stats-slider-track">
+        <!-- 1. Siswa Aktif (Statis A-01.jpg) -->
+        <div class="stats-slide-item">
+          <div class="media-stat-card">
+            <div class="media-stat-img-wrapper">
+              <img src="/assets/img/highlight/A-01.jpg" alt="Siswa Aktif SMK Cerdas Satu Bangsa" class="media-stat-img active" loading="lazy">
+            </div>
+            <div class="media-stat-overlay"></div>
+            <div class="media-stat-content">
+              <div class="stat-number media-stat-num">1,250+</div>
+              <div class="media-stat-label">Siswa Aktif</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Alumni Tersebar (Statis B-01.jpg) -->
+        <div class="stats-slide-item">
+          <div class="media-stat-card">
+            <div class="media-stat-img-wrapper">
+              <img src="/assets/img/highlight/B-01.jpg" alt="Alumni Tersebar SMK Cerdas Satu Bangsa" class="media-stat-img active" loading="lazy">
+            </div>
+            <div class="media-stat-overlay"></div>
+            <div class="media-stat-content">
+              <div class="stat-number media-stat-num">3,400+</div>
+              <div class="media-stat-label">Alumni Tersebar</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Tingkat Kebekerjaan (Statis C-01.jpg) -->
+        <div class="stats-slide-item">
+          <div class="media-stat-card">
+            <div class="media-stat-img-wrapper">
+              <img src="/assets/img/highlight/C-01.jpg" alt="Tingkat Kebekerjaan SMK Cerdas Satu Bangsa" class="media-stat-img active" loading="lazy">
+            </div>
+            <div class="media-stat-overlay"></div>
+            <div class="media-stat-content">
+              <div class="stat-number media-stat-num">98%</div>
+              <div class="media-stat-label">Tingkat Kebekerjaan</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Fasilitas (Slideshow D-01.jpg - D-04.jpg setiap 3 detik) -->
+        <div class="stats-slide-item">
+          <div class="media-stat-card">
+            <div class="media-stat-img-wrapper media-slideshow" data-interval="3000">
+              <img src="/assets/img/highlight/D-01.jpg" alt="Fasilitas 1" class="media-stat-img active" loading="lazy">
+              <img src="/assets/img/highlight/D-02.jpg" alt="Fasilitas 2" class="media-stat-img" loading="lazy">
+              <img src="/assets/img/highlight/D-03.jpg" alt="Fasilitas 3" class="media-stat-img" loading="lazy">
+              <img src="/assets/img/highlight/D-04.jpg" alt="Fasilitas 4" class="media-stat-img" loading="lazy">
+              <div class="slideshow-indicators" aria-hidden="true">
+                <span class="indicator-bar active"></span>
+                <span class="indicator-bar"></span>
+                <span class="indicator-bar"></span>
+                <span class="indicator-bar"></span>
+              </div>
+            </div>
+            <div class="media-stat-overlay"></div>
+            <div class="media-stat-content">
+              <div class="stat-number media-stat-num">5+</div>
+              <div class="media-stat-label">Fasilitas</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Ekstrakulikuler (Statis E-01.jpg) -->
+        <div class="stats-slide-item">
+          <div class="media-stat-card">
+            <div class="media-stat-img-wrapper">
+              <img src="/assets/img/highlight/E-01.jpg" alt="Ekstrakulikuler SMK Cerdas Satu Bangsa" class="media-stat-img active" loading="lazy">
+            </div>
+            <div class="media-stat-overlay"></div>
+            <div class="media-stat-content">
+              <div class="stat-number media-stat-num">10+</div>
+              <div class="media-stat-label">Ekstrakulikuler</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Prestasi & Olimpiade (Slideshow F-01.jpg - F-03.jpg setiap 3 detik) -->
+        <div class="stats-slide-item">
+          <div class="media-stat-card">
+            <div class="media-stat-img-wrapper media-slideshow" data-interval="3000">
+              <img src="/assets/img/highlight/F-01.jpg" alt="Prestasi 1" class="media-stat-img active" loading="lazy">
+              <img src="/assets/img/highlight/F-02.jpg" alt="Prestasi 2" class="media-stat-img" loading="lazy">
+              <img src="/assets/img/highlight/F-03.jpg" alt="Prestasi 3" class="media-stat-img" loading="lazy">
+              <div class="slideshow-indicators" aria-hidden="true">
+                <span class="indicator-bar active"></span>
+                <span class="indicator-bar"></span>
+                <span class="indicator-bar"></span>
+              </div>
+            </div>
+            <div class="media-stat-overlay"></div>
+            <div class="media-stat-content">
+              <div class="stat-number media-stat-num">15+</div>
+              <div class="media-stat-label">Prestasi &amp; Olimpiade</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Navigasi Kanan (>) -->
+      <button id="stats-next-btn" class="stats-nav-btn stats-nav-next" type="button" aria-label="Berikutnya" title="Geser ke Kanan">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Pop-up Brosur PPDB -->
+<div id="brosur-ppdb-modal" class="brosur-modal" role="dialog" aria-modal="true" aria-label="Brosur PPDB 2026/2027">
+  <div class="brosur-modal-content">
+    <div class="brosur-modal-toolbar">
+      <button type="button" id="brosur-modal-close" class="brosur-modal-close" aria-label="Tutup brosur" title="Tutup">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <img src="/assets/img/brosur/2026.jpg"
+         alt="Brosur PPDB SMK Cerdas Satu Bangsa Tahun 2026/2027">
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.getElementById('brosur-ppdb-modal');
+  const closeButton = document.getElementById('brosur-modal-close');
+  if (!modal || !closeButton) return;
+
+  // Lepaskan dari pembungkus halaman agar position: fixed dan scrollbar
+  // benar-benar memakai viewport browser, bukan area konten beranda.
+  if (modal.parentElement !== document.body) {
+    document.body.appendChild(modal);
+  }
+
+  document.body.classList.add('brosur-modal-open');
+
+  function closeBrosur() {
+    document.body.classList.remove('brosur-modal-open');
+    modal.classList.add('is-closing');
+    window.setTimeout(function () { modal.remove(); }, 180);
+  }
+
+  closeButton.addEventListener('click', closeBrosur);
+  modal.addEventListener('click', function (event) {
+    if (event.target === modal) closeBrosur();
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') closeBrosur();
+  });
+});
+</script>
+
+
+  <!-- ─── MAIN FOOTER ───────────────────────────────────────── -->
+  <footer class="main-footer">
+    <div class="container-fluid px-3 px-md-4 px-lg-5">
+      <div class="row justify-content-between g-4">
+
+        <!-- Column 1: School Identity (Pojok Kiri) -->
+        <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="0">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img src="/assets/img/logo/logo.png"
+                 onerror="this.onerror=null; this.src='/src/logos/logo22.png';"
+                 alt="Logo SMK Cerdas Satu Bangsa"
+                 style="height: 54px; width: auto; object-fit: contain;">
+            <div class="d-flex flex-column justify-content-center">
+              <span class="fw-bold text-white font-poppins" style="font-size: 1.15rem; letter-spacing: 0.5px; line-height: 1.2;">SMK CERDAS SATU BANGSA</span>
+              <span style="color: #38bdf8; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.3px; margin-top: 3px;">Siap Bertalenta dan Kerja</span>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <p class="mb-2" style="color: #cbd5e1; font-size: 0.92rem; font-weight: 500;">
+              Temukan kami di platform lainnya :
+            </p>
+            <div class="d-flex gap-2 flex-wrap">
+              <!-- Facebook (Warna Asli) -->
+              <button type="button" class="social-btn social-btn-fb" title="Facebook" onclick="showSosmedUnavailable('Facebook')">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+              <!-- Instagram (Warna Gradasi Asli) -->
+              <button type="button" class="social-btn social-btn-ig" title="Instagram" onclick="showSosmedUnavailable('Instagram')">
+                <i class="fab fa-instagram"></i>
+              </button>
+              <!-- YouTube (Warna Merah Asli) -->
+              <button type="button" class="social-btn social-btn-yt" title="YouTube" onclick="showSosmedUnavailable('YouTube')">
+                <i class="fab fa-youtube"></i>
+              </button>
+              <!-- TikTok (Warna Hitam + Aksen Neon Asli) -->
+              <button type="button" class="social-btn social-btn-tk" title="TikTok" onclick="showSosmedUnavailable('TikTok')">
+                <i class="fab fa-tiktok"></i>
+              </button>
+            </div>
+            <p class="mb-0 mt-3" style="color:#94a3b8; font-size:0.82rem;">
+              &copy; 2026              <strong style="color:#cbd5e1;">SMK Cerdas Satu Bangsa</strong>.
+              Hak Cipta Dilindungi Undang-Undang.
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 2 & 3: Tautan Cepat & Kontak Kami (Pojok Kanan) -->
+        <div class="col-lg-6 col-md-12">
+          <div class="row justify-content-lg-end g-4">
+
+            <!-- Column: Quick Links -->
+            <div class="col-sm-6 col-12 col-lg-5" data-aos="fade-up" data-aos-delay="80">
+              <h5 class="footer-title">Tautan Cepat</h5>
+              <ul class="footer-links">
+                <li><a href="/profil/sejarah.html"><i class="fas fa-chevron-right me-1 small"></i> Sejarah Sekolah</a></li>
+                <li><a href="/profil/visi-misi.html"><i class="fas fa-chevron-right me-1 small"></i> Visi &amp; Misi</a></li>
+                <li><a href="/profil/fasilitas.html"><i class="fas fa-chevron-right me-1 small"></i> Fasilitas</a></li>
+                <li><a href="/profil/sertifikasi.html"><i class="fas fa-chevron-right me-1 small"></i> Akreditasi</a></li>
+                <li><a href="/berita.html"><i class="fas fa-chevron-right me-1 small"></i> Berita Terbaru</a></li>
+              </ul>
+            </div>
+
+            <!-- Column: Contact Us -->
+            <div class="col-sm-6 col-12 col-lg-7" data-aos="fade-up" data-aos-delay="160">
+              <h5 class="footer-title">Kontak Kami</h5>
+              <ul class="footer-links">
+                <li class="d-flex align-items-start gap-2 mb-3">
+                  <i class="fas fa-map-marker-alt mt-1" style="color:#34d399;"></i>
+                  <span>Jl. Cirebon No.1, Pasar Baru, Medan Kota, Kota Medan, Sumatera Utara 20212</span>
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="fas fa-phone-alt" style="color:#34d399;"></i>
+                  <span>(061) 1234567</span>
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="fab fa-whatsapp" style="color:#34d399;"></i>
+                  <span>WhatsApp Hotline: 081234567890</span>
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <i class="fas fa-envelope" style="color:#34d399;"></i>
+                  <span>info@smkcerdassatubangsa.sch.id</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container-fluid -->
+  </footer>
+
+  <!-- ─── MODAL DI TENGAH LAYAR: NOTIFIKASI SOSMED BELUM TERSEDIA ─ -->
+  <div id="sosmed-modal-overlay" onclick="closeSosmedModal()" hidden>
+    <div class="sosmed-modal-box" onclick="event.stopPropagation()">
+      <!-- Baris Atas: Icon berdampingan dengan Tulisan Pemberitahuan -->
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <div class="sosmed-modal-icon">
+          <i class="fas fa-info-circle"></i>
+        </div>
+        <h6 class="fw-bold text-dark font-poppins mb-0" style="font-size: 1.05rem;">Pemberitahuan</h6>
+      </div>
+      <!-- Baris Bawah: Rata Kiri -->
+      <p id="sosmed-modal-text" class="text-muted text-start mb-0" style="font-size: 0.9rem; line-height: 1.5;">
+        saat ini belum tersedia...
+      </p>
+    </div>
+  </div>
+
+  <!-- ─── SCRIPTS ──────────────────────────────────────────── -->
+</div><!-- /#page-content-wrapper -->
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS – Animate on Scroll -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Custom JS Utama -->
+  <script src="/assets/js/script.js"></script>
+
+  <!-- Inline Styles & Scripts for Social Media Modal -->
+  <style>
+    /* ─── Tombol Media Sosial Minimalis & Sederhana ────────── */
+    .social-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: #ffffff !important;
+      font-size: 0.82rem;
+      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .social-btn:hover {
+      transform: translateY(-2px) !important;
+      opacity: 0.9;
+    }
+
+    /* Facebook */
+    .social-btn-fb {
+      background: #1877f2 !important;
+    }
+
+    /* Instagram */
+    .social-btn-ig {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+    }
+
+    /* YouTube */
+    .social-btn-yt {
+      background: #ff0000 !important;
+    }
+
+    /* TikTok */
+    .social-btn-tk {
+      background: #000000 !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+
+    /* ─── Modal Popup di Tengah Layar (Kompak & Modern) ─────── */
+    #sosmed-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    /* Mencegah popup sosial sempat terlihat saat HTML halaman baru pertama dimuat. */
+    #sosmed-modal-overlay[hidden] {
+      display: none !important;
+    }
+
+    #sosmed-modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    body.sosmed-modal-open {
+      overflow: hidden;
+    }
+
+    .sosmed-modal-box {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px 24px;
+      width: 90%;
+      max-width: 360px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+      transform: scale(0.88);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+    }
+
+    #sosmed-modal-overlay.active .sosmed-modal-box {
+      transform: scale(1);
+    }
+
+    .sosmed-modal-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #ecfdf5;
+      color: #059669;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+  </style>
+
+  <script>
+    let sosmedTimeout;
+    let sosmedHideTimeout;
+
+    function showSosmedUnavailable(platformName) {
+      const overlay = document.getElementById('sosmed-modal-overlay');
+      const textEl = document.getElementById('sosmed-modal-text');
+      if (textEl) {
+        textEl.innerHTML = platformName 
+          ? `Akun <strong>${platformName}</strong> saat ini belum tersedia...`
+          : `saat ini belum tersedia...`;
+      }
+      if (overlay) {
+        // Footer berada dalam pembungkus halaman. Pindahkan overlay ke body
+        // agar position: fixed selalu mengacu ke viewport yang sedang dilihat.
+        if (overlay.parentElement !== document.body) {
+          document.body.appendChild(overlay);
+        }
+        clearTimeout(sosmedHideTimeout);
+        overlay.hidden = false;
+        document.body.classList.add('sosmed-modal-open');
+        requestAnimationFrame(() => overlay.classList.add('active'));
+        clearTimeout(sosmedTimeout);
+        // Otomatis menghilang setelah 3 detik
+        sosmedTimeout = setTimeout(() => {
+          closeSosmedModal();
+        }, 3000);
+      }
+    }
+
+    function closeSosmedModal() {
+      const overlay = document.getElementById('sosmed-modal-overlay');
+      if (overlay) {
+        overlay.classList.remove('active');
+        document.body.classList.remove('sosmed-modal-open');
+        clearTimeout(sosmedTimeout);
+        clearTimeout(sosmedHideTimeout);
+        sosmedHideTimeout = setTimeout(() => {
+          if (!overlay.classList.contains('active')) overlay.hidden = true;
+        }, 260);
+      }
+    }
+
+    // Browser dapat memulihkan halaman dari cache (back/forward). Pastikan
+    // notifikasi lama tidak ikut muncul kembali pada halaman yang dipulihkan.
+    window.addEventListener('pageshow', closeSosmedModal);
+  </script>
+
+</body>
+</html>

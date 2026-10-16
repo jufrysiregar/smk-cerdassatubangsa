@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sertifikasi & Akreditasi – SMK Cerdas Satu Bangsa</title>
+  <meta name="description" content="Website Resmi SMK Cerdas Satu Bangsa – Sekolah Kejuruan Unggul, Berkarakter & Berprestasi.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/logo/logo.png">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- AOS – Animate on Scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <!-- Google Fonts (Poppins & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS Utama -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<!-- ─── MAIN NAVBAR ──────────────────────────────────────────── -->
+<nav class="navbar custom-navbar sticky-top" id="main-navbar" aria-label="Navigasi Utama">
+  <div class="container-fluid px-3 px-md-4 px-lg-5 d-flex align-items-center justify-content-between">
+
+    <!-- POJOK KIRI: Logo Sekolah + Nama & Slogan -->
+    <div class="navbar-brand-wrapper d-flex align-items-center gap-2 gap-sm-3 m-0 p-0" style="cursor: default; user-select: none;">
+      <img src="/assets/img/logo/logo.png"
+           onerror="this.onerror=null; this.src='/src/logos/logo22.png';"
+           alt="Logo SMK Cerdas Satu Bangsa"
+           class="navbar-brand-logo">
+      <div class="d-flex flex-column justify-content-center">
+        <span class="brand-school-name">SMK CERDAS SATU BANGSA</span>
+        <span class="brand-school-slogan">Siap Bertalenta dan Kerja</span>
+      </div>
+    </div>
+
+    <!-- POJOK KANAN: Tombol Daftar PPDB + Hamburger -->
+    <div class="d-flex align-items-center gap-3 ms-auto">
+      <!-- Tombol Daftar PPDB -->
+      <a href="/ppdb/formulir.html"
+         class="btn btn-ppdb-header rounded-pill px-3 py-2 text-nowrap d-inline-flex align-items-center">
+        <i class="fas fa-book-open me-2"></i>
+        <span class="raindrop-text">
+          <span class="drop-char" style="--i:0;">D</span><span class="drop-char" style="--i:1;">a</span><span class="drop-char" style="--i:2;">f</span><span class="drop-char" style="--i:3;">t</span><span class="drop-char" style="--i:4;">a</span><span class="drop-char" style="--i:5;">r</span><span class="drop-space">&nbsp;</span><span class="drop-char" style="--i:7;">P</span><span class="drop-char" style="--i:8;">P</span><span class="drop-char" style="--i:9;">D</span><span class="drop-char" style="--i:10;">B</span><span class="drop-space">&nbsp;</span><span class="drop-char" style="--i:12;">O</span><span class="drop-char" style="--i:13;">n</span><span class="drop-char" style="--i:14;">l</span><span class="drop-char" style="--i:15;">i</span><span class="drop-char" style="--i:16;">n</span><span class="drop-char" style="--i:17;">e</span>
+        </span>
+      </a>
+
+      <!-- Tombol menu tiga garis -->
+      <button id="hamburger-btn"
+              class="hamburger-custom border-0 bg-transparent p-0"
+              type="button"
+              aria-expanded="false"
+              aria-label="Buka Menu Navigasi"
+              title="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- End Navbar -->
+
+<!-- ─── SIDE PANEL MENU — PREMIUM 3D REDESIGN ─── -->
+<div id="side-menu-panel" aria-label="Menu Navigasi" role="dialog" aria-modal="true">
+
+  <!-- ── HEADER dengan background gelap premium ── -->
+  <div class="side-panel-header">
+    <div class="d-flex align-items-center gap-2" style="user-select:none; -webkit-user-select:none;">
+      <div class="sp-logo-ring">
+        <img src="/assets/img/logo/logo.png"
+             onerror="this.onerror=null; this.src='/src/logos/logo22.png';"
+             alt="Logo">
+      </div>
+      <div style="line-height:1.25;">
+        <div class="sp-school-name">SMK CERDAS SATU BANGSA</div>
+        <div class="sp-school-slogan">Siap Bertalenta dan Kerja</div>
+      </div>
+    </div>
+    <button id="side-panel-close" class="side-panel-close-btn" type="button" aria-label="Tutup Menu">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- ── BODY ── -->
+  <div class="side-panel-body">
+    <nav aria-label="Menu Navigasi">
+      <ul class="side-nav-list list-unstyled m-0 p-0">
+
+        <!-- 1. Beranda -->
+        <li class="side-nav-item">
+          <a class="sp-menu-card " href="/index.html">
+            <div class="sp-card-icon sp-icon-home">
+              <i class="fas fa-home"></i>
+            </div>
+            <span class="sp-card-title flex-grow-1">Beranda</span>
+            <div class="sp-card-arrow"><i class="fas fa-chevron-right"></i></div>
+          </a>
+        </li>
+
+        <!-- 2. Profil [+] -->
+        <li class="side-nav-item has-sub expanded">
+          <div class="side-nav-row">
+            <div class="sp-menu-card flex-grow-1 active" style="cursor:pointer;">
+              <div class="sp-card-icon sp-icon-profil">
+                <i class="fas fa-university"></i>
+              </div>
+              <span class="sp-card-title flex-grow-1">Profil</span>
+              <span class="sp-sub-sign">−</span>
+            </div>
+          </div>
+          <div class="side-submenu-panel">
+            <ul class="list-unstyled mb-0 sp-submenu">
+              <li><a class="sp-sub-link " href="/profil/sejarah.html"><i class="fas fa-landmark sp-sub-dot"></i>Sejarah Sekolah</a></li>
+              <li><a class="sp-sub-link " href="/profil/visi-misi.html"><i class="fas fa-star sp-sub-dot"></i>Visi &amp; Misi</a></li>
+              <li><a class="sp-sub-link " href="/profil/struktur.html"><i class="fas fa-sitemap sp-sub-dot"></i>Struktur Organisasi</a></li>
+              <li><a class="sp-sub-link " href="/profil/fasilitas.html"><i class="fas fa-building sp-sub-dot"></i>Fasilitas</a></li>
+              <li><a class="sp-sub-link active" href="/profil/sertifikasi.html"><i class="fas fa-certificate sp-sub-dot"></i>Akreditasi</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 3. Program Keahlian [+] -->
+        <li class="side-nav-item has-sub ">
+          <div class="side-nav-row">
+            <div class="sp-menu-card flex-grow-1 " style="cursor:pointer;">
+              <div class="sp-card-icon sp-icon-program">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <span class="sp-card-title flex-grow-1">Program Keahlian</span>
+              <span class="sp-sub-sign">+</span>
+            </div>
+          </div>
+          <div class="side-submenu-panel">
+            <ul class="list-unstyled mb-0 sp-submenu">
+              <li><a class="sp-sub-link " href="/program/tkj.html"><i class="fas fa-network-wired sp-sub-dot"></i>Teknik Komputer &amp; Jaringan</a></li>
+              <li><a class="sp-sub-link " href="/program/rpl.html"><i class="fas fa-code sp-sub-dot"></i>Rekayasa Perangkat Lunak</a></li>
+              <li><a class="sp-sub-link " href="/program/tav.html"><i class="fas fa-tv sp-sub-dot"></i>Teknik Audio Video</a></li>
+              <li><a class="sp-sub-link " href="/program/dkv.html"><i class="fas fa-paint-brush sp-sub-dot"></i>Desain Komunikasi Visual</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 4. Berita & Artikel -->
+        <li class="side-nav-item">
+          <a class="sp-menu-card " href="/berita.html">
+            <div class="sp-card-icon sp-icon-berita">
+              <i class="fas fa-newspaper"></i>
+            </div>
+            <span class="sp-card-title flex-grow-1">Berita &amp; Artikel</span>
+            <div class="sp-card-arrow"><i class="fas fa-chevron-right"></i></div>
+          </a>
+        </li>
+
+        <!-- 5. Galeri -->
+        <li class="side-nav-item">
+          <a class="sp-menu-card " href="/galeri.html">
+            <div class="sp-card-icon sp-icon-galeri">
+              <i class="fas fa-images"></i>
+            </div>
+            <span class="sp-card-title flex-grow-1">Galeri</span>
+            <div class="sp-card-arrow"><i class="fas fa-chevron-right"></i></div>
+          </a>
+        </li>
+
+        <!-- 6. PPDB [+] -->
+        <li class="side-nav-item has-sub ">
+          <div class="side-nav-row">
+            <div class="sp-menu-card flex-grow-1 " style="cursor:pointer;">
+              <div class="sp-card-icon sp-icon-ppdb">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <span class="sp-card-title flex-grow-1">PPDB</span>
+              <span class="sp-sub-sign">+</span>
+            </div>
+          </div>
+          <div class="side-submenu-panel">
+            <ul class="list-unstyled mb-0 sp-submenu">
+              <li><a class="sp-sub-link " href="/ppdb/informasi.html"><i class="fas fa-info-circle sp-sub-dot"></i>Informasi &amp; Alur PPDB</a></li>
+              <li><a class="sp-sub-link " href="/ppdb/formulir.html"><i class="fas fa-file-signature sp-sub-dot"></i>Formulir Pendaftaran</a></li>
+              <li><a class="sp-sub-link " href="/ppdb/pengumuman.html"><i class="fas fa-bullhorn sp-sub-dot"></i>Pengumuman Hasil</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 7. Kontak -->
+        <li class="side-nav-item">
+          <a class="sp-menu-card " href="/kontak.html">
+            <div class="sp-card-icon sp-icon-kontak">
+              <i class="fas fa-headset"></i>
+            </div>
+            <span class="sp-card-title flex-grow-1">Kontak</span>
+            <div class="sp-card-arrow"><i class="fas fa-chevron-right"></i></div>
+          </a>
+        </li>
+
+        <!-- 8. Alumni & Karir [+] -->
+        <li class="side-nav-item has-sub ">
+          <div class="side-nav-row">
+            <div class="sp-menu-card flex-grow-1 " style="cursor:pointer;">
+              <div class="sp-card-icon sp-icon-alumni">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <span class="sp-card-title flex-grow-1">Alumni &amp; Karir</span>
+              <span class="sp-sub-sign">+</span>
+            </div>
+          </div>
+          <div class="side-submenu-panel">
+            <ul class="list-unstyled mb-0 sp-submenu">
+              <li><a class="sp-sub-link " href="/alumni/alumni.html"><i class="fas fa-users sp-sub-dot"></i>Alumni</a></li>
+              <li><a class="sp-sub-link " href="/alumni/karir.html"><i class="fas fa-briefcase sp-sub-dot"></i>Pengembangan Karir</a></li>
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+  </div><!-- /.side-panel-body -->
+
+  <!-- ── FOOTER ── -->
+  <div class="side-panel-footer">
+    <a href="/ppdb/formulir.html" class="side-btn-ppdb">
+      <i class="fas fa-book-open me-2"></i>
+      <span>Daftar PPDB Online</span>
+      <i class="fas fa-arrow-right ms-auto sp-ppdb-arrow"></i>
+    </a>
+  </div><!-- /.side-panel-footer -->
+
+</div><!-- /#side-menu-panel -->
+
+<!-- ─── WRAPPER KONTEN WEBSITE (SEMUA KONTEN UTAMA & FOOTER ADA DI DALAM SINI) ─── -->
+<div id="page-content-wrapper">
+
+<!-- ─── HEADER HERO & BREADCRUMB ───────────────────────────── -->
+<section class="subpage-header">
+  <div class="container text-center">
+    <h1 class="subpage-title">Akreditasi Sekolah dan Program Jurusan</h1>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb breadcrumb-custom justify-content-center">
+        <li class="breadcrumb-item"><a href="/index.html">Beranda</a></li>
+        <li class="breadcrumb-item"><a href="javascript:void(0)">Profil</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Sertifikasi</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<!-- ─── SECTION 1: SERTIFIKASI SEKOLAH (AKREDITASI INSTITUSI) ── -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+      <h2 class="section-title">MUTU &amp; LEGALITAS RESMI</h2>
+      <div class="title-line"></div>
+      <p class="text-muted">
+        SMK Cerdas Satu Bangsa telah terakreditasi secara resmi oleh Badan Akreditasi Nasional Sekolah/Madrasah (BAN-S/M) dengan standar mutu pendidikan vokasi bertaraf nasional.
+      </p>
+    </div>
+
+    <!-- Featured School Accreditation Card -->
+    <div class="cert-main-card p-4 p-lg-5" data-aos="fade-up" data-aos-delay="100">
+      <div class="row align-items-center g-4 g-lg-5">
+        
+        <!-- Kolom Preview Sertifikat -->
+        <div class="col-lg-5 text-center">
+          <div class="position-relative d-inline-block w-100 rounded-3 overflow-hidden shadow-sm border">
+            <img src="/assets/img/sertifikasi/sekolah.jpg"
+                 alt="Sertifikat Akreditasi SMK Cerdas Satu Bangsa"
+                 class="img-fluid w-100"
+                 style="object-fit: cover; max-height: 320px;">
+          </div>
+        </div>
+
+        <!-- Kolom Informasi & Tombol Aksi -->
+        <div class="col-lg-7">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="badge bg-success px-3 py-2 rounded-pill font-poppins" style="font-size: 0.85rem; letter-spacing: 0.5px;">
+              <i class="fas fa-check-circle me-1"></i> Terakreditasi A (Unggul)
+            </span>
+            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill font-poppins" style="font-size: 0.85rem;">
+              Skor: 96 / 100
+            </span>
+          </div>
+
+          <h3 class="fw-bold text-dark font-poppins mb-2" style="font-size: 1.65rem;">
+            Sertifikat Akreditasi Institusi Sekolah
+          </h3>
+          <p class="text-muted mb-4" style="line-height: 1.7;">
+            Berdasarkan Keputusan Badan Akreditasi Nasional Pendidikan Anak Usia Dini, Pendidikan Dasar, dan Pendidikan Menengah (BAN-PDM), SMK Cerdas Satu Bangsa ditetapkan menyandang predikat <strong>Akreditasi A</strong> yang mencakup keunggulan kurikulum vokasi, kualitas tenaga pendidik, sarana laboratorium modern, dan manajemen sekolah berorientasi industri.
+          </p>
+
+          <div class="row g-3 mb-4">
+            <div class="col-sm-6">
+              <div class="p-3 bg-light rounded-3 border">
+                <small class="text-muted d-block mb-1">Nomor SK Akreditasi:</small>
+                <strong class="text-dark font-poppins">123/BAN-PDM/SK/2026</strong>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-3 bg-light rounded-3 border">
+                <small class="text-muted d-block mb-1">Masa Berlaku:</small>
+                <strong class="text-dark font-poppins">2026 – 2031 (5 Tahun)</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tombol Lihat & Download -->
+          <div class="d-flex gap-3 flex-wrap">
+            <button type="button"
+               class="btn-cert-view px-4 py-2 btn-lihat-dokumen"
+               data-document-title="Sertifikat Akreditasi Institusi Sekolah"
+               data-document-description="Dokumen Akreditasi SMK Cerdas Satu Bangsa"
+               data-document-image="/assets/img/sertifikasi/sekolah.jpg"
+               data-document-download="Sertifikat-Akreditasi-SMK-Cerdas-Satu-Bangsa.jpg"
+               title="Lihat Sertifikat PDF">
+              <i class="fas fa-eye me-1"></i> Lihat Dokumen
+            </button>
+            <a href="/assets/img/sertifikasi/sekolah.jpg"
+               download="Sertifikat-Akreditasi-SMK-Cerdas-Satu-Bangsa.jpg"
+               class="btn-cert-download px-4 py-2"
+               title="Download Sertifikat">
+              <i class="fas fa-download me-1"></i> Download Sertifikat
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECTION 2: SERTIFIKASI JURUSAN (GRID 4 KOLOM) ────────── -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+      <h2 class="section-title">STANDAR KOMPETENSI KEAHLIAN</h2>
+      <div class="title-line"></div>
+      <p class="text-muted">
+        Setiap program keahlian diuji dan diakreditasi secara berkala untuk memastikan relevansi keahlian siswa dengan standar kebutuhan industri 4.0.
+      </p>
+    </div>
+
+    <!-- Grid 4 Kolom Jurusan -->
+    <div class="row g-4">
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="cert-jurusan-card">
+          
+          <!-- Image Preview -->
+          <div class="cert-img-wrapper">
+            <img src="/assets/img/sertifikasi/TKJ.jpg" alt="Sertifikat Akreditasi Teknik Komputer & Jaringan">
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <h4 class="fw-bold font-poppins text-dark mb-0">TKJ</h4>
+              <span class="badge bg-light text-muted border small">2026 – 2031</span>
+            </div>
+            
+            <div class="fw-semibold text-emerald small mb-2">Teknik Komputer & Jaringan</div>
+            
+            <p class="text-muted small mb-3" style="font-size: 0.82rem; line-height: 1.5;">
+              <i class="fas fa-certificate text-emerald me-1"></i> Terakreditasi A (Unggul)<br>
+              <span class="text-muted" style="font-size: 0.78rem;">Nomor SK Akreditasi: 123/BAN-PDM/SK/2026</span>
+            </p>
+
+            <!-- Buttons: [Lihat] (Biru) & [Download] (Hijau) -->
+            <div class="d-flex gap-2 mt-auto pt-3 border-top">
+              <button type="button"
+                 class="btn-cert-view flex-grow-1 btn-lihat-dokumen"
+                 data-document-title="Sertifikat Akreditasi Teknik Komputer & Jaringan"
+                 data-document-description="Dokumen Akreditasi Program Keahlian TKJ"
+                 data-document-image="/assets/img/sertifikasi/TKJ.jpg"
+                 data-document-download="Sertifikat-Akreditasi-TKJ.jpg"
+                 title="Lihat Sertifikat TKJ">
+                <i class="fas fa-eye"></i> Lihat
+              </button>
+              <a href="/assets/img/sertifikasi/TKJ.jpg"
+                 download="Sertifikat-Akreditasi-TKJ.png"
+                 class="btn-cert-download flex-grow-1"
+                 title="Download Sertifikat TKJ">
+                <i class="fas fa-download"></i> Unduh
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="cert-jurusan-card">
+          
+          <!-- Image Preview -->
+          <div class="cert-img-wrapper">
+            <img src="/assets/img/sertifikasi/RPL.jpg" alt="Sertifikat Akreditasi Rekayasa Perangkat Lunak">
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <h4 class="fw-bold font-poppins text-dark mb-0">RPL</h4>
+              <span class="badge bg-light text-muted border small">2026 – 2031</span>
+            </div>
+            
+            <div class="fw-semibold text-emerald small mb-2">Rekayasa Perangkat Lunak</div>
+            
+            <p class="text-muted small mb-3" style="font-size: 0.82rem; line-height: 1.5;">
+              <i class="fas fa-certificate text-emerald me-1"></i> Terakreditasi A (Unggul)<br>
+              <span class="text-muted" style="font-size: 0.78rem;">Nomor SK Akreditasi: 123/BAN-PDM/SK/2026</span>
+            </p>
+
+            <!-- Buttons: [Lihat] (Biru) & [Download] (Hijau) -->
+            <div class="d-flex gap-2 mt-auto pt-3 border-top">
+              <button type="button"
+                 class="btn-cert-view flex-grow-1 btn-lihat-dokumen"
+                 data-document-title="Sertifikat Akreditasi Rekayasa Perangkat Lunak"
+                 data-document-description="Dokumen Akreditasi Program Keahlian RPL"
+                 data-document-image="/assets/img/sertifikasi/RPL.jpg"
+                 data-document-download="Sertifikat-Akreditasi-RPL.jpg"
+                 title="Lihat Sertifikat RPL">
+                <i class="fas fa-eye"></i> Lihat
+              </button>
+              <a href="/assets/img/sertifikasi/RPL.jpg"
+                 download="Sertifikat-Akreditasi-RPL.png"
+                 class="btn-cert-download flex-grow-1"
+                 title="Download Sertifikat RPL">
+                <i class="fas fa-download"></i> Unduh
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="cert-jurusan-card">
+          
+          <!-- Image Preview -->
+          <div class="cert-img-wrapper">
+            <img src="/assets/img/sertifikasi/DKV.jpg" alt="Sertifikat Akreditasi Desain Komunikasi Visual">
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <h4 class="fw-bold font-poppins text-dark mb-0">DKV</h4>
+              <span class="badge bg-light text-muted border small">2026 – 2031</span>
+            </div>
+            
+            <div class="fw-semibold text-emerald small mb-2">Desain Komunikasi Visual</div>
+            
+            <p class="text-muted small mb-3" style="font-size: 0.82rem; line-height: 1.5;">
+              <i class="fas fa-certificate text-emerald me-1"></i> Terakreditasi B (Baik Sekali)<br>
+              <span class="text-muted" style="font-size: 0.78rem;">Nomor SK Akreditasi: 123/BAN-PDM/SK/2026</span>
+            </p>
+
+            <!-- Buttons: [Lihat] (Biru) & [Download] (Hijau) -->
+            <div class="d-flex gap-2 mt-auto pt-3 border-top">
+              <button type="button"
+                 class="btn-cert-view flex-grow-1 btn-lihat-dokumen"
+                 data-document-title="Sertifikat Akreditasi Desain Komunikasi Visual"
+                 data-document-description="Dokumen Akreditasi Program Keahlian DKV"
+                 data-document-image="/assets/img/sertifikasi/DKV.jpg"
+                 data-document-download="Sertifikat-Akreditasi-DKV.jpg"
+                 title="Lihat Sertifikat DKV">
+                <i class="fas fa-eye"></i> Lihat
+              </button>
+              <a href="/assets/img/sertifikasi/DKV.jpg"
+                 download="Sertifikat-Akreditasi-DKV.png"
+                 class="btn-cert-download flex-grow-1"
+                 title="Download Sertifikat DKV">
+                <i class="fas fa-download"></i> Unduh
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="cert-jurusan-card">
+          
+          <!-- Image Preview -->
+          <div class="cert-img-wrapper">
+            <img src="/assets/img/sertifikasi/TAV.jpg" alt="Sertifikat Akreditasi Teknik Audio Video">
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <h4 class="fw-bold font-poppins text-dark mb-0">TAV</h4>
+              <span class="badge bg-light text-muted border small">2026 – 2031</span>
+            </div>
+            
+            <div class="fw-semibold text-emerald small mb-2">Teknik Audio Video</div>
+            
+            <p class="text-muted small mb-3" style="font-size: 0.82rem; line-height: 1.5;">
+              <i class="fas fa-certificate text-emerald me-1"></i> Masih Terakreditasi (Proses Re-Akreditasi)<br>
+              <span class="text-muted" style="font-size: 0.78rem;">Nomor SK Akreditasi: 123/BAN-PDM/SK/2026</span>
+            </p>
+
+            <!-- Buttons: [Lihat] (Biru) & [Download] (Hijau) -->
+            <div class="d-flex gap-2 mt-auto pt-3 border-top">
+              <button type="button"
+                 class="btn-cert-view flex-grow-1 btn-lihat-dokumen"
+                 data-document-title="Sertifikat Akreditasi Teknik Audio Video"
+                 data-document-description="Dokumen Akreditasi Program Keahlian TAV"
+                 data-document-image="/assets/img/sertifikasi/TAV.jpg"
+                 data-document-download="Sertifikat-Akreditasi-TAV.jpg"
+                 title="Lihat Sertifikat TAV">
+                <i class="fas fa-eye"></i> Lihat
+              </button>
+              <a href="/assets/img/sertifikasi/TAV.jpg"
+                 download="Sertifikat-Akreditasi-TAV.png"
+                 class="btn-cert-download flex-grow-1"
+                 title="Download Sertifikat TAV">
+                <i class="fas fa-download"></i> Unduh
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+          </div>
+
+  </div>
+</section>
+
+<!-- Viewer dokumen akreditasi -->
+<div id="modal-dokumen-akreditasi" class="modal-dokumen-akreditasi" role="dialog" aria-modal="true" aria-labelledby="judul-dokumen-akreditasi" hidden>
+  <div class="modal-dokumen-dialog">
+    <header class="modal-dokumen-header">
+      <div class="d-flex align-items-center gap-2">
+        <span class="modal-dokumen-icon"><i class="fas fa-certificate"></i></span>
+        <div>
+          <h2 id="judul-dokumen-akreditasi">Dokumen Akreditasi</h2>
+          <p id="deskripsi-dokumen-akreditasi">Sertifikat resmi sekolah</p>
+        </div>
+      </div>
+      <button type="button" id="btn-tutup-dokumen-akreditasi" class="modal-dokumen-close" aria-label="Tutup dokumen" title="Tutup">
+        <i class="fas fa-times"></i>
+      </button>
+    </header>
+
+    <div class="modal-dokumen-tools" aria-label="Kontrol dokumen">
+      <button type="button" id="btn-dokumen-zoom-out" class="btn-dokumen-tool" title="Kecilkan tampilan" aria-label="Kecilkan tampilan"><i class="fas fa-minus"></i></button>
+      <output id="dokumen-zoom-level" class="dokumen-zoom-level" aria-live="polite">100%</output>
+      <button type="button" id="btn-dokumen-zoom-in" class="btn-dokumen-tool" title="Perbesar tampilan" aria-label="Perbesar tampilan"><i class="fas fa-plus"></i></button>
+      <button type="button" id="btn-dokumen-fullscreen" class="btn-dokumen-tool" title="Layar penuh" aria-label="Layar penuh"><i class="fas fa-expand"></i></button>
+      <a id="btn-dokumen-download" class="btn-dokumen-tool" href="#" download title="Unduh dokumen" aria-label="Unduh dokumen"><i class="fas fa-download"></i></a>
+    </div>
+
+    <div id="dokumen-akreditasi-stage" class="dokumen-akreditasi-stage">
+      <img id="gambar-dokumen-akreditasi" alt="Pratinjau dokumen akreditasi" hidden>
+    </div>
+  </div>
+</div>
+
+<style>
+  body.modal-dokumen-open { overflow: hidden; }
+
+  .modal-dokumen-akreditasi {
+    position: fixed;
+    inset: 0;
+    z-index: 11000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(15, 23, 42, .62);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+  }
+
+  .modal-dokumen-dialog {
+    width: min(1120px, 96vw);
+    height: min(850px, 92vh);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 28px 80px rgba(2, 6, 23, .45);
+  }
+
+  .modal-dokumen-header,
+  .modal-dokumen-tools {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .modal-dokumen-header {
+    justify-content: space-between;
+    min-height: 78px;
+    padding: 14px 20px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .modal-dokumen-header h2 { margin: 0; color: #0f172a; font: 700 1.05rem/1.25 'Poppins', sans-serif; }
+  .modal-dokumen-header p { margin: 2px 0 0; color: #64748b; font-size: .8rem; }
+  .modal-dokumen-icon { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: #ecfdf5; color: #059669; }
+  .modal-dokumen-close { width: 40px; height: 40px; border: 1px solid #e2e8f0; border-radius: 50%; background: #fff; color: #111827; font-size: 1rem; cursor: pointer; }
+
+  .modal-dokumen-tools {
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 10px 16px;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+  }
+
+  .btn-dokumen-tool {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid #dbe3ee;
+    border-radius: 9px;
+    background: #fff;
+    color: #334155;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .btn-dokumen-tool:hover,
+  .btn-dokumen-tool:focus { border-color: #93c5fd; color: #1d4ed8; background: #eff6ff; }
+  .dokumen-zoom-level { width: 48px; color: #475569; font-size: .78rem; font-weight: 700; text-align: center; }
+  .dokumen-akreditasi-stage { --dokumen-zoom: 1; position: relative; flex: 1; overflow: auto; background: #475569; }
+  .dokumen-akreditasi-stage img { display: block; width: calc(100% - 56px); height: auto; margin: 28px auto; background: #fff; box-shadow: 0 6px 22px rgba(15, 23, 42, .32); transform: scale(var(--dokumen-zoom)); transform-origin: top center; }
+  .modal-dokumen-dialog:fullscreen { width: 100vw; height: 100vh; border-radius: 0; }
+
+  @media (max-width: 575.98px) {
+    .modal-dokumen-akreditasi { padding: 10px; }
+    .modal-dokumen-dialog { width: 100%; height: 96vh; border-radius: 13px; }
+    .modal-dokumen-header { min-height: 66px; padding: 10px 12px; }
+    .modal-dokumen-header p { display: none; }
+    .modal-dokumen-tools { padding: 8px; }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('modal-dokumen-akreditasi');
+    const dialog = modal ? modal.querySelector('.modal-dokumen-dialog') : null;
+    const closeButton = document.getElementById('btn-tutup-dokumen-akreditasi');
+    const title = document.getElementById('judul-dokumen-akreditasi');
+    const description = document.getElementById('deskripsi-dokumen-akreditasi');
+    const image = document.getElementById('gambar-dokumen-akreditasi');
+    const stage = document.getElementById('dokumen-akreditasi-stage');
+    const download = document.getElementById('btn-dokumen-download');
+    const zoomLabel = document.getElementById('dokumen-zoom-level');
+    const fullscreenButton = document.getElementById('btn-dokumen-fullscreen');
+    let activeButton = null;
+    let zoom = 1;
+
+    if (!modal || !dialog || !closeButton || !image || !stage) return;
+    if (modal.parentElement !== document.body) document.body.appendChild(modal);
+
+    function setZoom(value) {
+      zoom = Math.min(1.8, Math.max(.8, value));
+      zoomLabel.textContent = Math.round(zoom * 100) + '%';
+      stage.style.setProperty('--dokumen-zoom', zoom);
+    }
+
+    function updateFullscreenControl() {
+      const isFullscreen = document.fullscreenElement === dialog;
+      fullscreenButton.querySelector('i').className = isFullscreen ? 'fas fa-compress' : 'fas fa-expand';
+      fullscreenButton.title = isFullscreen ? 'Kecilkan layar' : 'Layar penuh';
+      fullscreenButton.setAttribute('aria-label', fullscreenButton.title);
+    }
+
+    document.querySelectorAll('.btn-lihat-dokumen').forEach(function (button) {
+      button.addEventListener('click', function () {
+        activeButton = button;
+        zoom = 1;
+        setZoom(zoom);
+        title.textContent = button.dataset.documentTitle;
+        description.textContent = button.dataset.documentDescription;
+        image.src = button.dataset.documentImage;
+        image.alt = button.dataset.documentTitle;
+        image.hidden = false;
+        download.href = button.dataset.documentImage;
+        download.download = button.dataset.documentDownload;
+        modal.hidden = false;
+        document.body.classList.add('modal-dokumen-open');
+        closeButton.focus();
+      });
+    });
+
+    closeButton.addEventListener('click', function () {
+      modal.hidden = true;
+      document.body.classList.remove('modal-dokumen-open');
+      if (activeButton) activeButton.focus();
+    });
+    document.getElementById('btn-dokumen-zoom-in').addEventListener('click', function () { setZoom(zoom + .1); });
+    document.getElementById('btn-dokumen-zoom-out').addEventListener('click', function () { setZoom(zoom - .1); });
+    fullscreenButton.addEventListener('click', function () {
+      if (document.fullscreenElement) document.exitFullscreen();
+      else if (dialog.requestFullscreen) dialog.requestFullscreen();
+    });
+    document.addEventListener('fullscreenchange', updateFullscreenControl);
+  });
+</script>
+
+
+  <!-- ─── MAIN FOOTER ───────────────────────────────────────── -->
+  <footer class="main-footer">
+    <div class="container-fluid px-3 px-md-4 px-lg-5">
+      <div class="row justify-content-between g-4">
+
+        <!-- Column 1: School Identity (Pojok Kiri) -->
+        <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="0">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img src="/assets/img/logo/logo.png"
+                 onerror="this.onerror=null; this.src='/src/logos/logo22.png';"
+                 alt="Logo SMK Cerdas Satu Bangsa"
+                 style="height: 54px; width: auto; object-fit: contain;">
+            <div class="d-flex flex-column justify-content-center">
+              <span class="fw-bold text-white font-poppins" style="font-size: 1.15rem; letter-spacing: 0.5px; line-height: 1.2;">SMK CERDAS SATU BANGSA</span>
+              <span style="color: #38bdf8; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.3px; margin-top: 3px;">Siap Bertalenta dan Kerja</span>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <p class="mb-2" style="color: #cbd5e1; font-size: 0.92rem; font-weight: 500;">
+              Temukan kami di platform lainnya :
+            </p>
+            <div class="d-flex gap-2 flex-wrap">
+              <!-- Facebook (Warna Asli) -->
+              <button type="button" class="social-btn social-btn-fb" title="Facebook" onclick="showSosmedUnavailable('Facebook')">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+              <!-- Instagram (Warna Gradasi Asli) -->
+              <button type="button" class="social-btn social-btn-ig" title="Instagram" onclick="showSosmedUnavailable('Instagram')">
+                <i class="fab fa-instagram"></i>
+              </button>
+              <!-- YouTube (Warna Merah Asli) -->
+              <button type="button" class="social-btn social-btn-yt" title="YouTube" onclick="showSosmedUnavailable('YouTube')">
+                <i class="fab fa-youtube"></i>
+              </button>
+              <!-- TikTok (Warna Hitam + Aksen Neon Asli) -->
+              <button type="button" class="social-btn social-btn-tk" title="TikTok" onclick="showSosmedUnavailable('TikTok')">
+                <i class="fab fa-tiktok"></i>
+              </button>
+            </div>
+            <p class="mb-0 mt-3" style="color:#94a3b8; font-size:0.82rem;">
+              &copy; 2026              <strong style="color:#cbd5e1;">SMK Cerdas Satu Bangsa</strong>.
+              Hak Cipta Dilindungi Undang-Undang.
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 2 & 3: Tautan Cepat & Kontak Kami (Pojok Kanan) -->
+        <div class="col-lg-6 col-md-12">
+          <div class="row justify-content-lg-end g-4">
+
+            <!-- Column: Quick Links -->
+            <div class="col-sm-6 col-12 col-lg-5" data-aos="fade-up" data-aos-delay="80">
+              <h5 class="footer-title">Tautan Cepat</h5>
+              <ul class="footer-links">
+                <li><a href="/profil/sejarah.html"><i class="fas fa-chevron-right me-1 small"></i> Sejarah Sekolah</a></li>
+                <li><a href="/profil/visi-misi.html"><i class="fas fa-chevron-right me-1 small"></i> Visi &amp; Misi</a></li>
+                <li><a href="/profil/fasilitas.html"><i class="fas fa-chevron-right me-1 small"></i> Fasilitas</a></li>
+                <li><a href="/profil/sertifikasi.html"><i class="fas fa-chevron-right me-1 small"></i> Akreditasi</a></li>
+                <li><a href="/berita.html"><i class="fas fa-chevron-right me-1 small"></i> Berita Terbaru</a></li>
+              </ul>
+            </div>
+
+            <!-- Column: Contact Us -->
+            <div class="col-sm-6 col-12 col-lg-7" data-aos="fade-up" data-aos-delay="160">
+              <h5 class="footer-title">Kontak Kami</h5>
+              <ul class="footer-links">
+                <li class="d-flex align-items-start gap-2 mb-3">
+                  <i class="fas fa-map-marker-alt mt-1" style="color:#34d399;"></i>
+                  <span>Jl. Cirebon No.1, Pasar Baru, Medan Kota, Kota Medan, Sumatera Utara 20212</span>
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="fas fa-phone-alt" style="color:#34d399;"></i>
+                  <span>(061) 1234567</span>
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="fab fa-whatsapp" style="color:#34d399;"></i>
+                  <span>WhatsApp Hotline: 081234567890</span>
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <i class="fas fa-envelope" style="color:#34d399;"></i>
+                  <span>info@smkcerdassatubangsa.sch.id</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container-fluid -->
+  </footer>
+
+  <!-- ─── MODAL DI TENGAH LAYAR: NOTIFIKASI SOSMED BELUM TERSEDIA ─ -->
+  <div id="sosmed-modal-overlay" onclick="closeSosmedModal()" hidden>
+    <div class="sosmed-modal-box" onclick="event.stopPropagation()">
+      <!-- Baris Atas: Icon berdampingan dengan Tulisan Pemberitahuan -->
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <div class="sosmed-modal-icon">
+          <i class="fas fa-info-circle"></i>
+        </div>
+        <h6 class="fw-bold text-dark font-poppins mb-0" style="font-size: 1.05rem;">Pemberitahuan</h6>
+      </div>
+      <!-- Baris Bawah: Rata Kiri -->
+      <p id="sosmed-modal-text" class="text-muted text-start mb-0" style="font-size: 0.9rem; line-height: 1.5;">
+        saat ini belum tersedia...
+      </p>
+    </div>
+  </div>
+
+  <!-- ─── SCRIPTS ──────────────────────────────────────────── -->
+</div><!-- /#page-content-wrapper -->
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS – Animate on Scroll -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Custom JS Utama -->
+  <script src="/assets/js/script.js"></script>
+
+  <!-- Inline Styles & Scripts for Social Media Modal -->
+  <style>
+    /* ─── Tombol Media Sosial Minimalis & Sederhana ────────── */
+    .social-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: #ffffff !important;
+      font-size: 0.82rem;
+      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .social-btn:hover {
+      transform: translateY(-2px) !important;
+      opacity: 0.9;
+    }
+
+    /* Facebook */
+    .social-btn-fb {
+      background: #1877f2 !important;
+    }
+
+    /* Instagram */
+    .social-btn-ig {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+    }
+
+    /* YouTube */
+    .social-btn-yt {
+      background: #ff0000 !important;
+    }
+
+    /* TikTok */
+    .social-btn-tk {
+      background: #000000 !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+
+    /* ─── Modal Popup di Tengah Layar (Kompak & Modern) ─────── */
+    #sosmed-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    /* Mencegah popup sosial sempat terlihat saat HTML halaman baru pertama dimuat. */
+    #sosmed-modal-overlay[hidden] {
+      display: none !important;
+    }
+
+    #sosmed-modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    body.sosmed-modal-open {
+      overflow: hidden;
+    }
+
+    .sosmed-modal-box {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px 24px;
+      width: 90%;
+      max-width: 360px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+      transform: scale(0.88);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+    }
+
+    #sosmed-modal-overlay.active .sosmed-modal-box {
+      transform: scale(1);
+    }
+
+    .sosmed-modal-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #ecfdf5;
+      color: #059669;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+  </style>
+
+  <script>
+    let sosmedTimeout;
+    let sosmedHideTimeout;
+
+    function showSosmedUnavailable(platformName) {
+      const overlay = document.getElementById('sosmed-modal-overlay');
+      const textEl = document.getElementById('sosmed-modal-text');
+      if (textEl) {
+        textEl.innerHTML = platformName 
+          ? `Akun <strong>${platformName}</strong> saat ini belum tersedia...`
+          : `saat ini belum tersedia...`;
+      }
+      if (overlay) {
+        // Footer berada dalam pembungkus halaman. Pindahkan overlay ke body
+        // agar position: fixed selalu mengacu ke viewport yang sedang dilihat.
+        if (overlay.parentElement !== document.body) {
+          document.body.appendChild(overlay);
+        }
+        clearTimeout(sosmedHideTimeout);
+        overlay.hidden = false;
+        document.body.classList.add('sosmed-modal-open');
+        requestAnimationFrame(() => overlay.classList.add('active'));
+        clearTimeout(sosmedTimeout);
+        // Otomatis menghilang setelah 3 detik
+        sosmedTimeout = setTimeout(() => {
+          closeSosmedModal();
+        }, 3000);
+      }
+    }
+
+    function closeSosmedModal() {
+      const overlay = document.getElementById('sosmed-modal-overlay');
+      if (overlay) {
+        overlay.classList.remove('active');
+        document.body.classList.remove('sosmed-modal-open');
+        clearTimeout(sosmedTimeout);
+        clearTimeout(sosmedHideTimeout);
+        sosmedHideTimeout = setTimeout(() => {
+          if (!overlay.classList.contains('active')) overlay.hidden = true;
+        }, 260);
+      }
+    }
+
+    // Browser dapat memulihkan halaman dari cache (back/forward). Pastikan
+    // notifikasi lama tidak ikut muncul kembali pada halaman yang dipulihkan.
+    window.addEventListener('pageshow', closeSosmedModal);
+  </script>
+
+</body>
+</html>

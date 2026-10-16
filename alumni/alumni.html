@@ -1,0 +1,2191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil & Jejak Alumni – SMK Cerdas Satu Bangsa</title>
+  <meta name="description" content="Website Resmi SMK Cerdas Satu Bangsa – Sekolah Kejuruan Unggul, Berkarakter & Berprestasi.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/logo/logo.png">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- AOS – Animate on Scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <!-- Google Fonts (Poppins & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS Utama -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<!-- ─── MAIN NAVBAR ──────────────────────────────────────────── -->
+<nav class="navbar custom-navbar sticky-top" id="main-navbar" aria-label="Navigasi Utama">
+  <div class="container-fluid px-3 px-md-4 px-lg-5 d-flex align-items-center justify-content-between">
+
+    <!-- POJOK KIRI: Logo Sekolah + Nama & Slogan -->
+    <div class="navbar-brand-wrapper d-flex align-items-center gap-2 gap-sm-3 m-0 p-0" style="cursor: default; user-select: none;">
+      <img src="/assets/img/logo/logo.png"
+           onerror="this.onerror=null; this.src='/src/logos/logo22.png';"
+           alt="Logo SMK Cerdas Satu Bangsa"
+           class="navbar-brand-logo">
+      <div class="d-flex flex-column justify-content-center">
+        <span class="brand-school-name">SMK CERDAS SATU BANGSA</span>
+        <span class="brand-school-slogan">Siap Bertalenta dan Kerja</span>
+      </div>
+    </div>
+
+    <!-- POJOK KANAN: Tombol Daftar PPDB + Hamburger -->
+    <div class="d-flex align-items-center gap-3 ms-auto">
+      <!-- Tombol Daftar PPDB -->
+      <a href="/ppdb/formulir.html"
+         class="btn btn-ppdb-header rounded-pill px-3 py-2 text-nowrap d-inline-flex align-items-center">
+        <i class="fas fa-book-open me-2"></i>
+        <span class="raindrop-text">
+          <span class="drop-char" style="--i:0;">D</span><span class="drop-char" style="--i:1;">a</span><span class="drop-char" style="--i:2;">f</span><span class="drop-char" style="--i:3;">t</span><span class="drop-char" style="--i:4;">a</span><span class="drop-char" style="--i:5;">r</span><span class="drop-space">&nbsp;</span><span class="drop-char" style="--i:7;">P</span><span class="drop-char" style="--i:8;">P</span><span class="drop-char" style="--i:9;">D</span><span class="drop-char" style="--i:10;">B</span><span class="drop-space">&nbsp;</span><span class="drop-char" style="--i:12;">O</span><span class="drop-char" style="--i:13;">n</span><span class="drop-char" style="--i:14;">l</span><span class="drop-char" style="--i:15;">i</span><span class="drop-char" style="--i:16;">n</span><span class="drop-char" style="--i:17;">e</span>
+        </span>
+      </a>
+
+      <!-- Tombol menu tiga garis -->
+      <button id="hamburger-btn"
+              class="hamburger-custom border-0 bg-transparent p-0"
+              type="button"
+              aria-expanded="false"
+              aria-label="Buka Menu Navigasi"
+              title="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- End Navbar -->
+
+<!-- ─── SIDE PANEL MENU — PREMIUM 3D REDESIGN ─── -->
+<div id="side-menu-panel" aria-label="Menu Navigasi" role="dialog" aria-modal="true">
+
+  <!-- ── HEADER dengan background gelap premium ── -->
+  <div class="side-panel-header">
+    <div class="d-flex align-items-center gap-2" style="user-select:none; -webkit-user-select:none;">
+      <div class="sp-logo-ring">
+        <img src="/assets/img/logo/logo.png"
+             onerror="this.onerror=null; this.src='/src/logos/logo22.png';"
+             alt="Logo">
+      </div>
+      <div style="line-height:1.25;">
+        <div class="sp-school-name">SMK CERDAS SATU BANGSA</div>
+        <div class="sp-school-slogan">Siap Bertalenta dan Kerja</div>
+      </div>
+    </div>
+    <button id="side-panel-close" class="side-panel-close-btn" type="button" aria-label="Tutup Menu">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- ── BODY ── -->
+  <div class="side-panel-body">
+    <nav aria-label="Menu Navigasi">
+      <ul class="side-nav-list list-unstyled m-0 p-0">
+
+        <!-- 1. Beranda -->
+        <li class="side-nav-item">
+          <a class="sp-menu-card " href="/index.html">
+            <div class="sp-card-icon sp-icon-home">
+              <i class="fas fa-home"></i>
+            </div>
+            <span class="sp-card-title flex-grow-1">Beranda</span>
+            <div class="sp-card-arrow"><i class="fas fa-chevron-right"></i></div>
+          </a>
+        </li>
+
+        <!-- 2. Profil [+] -->
+        <li class="side-nav-item has-sub ">
+          <div class="side-nav-row">
+            <div class="sp-menu-card flex-grow-1 " style="cursor:pointer;">
+              <div class="sp-card-icon sp-icon-profil">
+                <i class="fas fa-university"></i>
+              </div>
+              <span class="sp-card-title flex-grow-1">Profil</span>
+              <span class="sp-sub-sign">+</span>
+            </div>
+          </div>
+          <div class="side-submenu-panel">
+            <ul class="list-unstyled mb-0 sp-submenu">
+              <li><a class="sp-sub-link " href="/profil/sejarah.html"><i class="fas fa-landmark sp-sub-dot"></i>Sejarah Sekolah</a></li>
+              <li><a class="sp-sub-link " href="/profil/visi-misi.html"><i class="fas fa-star sp-sub-dot"></i>Visi &amp; Misi</a></li>
+              <li><a class="sp-sub-link " href="/profil/struktur.html"><i class="fas fa-sitemap sp-sub-dot"></i>Struktur Organisasi</a></li>
+              <li><a class="sp-sub-link " href="/profil/fasilitas.html"><i class="fas fa-building sp-sub-dot"></i>Fasilitas</a></li>
+              <li><a class="sp-sub-link " href="/profil/sertifikasi.html"><i class="fas fa-certificate sp-sub-dot"></i>Akreditasi</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 3. Program Keahlian [+] -->
+        <li class="side-nav-item has-sub ">
+          <div class="side-nav-row">
+            <div class="sp-menu-card flex-grow-1 " style="cursor:pointer;">
+              <div class="sp-card-icon sp-icon-program">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <span class="sp-card-title flex-grow-1">Program Keahlian</span>
+              <span class="sp-sub-sign">+</span>
+            </div>
+          </div>
+          <div class="side-submenu-panel">
+            <ul class="list-unstyled mb-0 sp-submenu">
+              <li><a class="sp-sub-link " href="/program/tkj.html"><i class="fas fa-network-wired sp-sub-dot"></i>Teknik Komputer &amp; Jaringan</a></li>
+              <li><a class="sp-sub-link " href="/program/rpl.html"><i class="fas fa-code sp-sub-dot"></i>Rekayasa Perangkat Lunak</a></li>
+              <li><a class="sp-sub-link " href="/program/tav.html"><i class="fas fa-tv sp-sub-dot"></i>Teknik Audio Video</a></li>
+              <li><a class="sp-sub-link " href="/program/dkv.html"><i class="fas fa-paint-brush sp-sub-dot"></i>Desain Komunikasi Visual</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 4. Berita & Artikel -->
+        <li class="side-nav-item">
+          <a class="sp-menu-card " href="/berita.html">
+            <div class="sp-card-icon sp-icon-berita">
+              <i class="fas fa-newspaper"></i>
+            </div>
+            <span class="sp-card-title flex-grow-1">Berita &amp; Artikel</span>
+            <div class="sp-card-arrow"><i class="fas fa-chevron-right"></i></div>
+          </a>
+        </li>
+
+        <!-- 5. Galeri -->
+        <li class="side-nav-item">
+          <a class="sp-menu-card " href="/galeri.html">
+            <div class="sp-card-icon sp-icon-galeri">
+              <i class="fas fa-images"></i>
+            </div>
+            <span class="sp-card-title flex-grow-1">Galeri</span>
+            <div class="sp-card-arrow"><i class="fas fa-chevron-right"></i></div>
+          </a>
+        </li>
+
+        <!-- 6. PPDB [+] -->
+        <li class="side-nav-item has-sub ">
+          <div class="side-nav-row">
+            <div class="sp-menu-card flex-grow-1 " style="cursor:pointer;">
+              <div class="sp-card-icon sp-icon-ppdb">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <span class="sp-card-title flex-grow-1">PPDB</span>
+              <span class="sp-sub-sign">+</span>
+            </div>
+          </div>
+          <div class="side-submenu-panel">
+            <ul class="list-unstyled mb-0 sp-submenu">
+              <li><a class="sp-sub-link " href="/ppdb/informasi.html"><i class="fas fa-info-circle sp-sub-dot"></i>Informasi &amp; Alur PPDB</a></li>
+              <li><a class="sp-sub-link " href="/ppdb/formulir.html"><i class="fas fa-file-signature sp-sub-dot"></i>Formulir Pendaftaran</a></li>
+              <li><a class="sp-sub-link " href="/ppdb/pengumuman.html"><i class="fas fa-bullhorn sp-sub-dot"></i>Pengumuman Hasil</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 7. Kontak -->
+        <li class="side-nav-item">
+          <a class="sp-menu-card " href="/kontak.html">
+            <div class="sp-card-icon sp-icon-kontak">
+              <i class="fas fa-headset"></i>
+            </div>
+            <span class="sp-card-title flex-grow-1">Kontak</span>
+            <div class="sp-card-arrow"><i class="fas fa-chevron-right"></i></div>
+          </a>
+        </li>
+
+        <!-- 8. Alumni & Karir [+] -->
+        <li class="side-nav-item has-sub expanded">
+          <div class="side-nav-row">
+            <div class="sp-menu-card flex-grow-1 active" style="cursor:pointer;">
+              <div class="sp-card-icon sp-icon-alumni">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <span class="sp-card-title flex-grow-1">Alumni &amp; Karir</span>
+              <span class="sp-sub-sign">−</span>
+            </div>
+          </div>
+          <div class="side-submenu-panel">
+            <ul class="list-unstyled mb-0 sp-submenu">
+              <li><a class="sp-sub-link active" href="/alumni/alumni.html"><i class="fas fa-users sp-sub-dot"></i>Alumni</a></li>
+              <li><a class="sp-sub-link " href="/alumni/karir.html"><i class="fas fa-briefcase sp-sub-dot"></i>Pengembangan Karir</a></li>
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+  </div><!-- /.side-panel-body -->
+
+  <!-- ── FOOTER ── -->
+  <div class="side-panel-footer">
+    <a href="/ppdb/formulir.html" class="side-btn-ppdb">
+      <i class="fas fa-book-open me-2"></i>
+      <span>Daftar PPDB Online</span>
+      <i class="fas fa-arrow-right ms-auto sp-ppdb-arrow"></i>
+    </a>
+  </div><!-- /.side-panel-footer -->
+
+</div><!-- /#side-menu-panel -->
+
+<!-- ─── WRAPPER KONTEN WEBSITE (SEMUA KONTEN UTAMA & FOOTER ADA DI DALAM SINI) ─── -->
+<div id="page-content-wrapper">
+
+<!-- Header Banner -->
+<section class="subpage-header">
+  <div class="container text-center">
+    <h1 class="subpage-title mb-2">Jejak Langkah &amp; Inspirasi Alumni</h1>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb breadcrumb-custom justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="/index.html">Beranda</a></li>
+        <li class="breadcrumb-item">Alumni &amp; Karir</li>
+        <li class="breadcrumb-item active" aria-current="page">Alumni</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<!-- Main Alumni Section -->
+<section class="alumni-showcase-section py-5">
+  <div class="container-fluid px-3 px-md-4 px-xl-5 py-lg-3">
+
+    <!-- Section Intro Header -->
+    <div class="text-center max-w-800 mx-auto mb-4" data-aos="fade-up">
+      <h2 class="section-title">Kebanggaan SMK Cerdas Satu Bangsa</h2>
+      <div class="title-line"></div>
+      <p class="text-muted mt-3">
+        Membuktikan kualitas lulusan vokasi yang kompeten, berkarakter, dan berdaya saing tinggi di dunia industri, korporasi, maritim, hingga kampus ternama.
+      </p>
+    </div>
+
+    <!-- Filter Buttons (Semua, Jurusan) -->
+    <div class="alumni-filter-wrapper text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+      <div class="d-inline-flex flex-wrap justify-content-center gap-2 p-2 bg-white rounded-pill shadow-sm border">
+        <button type="button" class="btn btn-filter-pill active" data-filter="all">
+          <i class="fas fa-users me-1"></i> Semua (12)
+        </button>
+        <button type="button" class="btn btn-filter-pill" data-filter="RPL">
+          <i class="fas fa-laptop-code me-1"></i> RPL
+        </button>
+        <button type="button" class="btn btn-filter-pill" data-filter="TKJ">
+          <i class="fas fa-network-wired me-1"></i> TKJ
+        </button>
+        <button type="button" class="btn btn-filter-pill" data-filter="DKV">
+          <i class="fas fa-palette me-1"></i> DKV
+        </button>
+        <button type="button" class="btn btn-filter-pill" data-filter="TAV">
+          <i class="fas fa-bolt me-1"></i> TAV
+        </button>
+      </div>
+    </div>
+
+    <!-- Alumni Grid Cards (4 Card per Baris: col-xl-3 col-lg-4 col-md-6) -->
+    <div class="row g-4 justify-content-center" id="alumni-cards-container">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 alumni-card-item" 
+           data-jurusan="RPL"
+           data-gender="perempuan"
+           data-aos="fade-up" 
+           data-aos-delay="0">
+        <div class="alumni-card">
+          
+          <!-- Card Header & Photo -->
+          <div class="alumni-card-top">
+            <div class="alumni-photo-box">
+              <img src="/assets/img/alumni/A-02.jpg" 
+                   alt="Natasha Aurelia" 
+                   class="alumni-avatar"
+                   loading="lazy"
+                   onerror="this.onerror=null; this.src='https://placehold.co/400x500?text=Foto+Alumni';">
+              <span class="alumni-badge-floating">
+                <i class="fas fa-code"></i>
+              </span>
+            </div>
+            
+            <div class="alumni-identity">
+              <div class="mb-1">
+                <span class="alumni-batch">
+                  <i class="far fa-calendar-check me-1"></i> Lulusan 2025                </span>
+              </div>
+              <h3 class="alumni-name" title="Natasha Aurelia">Natasha Aurelia</h3>
+              <p class="alumni-full-major text-muted" title="Rekayasa Perangkat Lunak (RPL)">
+                <i class="fas fa-graduation-cap me-1"></i> Rekayasa Perangkat Lunak (RPL)              </p>
+            </div>
+          </div>
+
+          <!-- Career Detail Box -->
+          <div class="alumni-career-box">
+            <div class="career-icon-pill">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="career-text">
+              <span class="career-role">Junior Programmer</span>
+              <span class="career-company">PT ByteCraft Teknologi Indonesia</span>
+            </div>
+          </div>
+
+          <!-- Testimonial Quote -->
+          <div class="alumni-quote-wrap">
+            <i class="fas fa-quote-left quote-mark"></i>
+            <p class="alumni-quote-text">
+              Nggak nyangka baru lulus langsung dapet kerja jadi programmer. Bekas kodingan dan logika pemrograman dari lab RPL Cerdas Satu Bangsa benar-benar fondasi utamanya.            </p>
+          </div>
+
+          <!-- Card Bottom Info -->
+          <div class="alumni-card-footer">
+            <span class="verified-tag">
+              <i class="fas fa-circle-check text-success me-1"></i> Terverifikasi
+            </span>
+            <span class="industry-tag" title="Teknologi Informasi">
+              <i class="fas fa-tag me-1"></i> Teknologi Informasi            </span>
+          </div>
+
+        </div>
+      </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 alumni-card-item" 
+           data-jurusan="DKV"
+           data-gender="perempuan"
+           data-aos="fade-up" 
+           data-aos-delay="80">
+        <div class="alumni-card">
+          
+          <!-- Card Header & Photo -->
+          <div class="alumni-card-top">
+            <div class="alumni-photo-box">
+              <img src="/assets/img/alumni/A-04.jpg" 
+                   alt="Rania Salma Salsabila" 
+                   class="alumni-avatar"
+                   loading="lazy"
+                   onerror="this.onerror=null; this.src='https://placehold.co/400x500?text=Foto+Alumni';">
+              <span class="alumni-badge-floating">
+                <i class="fas fa-graduation-cap"></i>
+              </span>
+            </div>
+            
+            <div class="alumni-identity">
+              <div class="mb-1">
+                <span class="alumni-batch">
+                  <i class="far fa-calendar-check me-1"></i> Lulusan 2025                </span>
+              </div>
+              <h3 class="alumni-name" title="Rania Salma Salsabila">Rania Salma Salsabila</h3>
+              <p class="alumni-full-major text-muted" title="Desain Komunikasi Visual (DKV)">
+                <i class="fas fa-graduation-cap me-1"></i> Desain Komunikasi Visual (DKV)              </p>
+            </div>
+          </div>
+
+          <!-- Career Detail Box -->
+          <div class="alumni-career-box">
+            <div class="career-icon-pill">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="career-text">
+              <span class="career-role">Mahasiswi Program Studi Desain</span>
+              <span class="career-company">Institut Teknologi Bandung (ITB)</span>
+            </div>
+          </div>
+
+          <!-- Testimonial Quote -->
+          <div class="alumni-quote-wrap">
+            <i class="fas fa-quote-left quote-mark"></i>
+            <p class="alumni-quote-text">
+              Anak SMK bisa tembus ITB? Bisa banget! Portofolio desain waktu di jurusan DKV SMK Cerdas Satu Bangsa jadi modal utama aku lolos seleksi masuk kampus impian ini.            </p>
+          </div>
+
+          <!-- Card Bottom Info -->
+          <div class="alumni-card-footer">
+            <span class="verified-tag">
+              <i class="fas fa-circle-check text-success me-1"></i> Terverifikasi
+            </span>
+            <span class="industry-tag" title="Pendidikan Tinggi PTN">
+              <i class="fas fa-tag me-1"></i> Pendidikan Tinggi PTN            </span>
+          </div>
+
+        </div>
+      </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 alumni-card-item" 
+           data-jurusan="TKJ"
+           data-gender="laki-laki"
+           data-aos="fade-up" 
+           data-aos-delay="160">
+        <div class="alumni-card">
+          
+          <!-- Card Header & Photo -->
+          <div class="alumni-card-top">
+            <div class="alumni-photo-box">
+              <img src="/assets/img/alumni/B-03.jpg" 
+                   alt="Rizky Ramadhan" 
+                   class="alumni-avatar"
+                   loading="lazy"
+                   onerror="this.onerror=null; this.src='https://placehold.co/400x500?text=Foto+Alumni';">
+              <span class="alumni-badge-floating">
+                <i class="fas fa-network-wired"></i>
+              </span>
+            </div>
+            
+            <div class="alumni-identity">
+              <div class="mb-1">
+                <span class="alumni-batch">
+                  <i class="far fa-calendar-check me-1"></i> Lulusan 2025                </span>
+              </div>
+              <h3 class="alumni-name" title="Rizky Ramadhan">Rizky Ramadhan</h3>
+              <p class="alumni-full-major text-muted" title="Teknik Komputer dan Jaringan (TKJ)">
+                <i class="fas fa-graduation-cap me-1"></i> Teknik Komputer dan Jaringan (TKJ)              </p>
+            </div>
+          </div>
+
+          <!-- Career Detail Box -->
+          <div class="alumni-career-box">
+            <div class="career-icon-pill">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="career-text">
+              <span class="career-role">Field Technician</span>
+              <span class="career-company">PT Telkom Akses (IndiHome)</span>
+            </div>
+          </div>
+
+          <!-- Testimonial Quote -->
+          <div class="alumni-quote-wrap">
+            <i class="fas fa-quote-left quote-mark"></i>
+            <p class="alumni-quote-text">
+              Baru beberapa bulan lulus, langsung dapet job jadi teknisi lapangan. Masalah kabel fiber optik, router, dan jaringan udah biasa kita ulik di bengkel TKJ SMK Cerdas Satu Bangsa.            </p>
+          </div>
+
+          <!-- Card Bottom Info -->
+          <div class="alumni-card-footer">
+            <span class="verified-tag">
+              <i class="fas fa-circle-check text-success me-1"></i> Terverifikasi
+            </span>
+            <span class="industry-tag" title="Infrastruktur Jaringan Fiber">
+              <i class="fas fa-tag me-1"></i> Infrastruktur Jaringan Fiber            </span>
+          </div>
+
+        </div>
+      </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 alumni-card-item" 
+           data-jurusan="TKJ"
+           data-gender="perempuan"
+           data-aos="fade-up" 
+           data-aos-delay="240">
+        <div class="alumni-card">
+          
+          <!-- Card Header & Photo -->
+          <div class="alumni-card-top">
+            <div class="alumni-photo-box">
+              <img src="/assets/img/alumni/A-01.jpg" 
+                   alt="Siti Nurhaliza" 
+                   class="alumni-avatar"
+                   loading="lazy"
+                   onerror="this.onerror=null; this.src='https://placehold.co/400x500?text=Foto+Alumni';">
+              <span class="alumni-badge-floating">
+                <i class="fas fa-headset"></i>
+              </span>
+            </div>
+            
+            <div class="alumni-identity">
+              <div class="mb-1">
+                <span class="alumni-batch">
+                  <i class="far fa-calendar-check me-1"></i> Lulusan 2024                </span>
+              </div>
+              <h3 class="alumni-name" title="Siti Nurhaliza">Siti Nurhaliza</h3>
+              <p class="alumni-full-major text-muted" title="Teknik Komputer dan Jaringan (TKJ)">
+                <i class="fas fa-graduation-cap me-1"></i> Teknik Komputer dan Jaringan (TKJ)              </p>
+            </div>
+          </div>
+
+          <!-- Career Detail Box -->
+          <div class="alumni-career-box">
+            <div class="career-icon-pill">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="career-text">
+              <span class="career-role">Call Center Officer</span>
+              <span class="career-company">PT Telekomunikasi Selular (Telkomsel)</span>
+            </div>
+          </div>
+
+          <!-- Testimonial Quote -->
+          <div class="alumni-quote-wrap">
+            <i class="fas fa-quote-left quote-mark"></i>
+            <p class="alumni-quote-text">
+              Skill komunikasi dan dasar jaringan yang diajarin pas praktik di SMK Cerdas Satu Bangsa ngebantu banget pas kerja di dunia customer service operator seluler kayak gini.            </p>
+          </div>
+
+          <!-- Card Bottom Info -->
+          <div class="alumni-card-footer">
+            <span class="verified-tag">
+              <i class="fas fa-circle-check text-success me-1"></i> Terverifikasi
+            </span>
+            <span class="industry-tag" title="Telekomunikasi">
+              <i class="fas fa-tag me-1"></i> Telekomunikasi            </span>
+          </div>
+
+        </div>
+      </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 alumni-card-item" 
+           data-jurusan="RPL"
+           data-gender="perempuan"
+           data-aos="fade-up" 
+           data-aos-delay="0">
+        <div class="alumni-card">
+          
+          <!-- Card Header & Photo -->
+          <div class="alumni-card-top">
+            <div class="alumni-photo-box">
+              <img src="/assets/img/alumni/A-03.jpg" 
+                   alt="Naura Prameswari" 
+                   class="alumni-avatar"
+                   loading="lazy"
+                   onerror="this.onerror=null; this.src='https://placehold.co/400x500?text=Foto+Alumni';">
+              <span class="alumni-badge-floating">
+                <i class="fas fa-building-columns"></i>
+              </span>
+            </div>
+            
+            <div class="alumni-identity">
+              <div class="mb-1">
+                <span class="alumni-batch">
+                  <i class="far fa-calendar-check me-1"></i> Lulusan 2024                </span>
+              </div>
+              <h3 class="alumni-name" title="Naura Prameswari">Naura Prameswari</h3>
+              <p class="alumni-full-major text-muted" title="Rekayasa Perangkat Lunak (RPL)">
+                <i class="fas fa-graduation-cap me-1"></i> Rekayasa Perangkat Lunak (RPL)              </p>
+            </div>
+          </div>
+
+          <!-- Career Detail Box -->
+          <div class="alumni-career-box">
+            <div class="career-icon-pill">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="career-text">
+              <span class="career-role">Staff Administrasi &amp; Sistem</span>
+              <span class="career-company">PT Bank Mandiri (Persero) Tbk</span>
+            </div>
+          </div>
+
+          <!-- Testimonial Quote -->
+          <div class="alumni-quote-wrap">
+            <i class="fas fa-quote-left quote-mark"></i>
+            <p class="alumni-quote-text">
+              Masuk BUMN impian ternyata bisa diwujudkan lulusan SMK. Disiplin dan etos kerja yang dibentuk di sekolah ngebantu aku beradaptasi cepat di lingkungan korporasi.            </p>
+          </div>
+
+          <!-- Card Bottom Info -->
+          <div class="alumni-card-footer">
+            <span class="verified-tag">
+              <i class="fas fa-circle-check text-success me-1"></i> Terverifikasi
+            </span>
+            <span class="industry-tag" title="BUMN Perbankan">
+              <i class="fas fa-tag me-1"></i> BUMN Perbankan            </span>
+          </div>
+
+        </div>
+      </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 alumni-card-item" 
+           data-jurusan="TAV"
+           data-gender="laki-laki"
+           data-aos="fade-up" 
+           data-aos-delay="80">
+        <div class="alumni-card">
+          
+          <!-- Card Header & Photo -->
+          <div class="alumni-card-top">
+            <div class="alumni-photo-box">
+              <img src="/assets/img/alumni/B-02.jpg" 
+                   alt="Bayu Saputra" 
+                   class="alumni-avatar"
+                   loading="lazy"
+                   onerror="this.onerror=null; this.src='https://placehold.co/400x500?text=Foto+Alumni';">
+              <span class="alumni-badge-floating">
+                <i class="fas fa-ship"></i>
+              </span>
+            </div>
+            
+            <div class="alumni-identity">
+              <div class="mb-1">
+                <span class="alumni-batch">
+                  <i class="far fa-calendar-check me-1"></i> Lulusan 2024                </span>
+              </div>
+              <h3 class="alumni-name" title="Bayu Saputra">Bayu Saputra</h3>
+              <p class="alumni-full-major text-muted" title="Teknik Audio Video (TAV)">
+                <i class="fas fa-graduation-cap me-1"></i> Teknik Audio Video (TAV)              </p>
+            </div>
+          </div>
+
+          <!-- Career Detail Box -->
+          <div class="alumni-career-box">
+            <div class="career-icon-pill">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="career-text">
+              <span class="career-role">Electrical &amp; Navigation Crew (ABK)</span>
+              <span class="career-company">PT Pelayaran Samudera Raya</span>
+            </div>
+          </div>
+
+          <!-- Testimonial Quote -->
+          <div class="alumni-quote-wrap">
+            <i class="fas fa-quote-left quote-mark"></i>
+            <p class="alumni-quote-text">
+              Kerja di perkapalan nuntut ketelitian tinggi, terutama bagian sistem kelistrikan dan navigasi kapal. Dasar teknik yang kuat dari sekolah ngebantu aku cepat beradaptasi di laut.            </p>
+          </div>
+
+          <!-- Card Bottom Info -->
+          <div class="alumni-card-footer">
+            <span class="verified-tag">
+              <i class="fas fa-circle-check text-success me-1"></i> Terverifikasi
+            </span>
+            <span class="industry-tag" title="Pelayaran &amp; Kelautan">
+              <i class="fas fa-tag me-1"></i> Pelayaran &amp; Kelautan            </span>
+          </div>
+
+        </div>
+      </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 alumni-card-item" 
+           data-jurusan="TAV"
+           data-gender="laki-laki"
+           data-aos="fade-up" 
+           data-aos-delay="160">
+        <div class="alumni-card">
+          
+          <!-- Card Header & Photo -->
+          <div class="alumni-card-top">
+            <div class="alumni-photo-box">
+              <img src="/assets/img/alumni/B-05.jpg" 
+                   alt="Fajar Nugroho" 
+                   class="alumni-avatar"
+                   loading="lazy"
+                   onerror="this.onerror=null; this.src='https://placehold.co/400x500?text=Foto+Alumni';">
+              <span class="alumni-badge-floating">
+                <i class="fas fa-wrench"></i>
+              </span>
+            </div>
+            
+            <div class="alumni-identity">
+              <div class="mb-1">
+                <span class="alumni-batch">
+                  <i class="far fa-calendar-check me-1"></i> Lulusan 2024                </span>
+              </div>
+              <h3 class="alumni-name" title="Fajar Nugroho">Fajar Nugroho</h3>
+              <p class="alumni-full-major text-muted" title="Teknik Audio Video (TAV)">
+                <i class="fas fa-graduation-cap me-1"></i> Teknik Audio Video (TAV)              </p>
+            </div>
+          </div>
+
+          <!-- Career Detail Box -->
+          <div class="alumni-career-box">
+            <div class="career-icon-pill">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="career-text">
+              <span class="career-role">Maintenance Technician</span>
+              <span class="career-company">PT Sinar Mitra Elektronika</span>
+            </div>
+          </div>
+
+          <!-- Testimonial Quote -->
+          <div class="alumni-quote-wrap">
+            <i class="fas fa-quote-left quote-mark"></i>
+            <p class="alumni-quote-text">
+              Praktek merakit dan perbaikan perangkat elektronik waktu sekolah relevan banget sama pekerjaan aku sekarang sebagai teknisi pemeliharaan mesin industri swasta.            </p>
+          </div>
+
+          <!-- Card Bottom Info -->
+          <div class="alumni-card-footer">
+            <span class="verified-tag">
+              <i class="fas fa-circle-check text-success me-1"></i> Terverifikasi
+            </span>
+            <span class="industry-tag" title="Elektronika &amp; Manufaktur">
+              <i class="fas fa-tag me-1"></i> Elektronika &amp; Manufaktur            </span>
+          </div>
+
+        </div>
+      </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 alumni-card-item" 
+           data-jurusan="DKV"
+           data-gender="perempuan"
+           data-aos="fade-up" 
+           data-aos-delay="240">
+        <div class="alumni-card">
+          
+          <!-- Card Header & Photo -->
+          <div class="alumni-card-top">
+            <div class="alumni-photo-box">
+              <img src="/assets/img/alumni/A-06.jpg" 
+                   alt="Nadira Zahra Kirana" 
+                   class="alumni-avatar"
+                   loading="lazy"
+                   onerror="this.onerror=null; this.src='https://placehold.co/400x500?text=Foto+Alumni';">
+              <span class="alumni-badge-floating">
+                <i class="fas fa-palette"></i>
+              </span>
+            </div>
+            
+            <div class="alumni-identity">
+              <div class="mb-1">
+                <span class="alumni-batch">
+                  <i class="far fa-calendar-check me-1"></i> Lulusan 2024                </span>
+              </div>
+              <h3 class="alumni-name" title="Nadira Zahra Kirana">Nadira Zahra Kirana</h3>
+              <p class="alumni-full-major text-muted" title="Desain Komunikasi Visual (DKV)">
+                <i class="fas fa-graduation-cap me-1"></i> Desain Komunikasi Visual (DKV)              </p>
+            </div>
+          </div>
+
+          <!-- Career Detail Box -->
+          <div class="alumni-career-box">
+            <div class="career-icon-pill">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="career-text">
+              <span class="career-role">Digital Content Illustrator</span>
+              <span class="career-company">PT Creativa Digital Studio</span>
+            </div>
+          </div>
+
+          <!-- Testimonial Quote -->
+          <div class="alumni-quote-wrap">
+            <i class="fas fa-quote-left quote-mark"></i>
+            <p class="alumni-quote-text">
+              Terima kasih buat guru-guru DKV SMK Cerdas Satu Bangsa yang udah sabar ngajarin teknik dasar ilustrasi digital, komposisi warna, sampai cara bangun portofolio. Sangat ngebantu saya beradaptasi cepat di industri kreatif digital saat ini.            </p>
+          </div>
+
+          <!-- Card Bottom Info -->
+          <div class="alumni-card-footer">
+            <span class="verified-tag">
+              <i class="fas fa-circle-check text-success me-1"></i> Terverifikasi
+            </span>
+            <span class="industry-tag" title="Industri Kreatif &amp; Digital Art">
+              <i class="fas fa-tag me-1"></i> Industri Kreatif &amp; Digital Art            </span>
+          </div>
+
+        </div>
+      </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 alumni-card-item" 
+           data-jurusan="TAV"
+           data-gender="perempuan"
+           data-aos="fade-up" 
+           data-aos-delay="0">
+        <div class="alumni-card">
+          
+          <!-- Card Header & Photo -->
+          <div class="alumni-card-top">
+            <div class="alumni-photo-box">
+              <img src="/assets/img/alumni/A-05.jpg" 
+                   alt="Kirana Maharani" 
+                   class="alumni-avatar"
+                   loading="lazy"
+                   onerror="this.onerror=null; this.src='https://placehold.co/400x500?text=Foto+Alumni';">
+              <span class="alumni-badge-floating">
+                <i class="fas fa-tv"></i>
+              </span>
+            </div>
+            
+            <div class="alumni-identity">
+              <div class="mb-1">
+                <span class="alumni-batch">
+                  <i class="far fa-calendar-check me-1"></i> Lulusan 2023                </span>
+              </div>
+              <h3 class="alumni-name" title="Kirana Maharani">Kirana Maharani</h3>
+              <p class="alumni-full-major text-muted" title="Teknik Audio Video (TAV)">
+                <i class="fas fa-graduation-cap me-1"></i> Teknik Audio Video (TAV)              </p>
+            </div>
+          </div>
+
+          <!-- Career Detail Box -->
+          <div class="alumni-career-box">
+            <div class="career-icon-pill">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="career-text">
+              <span class="career-role">Broadcast &amp; Master Control Room Staff</span>
+              <span class="career-company">Nusa TV</span>
+            </div>
+          </div>
+
+          <!-- Testimonial Quote -->
+          <div class="alumni-quote-wrap">
+            <i class="fas fa-quote-left quote-mark"></i>
+            <p class="alumni-quote-text">
+              Terbiasa pegang alat audio video dan peralatan studio di sekolah bikin aku nggak kaget lagi waktu terjun langsung kerja di dunia penyiaran televisi nasional.            </p>
+          </div>
+
+          <!-- Card Bottom Info -->
+          <div class="alumni-card-footer">
+            <span class="verified-tag">
+              <i class="fas fa-circle-check text-success me-1"></i> Terverifikasi
+            </span>
+            <span class="industry-tag" title="Broadcasting &amp; Media">
+              <i class="fas fa-tag me-1"></i> Broadcasting &amp; Media            </span>
+          </div>
+
+        </div>
+      </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 alumni-card-item" 
+           data-jurusan="DKV"
+           data-gender="laki-laki"
+           data-aos="fade-up" 
+           data-aos-delay="80">
+        <div class="alumni-card">
+          
+          <!-- Card Header & Photo -->
+          <div class="alumni-card-top">
+            <div class="alumni-photo-box">
+              <img src="/assets/img/alumni/B-01.jpg" 
+                   alt="Dimas Pratama" 
+                   class="alumni-avatar"
+                   loading="lazy"
+                   onerror="this.onerror=null; this.src='https://placehold.co/400x500?text=Foto+Alumni';">
+              <span class="alumni-badge-floating">
+                <i class="fas fa-city"></i>
+              </span>
+            </div>
+            
+            <div class="alumni-identity">
+              <div class="mb-1">
+                <span class="alumni-batch">
+                  <i class="far fa-calendar-check me-1"></i> Lulusan 2023                </span>
+              </div>
+              <h3 class="alumni-name" title="Dimas Pratama">Dimas Pratama</h3>
+              <p class="alumni-full-major text-muted" title="Desain Komunikasi Visual (DKV)">
+                <i class="fas fa-graduation-cap me-1"></i> Desain Komunikasi Visual (DKV)              </p>
+            </div>
+          </div>
+
+          <!-- Career Detail Box -->
+          <div class="alumni-career-box">
+            <div class="career-icon-pill">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="career-text">
+              <span class="career-role">Property Consultant &amp; Marketing</span>
+              <span class="career-company">PT Graha Indah Propertindo</span>
+            </div>
+          </div>
+
+          <!-- Testimonial Quote -->
+          <div class="alumni-quote-wrap">
+            <i class="fas fa-quote-left quote-mark"></i>
+            <p class="alumni-quote-text">
+              Ilmu visual dan presentasi produk dari DKV ngebantu banget pas bikin materi promosi dan nawarin perumahan ke klien. Skill komunikasi di sekolah kepake habis!            </p>
+          </div>
+
+          <!-- Card Bottom Info -->
+          <div class="alumni-card-footer">
+            <span class="verified-tag">
+              <i class="fas fa-circle-check text-success me-1"></i> Terverifikasi
+            </span>
+            <span class="industry-tag" title="Properti &amp; Marketing">
+              <i class="fas fa-tag me-1"></i> Properti &amp; Marketing            </span>
+          </div>
+
+        </div>
+      </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 alumni-card-item" 
+           data-jurusan="RPL"
+           data-gender="laki-laki"
+           data-aos="fade-up" 
+           data-aos-delay="160">
+        <div class="alumni-card">
+          
+          <!-- Card Header & Photo -->
+          <div class="alumni-card-top">
+            <div class="alumni-photo-box">
+              <img src="/assets/img/alumni/B-04.jpg" 
+                   alt="Kevin Ardiansyah" 
+                   class="alumni-avatar"
+                   loading="lazy"
+                   onerror="this.onerror=null; this.src='https://placehold.co/400x500?text=Foto+Alumni';">
+              <span class="alumni-badge-floating">
+                <i class="fas fa-chart-line"></i>
+              </span>
+            </div>
+            
+            <div class="alumni-identity">
+              <div class="mb-1">
+                <span class="alumni-batch">
+                  <i class="far fa-calendar-check me-1"></i> Lulusan 2023                </span>
+              </div>
+              <h3 class="alumni-name" title="Kevin Ardiansyah">Kevin Ardiansyah</h3>
+              <p class="alumni-full-major text-muted" title="Rekayasa Perangkat Lunak (RPL)">
+                <i class="fas fa-graduation-cap me-1"></i> Rekayasa Perangkat Lunak (RPL)              </p>
+            </div>
+          </div>
+
+          <!-- Career Detail Box -->
+          <div class="alumni-career-box">
+            <div class="career-icon-pill">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="career-text">
+              <span class="career-role">Distributor Sales Executive (DSE)</span>
+              <span class="career-company">PT Indosat Ooredoo Hutchison Tbk</span>
+            </div>
+          </div>
+
+          <!-- Testimonial Quote -->
+          <div class="alumni-quote-wrap">
+            <i class="fas fa-quote-left quote-mark"></i>
+            <p class="alumni-quote-text">
+              Walaupun lulusan RPL, mental problem-solving dan kerja tim dari sekolah ngebantu banget buat negosiasi dan nge-handle area distribusi produk telekomunikasi di Indosat.            </p>
+          </div>
+
+          <!-- Card Bottom Info -->
+          <div class="alumni-card-footer">
+            <span class="verified-tag">
+              <i class="fas fa-circle-check text-success me-1"></i> Terverifikasi
+            </span>
+            <span class="industry-tag" title="Telekomunikasi Seluler">
+              <i class="fas fa-tag me-1"></i> Telekomunikasi Seluler            </span>
+          </div>
+
+        </div>
+      </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 alumni-card-item" 
+           data-jurusan="TAV"
+           data-gender="laki-laki"
+           data-aos="fade-up" 
+           data-aos-delay="240">
+        <div class="alumni-card">
+          
+          <!-- Card Header & Photo -->
+          <div class="alumni-card-top">
+            <div class="alumni-photo-box">
+              <img src="/assets/img/alumni/B-06.jpg" 
+                   alt="Satria Mahendra" 
+                   class="alumni-avatar"
+                   loading="lazy"
+                   onerror="this.onerror=null; this.src='https://placehold.co/400x500?text=Foto+Alumni';">
+              <span class="alumni-badge-floating">
+                <i class="fas fa-microchip"></i>
+              </span>
+            </div>
+            
+            <div class="alumni-identity">
+              <div class="mb-1">
+                <span class="alumni-batch">
+                  <i class="far fa-calendar-check me-1"></i> Lulusan 2023                </span>
+              </div>
+              <h3 class="alumni-name" title="Satria Mahendra">Satria Mahendra</h3>
+              <p class="alumni-full-major text-muted" title="Teknik Audio Video (TAV)">
+                <i class="fas fa-graduation-cap me-1"></i> Teknik Audio Video (TAV)              </p>
+            </div>
+          </div>
+
+          <!-- Career Detail Box -->
+          <div class="alumni-career-box">
+            <div class="career-icon-pill">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="career-text">
+              <span class="career-role">IoT Hardware Technician</span>
+              <span class="career-company">PT Nusantara IoT Solutions</span>
+            </div>
+          </div>
+
+          <!-- Testimonial Quote -->
+          <div class="alumni-quote-wrap">
+            <i class="fas fa-quote-left quote-mark"></i>
+            <p class="alumni-quote-text">
+              Waktu sekolah di TAV Cerdas Satu Bangsa, saya nggak cuma belajar teori elektronik dasar, tapi juga diajarin cara merakit mikrokontroler dan sensor. Ilmu itu bener-bener jadi modal utama saya pas kerja megang perangkat IoT di perusahaan sekarang.            </p>
+          </div>
+
+          <!-- Card Bottom Info -->
+          <div class="alumni-card-footer">
+            <span class="verified-tag">
+              <i class="fas fa-circle-check text-success me-1"></i> Terverifikasi
+            </span>
+            <span class="industry-tag" title="Teknologi IoT &amp; Elektronika">
+              <i class="fas fa-tag me-1"></i> Teknologi IoT &amp; Elektronika            </span>
+          </div>
+
+        </div>
+      </div>
+          </div>
+
+    <!-- Pagination Alumni (Sama seperti Berita & Galeri) -->
+    <div class="pagination-wrapper" id="alumni-pagination"></div>
+
+    <!-- Empty Filter Notice (Hidden by Default) -->
+    <div id="alumni-empty-state" class="text-center py-5 d-none">
+      <div class="empty-icon-wrap mb-3">
+        <i class="fas fa-user-slash fa-3x text-muted opacity-50"></i>
+      </div>
+      <h5 class="fw-bold text-dark">Tidak ada alumni yang sesuai kategori ini</h5>
+      <p class="text-muted">Silakan pilih kategori jurusan lain untuk melihat data alumni kami.</p>
+    </div>
+
+    <!-- Banner 1: Pendaftaran & Lowongan Kerja -->
+    <div class="alumni-cta-card cta-card-join mt-5 p-4 p-lg-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7 text-center text-lg-start">
+          <span class="cta-pill-badge mb-2">
+            <i class="fas fa-rocket me-1"></i> Waktunya Giliran Anda
+          </span>
+          <h3 class="cta-main-title mb-2">Siap Mengukir Cerita Sukses Berikutnya?</h3>
+          <p class="cta-main-desc mb-0">
+            Bergabunglah dengan SMK Cerdas Satu Bangsa. Dapatkan kurikulum berbasis industri terkini, laboratorium modern, serta bimbingan penyaluran karir langsung dari Bursa Kerja Khusus (BKK).
+          </p>
+        </div>
+        <div class="col-lg-5 text-center text-lg-end">
+          <div class="d-inline-flex flex-wrap justify-content-center justify-content-lg-end gap-3">
+            <a href="/ppdb/informasi.html" class="btn-cta-action btn-cta-ppdb">
+              Daftar PPDB
+            </a>
+            <a href="/alumni/karir.html" class="btn-cta-action btn-cta-lowongan">
+              Info Lowongan Kerja
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banner 2: Khusus Alumni (Terpisah) -->
+    <div class="alumni-cta-card cta-card-alumni mt-4 p-4 px-lg-5 py-lg-4">
+      <div class="row align-items-center g-3">
+        <div class="col-lg-8 text-center text-lg-start">
+          <div class="d-flex flex-column flex-sm-row align-items-center gap-3">
+            <div class="alumni-callout-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <div>
+              <h4 class="alumni-callout-title mb-1">Kamu Alumni SMK Cerdas Satu Bangsa?</h4>
+              <p class="alumni-callout-desc mb-0">
+                Daftarkan diri dan bagikan jejak kariermu agar namamu tampil di halaman alumni ini.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+          <button type="button" class="btn-cta-action btn-cta-alumni" onclick="openAlumniModal()">
+            Halo Alumni.!
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- Modal Form: Saya Alumni -->
+<div id="modalSayaAlumni" class="alumni-modal-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="modalAlumniTitle">
+  <div class="alumni-modal-box">
+
+    <!-- Header Modal -->
+    <div class="alumni-modal-header">
+      <div>
+        <h4 id="modalAlumniTitle" class="alumni-modal-title">
+          <i class="fas fa-user-graduate me-2"></i> Daftarkan Diri Sebagai Alumni
+        </h4>
+        <p class="alumni-modal-subtitle">Isi data berikut untuk menambahkan profil Anda ke halaman alumni kami.</p>
+      </div>
+      <button type="button" class="alumni-modal-close" onclick="closeAlumniModal()" aria-label="Tutup Modal">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- Body Modal -->
+    <div class="alumni-modal-body">
+      <form id="formSayaAlumni" novalidate onsubmit="submitAlumniForm(event)">
+
+        <div class="row g-3">
+
+          <!-- Nama Lengkap -->
+          <div class="col-sm-6">
+            <label class="alumni-form-label" for="al_nama">Nama Lengkap <span class="text-danger">*</span></label>
+            <input type="text" id="al_nama" name="nama"
+                   class="alumni-form-input"
+                   placeholder="Contoh: Budi Santoso"
+                   minlength="3" maxlength="80" required>
+            <div class="alumni-field-error" id="err_al_nama"></div>
+          </div>
+
+          <!-- Email Aktif -->
+          <div class="col-sm-6">
+            <label class="alumni-form-label" for="al_email">Alamat Email Aktif <span class="text-danger">*</span></label>
+            <input type="email" id="al_email" name="email"
+                   class="alumni-form-input"
+                   placeholder="Contoh: budi@gmail.com"
+                   autocomplete="email"
+                   required>
+            <div class="alumni-field-error" id="err_al_email"></div>
+          </div>
+
+          <!-- Jenis Kelamin -->
+          <div class="col-sm-6">
+            <label class="alumni-form-label" for="al_gender">Jenis Kelamin <span class="text-danger">*</span></label>
+            <select id="al_gender" name="jenis_kelamin" class="alumni-form-input" required>
+              <option value="" disabled selected>Pilih Jenis Kelamin</option>
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
+            <div class="alumni-field-error" id="err_al_gender"></div>
+          </div>
+
+          <!-- NISN -->
+          <div class="col-sm-6">
+            <label class="alumni-form-label" for="al_nisn">NISN <span class="text-danger">*</span></label>
+            <input type="text" id="al_nisn" name="nisn"
+                   class="alumni-form-input"
+                   placeholder="10 digit angka"
+                   maxlength="10"
+                   inputmode="numeric"
+                   required>
+            <div class="alumni-field-error" id="err_al_nisn"></div>
+          </div>
+
+          <!-- Tahun Lulus -->
+          <div class="col-sm-6">
+            <label class="alumni-form-label" for="al_tahun">Tahun Lulus <span class="text-danger">*</span></label>
+            <input type="number" id="al_tahun" name="tahun_lulus"
+                   class="alumni-form-input"
+                   placeholder="Contoh: 2023"
+                   min="2000" max="2026"
+                   required>
+            <div class="alumni-field-error" id="err_al_tahun"></div>
+          </div>
+
+          <!-- PT / Tempat Pekerjaan -->
+          <div class="col-sm-6">
+            <label class="alumni-form-label" for="al_perusahaan">Perusahaan / Instansi Saat Ini <span class="text-danger">*</span></label>
+            <input type="text" id="al_perusahaan" name="perusahaan"
+                   class="alumni-form-input"
+                   placeholder="Contoh: PT Telkom Indonesia"
+                   minlength="3" maxlength="100" required>
+            <div class="alumni-field-error" id="err_al_perusahaan"></div>
+          </div>
+
+          <!-- Posisi Kerja -->
+          <div class="col-12">
+            <label class="alumni-form-label" for="al_posisi">Posisi / Jabatan Saat Ini <span class="text-danger">*</span></label>
+            <input type="text" id="al_posisi" name="posisi"
+                   class="alumni-form-input"
+                   placeholder="Contoh: Network Engineer"
+                   minlength="3" maxlength="80" required>
+            <div class="alumni-field-error" id="err_al_posisi"></div>
+          </div>
+
+          <!-- Pesan Singkat -->
+          <div class="col-12">
+            <label class="alumni-form-label" for="al_pesan">Pesan Singkat Alumni <span class="text-danger">*</span></label>
+            <textarea id="al_pesan" name="pesan"
+                      class="alumni-form-input alumni-form-textarea"
+                      placeholder="Tuliskan pesan dan kesan..."
+                      minlength="80" maxlength="400" required
+                      rows="3"></textarea>
+            <div class="alumni-field-error" id="err_al_pesan"></div>
+            <div class="alumni-form-char-info d-flex justify-content-between align-items-center mt-1">
+              <span id="al_pesan_status" style="font-size: 0.76rem; color: #94A3B8; font-family: 'Poppins', sans-serif;">Minimal 80 karakter</span>
+              <span class="alumni-char-counter" id="al_pesan_counter">0 / 400</span>
+            </div>
+          </div>
+
+        </div><!-- /row -->
+
+        <!-- Alert success (hidden) -->
+        <div id="alumni-form-success" class="alumni-success-msg" style="display:none;">
+          <i class="fas fa-circle-check me-2"></i>
+          Data berhasil dikirim, silahkan tunggu respon operator melalui email. Terimakasih atas masukan anda dan tetap semangat.
+        </div>
+
+      </form>
+    </div>
+
+    <!-- Footer Modal -->
+    <div class="alumni-modal-footer">
+      <button type="submit" form="formSayaAlumni" class="btn-alumni-submit" id="btn-alumni-submit">
+        <i class="fas fa-paper-plane me-2"></i> Kirim Data
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<style>
+/* ── Tombol Saya Alumni ── */
+.btn-alumni-register {
+  background: #FFFFFF;
+  border: 1.5px solid #059669;
+  color: #059669;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.25s ease;
+}
+.btn-alumni-register:hover {
+  background: #059669;
+  color: #FFFFFF;
+  box-shadow: 0 6px 16px rgba(5,150,105,0.25);
+  transform: translateY(-2px);
+}
+
+/* ── Modal Overlay ── */
+.alumni-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: modalFadeIn 0.2s ease;
+}
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Modal Box ── */
+.alumni-modal-box {
+  background: #FFFFFF;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 640px;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.2);
+  animation: modalSlideUp 0.25s ease;
+}
+@keyframes modalSlideUp {
+  from { transform: translateY(24px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* ── Modal Header ── */
+.alumni-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 22px 24px 18px;
+  border-bottom: 1px solid #E2E8F0;
+}
+.alumni-modal-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0 0 4px;
+}
+.alumni-modal-subtitle {
+  font-size: 0.82rem;
+  color: #64748B;
+  margin: 0;
+}
+.alumni-modal-close {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+.alumni-modal-close:hover {
+  background: #F8FAFC;
+  border-color: #CBD5E1;
+  color: #DC2626;
+}
+
+/* ── Modal Body ── */
+.alumni-modal-body {
+  overflow-y: auto;
+  padding: 22px 24px;
+  flex: 1;
+}
+
+/* ── Form Elements ── */
+.alumni-form-label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+.alumni-form-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  color: #0F172A;
+  background: #FAFAFA;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+  appearance: auto;
+}
+.alumni-form-input:focus {
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5,150,105,0.12);
+  background: #FFFFFF;
+}
+.alumni-form-input.is-invalid {
+  border-color: #DC2626 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12) !important;
+  background-color: #FEF2F2 !important;
+}
+.alumni-field-error {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #DC2626;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  line-height: 1.35;
+  animation: alumniFadeInDown 0.2s ease;
+}
+.alumni-field-error.show {
+  display: flex;
+}
+.alumni-field-error::before {
+  content: "\f071";
+  font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 0.72rem;
+  flex-shrink: 0;
+  color: #DC2626;
+}
+@keyframes alumniFadeInDown {
+  from { opacity: 0; transform: translateY(-3px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.alumni-form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.alumni-form-hint {
+  font-size: 0.76rem;
+  color: #94A3B8;
+  margin-top: 4px;
+}
+.alumni-form-char-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+.alumni-char-counter {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #94A3B8;
+  font-family: 'Poppins', sans-serif;
+}
+.alumni-char-counter.warn  { color: #F59E0B; }
+.alumni-char-counter.limit { color: #EF4444; }
+
+/* ── Success Message ── */
+.alumni-success-msg {
+  margin-top: 18px;
+  padding: 14px 18px;
+  background: #ECFDF5;
+  border: 1.5px solid #A7F3D0;
+  border-radius: 12px;
+  color: #065F46;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+/* ── Modal Footer ── */
+.alumni-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 24px 20px;
+  border-top: 1px solid #E2E8F0;
+}
+.btn-alumni-cancel {
+  padding: 9px 20px;
+  border-radius: 40px;
+  border: 1.5px solid #E2E8F0;
+  background: #F8FAFC;
+  color: #64748B;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-alumni-cancel:hover {
+  border-color: #CBD5E1;
+  background: #F1F5F9;
+  color: #374151;
+}
+.btn-alumni-submit {
+  padding: 10px 24px;
+  border-radius: 40px;
+  border: none;
+  background: #059669;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(5,150,105,0.25);
+}
+.btn-alumni-submit:hover {
+  background: #047857;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(5,150,105,0.3);
+}
+.btn-alumni-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 576px) {
+  .alumni-modal-header { padding: 18px 18px 14px; }
+  .alumni-modal-body   { padding: 18px; }
+  .alumni-modal-footer { padding: 14px 18px 18px; }
+  .alumni-modal-box    { border-radius: 16px; }
+}
+</style>
+
+<script>
+/* ── Alumni Modal & Inline Validation ── */
+function setFieldError(fieldId, errorId, message) {
+  const field = document.getElementById(fieldId);
+  const errEl = document.getElementById(errorId);
+  if (!field || !errEl) return !message;
+
+  if (message) {
+    field.classList.add('is-invalid');
+    errEl.textContent = message;
+    errEl.classList.add('show');
+    return false;
+  } else {
+    field.classList.remove('is-invalid');
+    errEl.textContent = '';
+    errEl.classList.remove('show');
+    return true;
+  }
+}
+
+function clearAllErrors() {
+  document.querySelectorAll('#formSayaAlumni .is-invalid').forEach(el => el.classList.remove('is-invalid'));
+  document.querySelectorAll('#formSayaAlumni .alumni-field-error').forEach(el => {
+    el.textContent = '';
+    el.classList.remove('show');
+  });
+}
+
+function validateNama(showEmpty = false) {
+  const field = document.getElementById('al_nama');
+  if (!field) return true;
+  const val = field.value.trim();
+  let msg = '';
+  if (!val) {
+    if (showEmpty) msg = 'Nama lengkap wajib diisi.';
+  } else if (val.length < 3) {
+    msg = 'Nama lengkap minimal 3 karakter.';
+  } else if (!/^[a-zA-Z\s\.\,\']+$/.test(val)) {
+    msg = "Nama hanya boleh berisi huruf, spasi, titik (.), koma (,), dan petik satu (').";
+  }
+  return setFieldError('al_nama', 'err_al_nama', msg);
+}
+
+function validateEmail(showEmpty = false) {
+  const field = document.getElementById('al_email');
+  if (!field) return true;
+  const val = field.value.trim();
+  let msg = '';
+  if (!val) {
+    if (showEmpty) msg = 'Alamat email aktif wajib diisi.';
+  } else if (!/^[^\s@]+@gmail\.com$/i.test(val)) {
+    msg = 'Gunakan alamat email dengan domain @gmail.com.';
+  }
+  return setFieldError('al_email', 'err_al_email', msg);
+}
+
+function validateGender(showEmpty = false) {
+  const field = document.getElementById('al_gender');
+  if (!field) return true;
+  const val = field.value;
+  let msg = '';
+  if (!val) {
+    if (showEmpty) msg = 'Silakan pilih jenis kelamin.';
+  }
+  return setFieldError('al_gender', 'err_al_gender', msg);
+}
+
+function validateNisn(showEmpty = false) {
+  const field = document.getElementById('al_nisn');
+  if (!field) return true;
+  const val = field.value.trim();
+  let msg = '';
+  if (!val) {
+    if (showEmpty) msg = 'NISN wajib diisi.';
+  } else if (!/^\d{10}$/.test(val)) {
+    msg = 'NISN harus berisi tepat 10 digit angka.';
+  }
+  return setFieldError('al_nisn', 'err_al_nisn', msg);
+}
+
+function validateTahun(showEmpty = false) {
+  const field = document.getElementById('al_tahun');
+  if (!field) return true;
+  const val = field.value.trim();
+  const currentYear = new Date().getFullYear();
+  let msg = '';
+  if (!val) {
+    if (showEmpty) msg = 'Tahun kelulusan wajib diisi.';
+  } else {
+    const num = parseInt(val, 10);
+    if (isNaN(num) || num < 2000 || num > currentYear) {
+      msg = 'Masukkan tahun kelulusan yang valid (antara 2000 - ' + currentYear + ').';
+    }
+  }
+  return setFieldError('al_tahun', 'err_al_tahun', msg);
+}
+
+function validatePerusahaan(showEmpty = false) {
+  const field = document.getElementById('al_perusahaan');
+  if (!field) return true;
+  const val = field.value.trim();
+  let msg = '';
+  if (!val) {
+    if (showEmpty) msg = 'Perusahaan / instansi saat ini wajib diisi.';
+  } else if (val.length < 3) {
+    msg = 'Nama instansi / perusahaan minimal 3 karakter.';
+  }
+  return setFieldError('al_perusahaan', 'err_al_perusahaan', msg);
+}
+
+function validatePosisi(showEmpty = false) {
+  const field = document.getElementById('al_posisi');
+  if (!field) return true;
+  const val = field.value.trim();
+  let msg = '';
+  if (!val) {
+    if (showEmpty) msg = 'Posisi / jabatan saat ini wajib diisi.';
+  } else if (val.length < 3) {
+    msg = 'Posisi atau jabatan minimal 3 karakter.';
+  }
+  return setFieldError('al_posisi', 'err_al_posisi', msg);
+}
+
+function updatePesanInfoAndValidity(showEmpty = false) {
+  const el = document.getElementById('al_pesan');
+  const counter = document.getElementById('al_pesan_counter');
+  const status = document.getElementById('al_pesan_status');
+  if (!el) return true;
+
+  const len = el.value.length;
+
+  if (counter) {
+    counter.textContent = len + ' / 400';
+    counter.className = 'alumni-char-counter' + (len >= 400 ? ' limit' : len >= 350 ? ' warn' : '');
+  }
+
+  let msg = '';
+  if (len === 0) {
+    if (showEmpty) msg = 'Pesan singkat alumni wajib diisi.';
+    if (status) {
+      status.style.color = '#94A3B8';
+      status.innerHTML = 'Minimal 80 karakter';
+    }
+  } else if (len < 80) {
+    msg = 'Harap perpanjang teks ini hingga 80 karakter atau lebih (saat ini ' + len + ' karakter).';
+    if (status) {
+      status.style.color = '#D97706';
+      status.innerHTML = '<i class="fas fa-circle-exclamation me-1"></i>Kurang ' + (80 - len) + ' karakter lagi (minimal 80)';
+    }
+  } else if (len > 400) {
+    msg = 'Pesan singkat tidak boleh melebihi 400 karakter.';
+    if (status) {
+      status.style.color = '#EF4444';
+      status.innerHTML = 'Melebihi batas 400 karakter';
+    }
+  } else {
+    if (status) {
+      status.style.color = '#10B981';
+      status.innerHTML = '<i class="fas fa-circle-check me-1"></i>Panjang pesan memenuhi syarat';
+    }
+  }
+
+  return setFieldError('al_pesan', 'err_al_pesan', msg);
+}
+
+function openAlumniModal() {
+  const overlay = document.getElementById('modalSayaAlumni');
+  overlay.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  updatePesanInfoAndValidity(false);
+  document.getElementById('al_nama').focus();
+}
+
+function closeAlumniModal() {
+  const overlay = document.getElementById('modalSayaAlumni');
+  overlay.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+function resetAlumniForm() {
+  const form = document.getElementById('formSayaAlumni');
+  if (form) form.reset();
+  clearAllErrors();
+  const successMsg = document.getElementById('alumni-form-success');
+  if (successMsg) successMsg.style.display = 'none';
+  const btn = document.getElementById('btn-alumni-submit');
+  if (btn) {
+    btn.disabled = false;
+    btn.innerHTML = '<i class="fas fa-paper-plane me-2"></i> Kirim Data';
+    btn.style.background = '';
+    btn.style.display = '';
+  }
+  updatePesanInfoAndValidity(false);
+}
+
+// Tutup saat klik overlay luar
+document.getElementById('modalSayaAlumni').addEventListener('click', function(e) {
+  if (e.target === this) closeAlumniModal();
+});
+
+// Tutup saat Escape
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeAlumniModal();
+});
+
+// Real-time Event Listeners
+const elNama = document.getElementById('al_nama');
+if (elNama) {
+  elNama.addEventListener('input', function() {
+    this.value = this.value.replace(/[^a-zA-Z\s\.\,\']/g, '');
+    if (this.classList.contains('is-invalid')) validateNama(true);
+  });
+  elNama.addEventListener('blur', function() {
+    if (this.value.trim()) validateNama(false);
+  });
+}
+
+const elEmail = document.getElementById('al_email');
+if (elEmail) {
+  elEmail.addEventListener('input', function() {
+    if (this.classList.contains('is-invalid')) validateEmail(true);
+  });
+  elEmail.addEventListener('blur', function() {
+    if (this.value.trim()) validateEmail(false);
+  });
+}
+
+const elGender = document.getElementById('al_gender');
+if (elGender) {
+  elGender.addEventListener('change', function() {
+    if (this.classList.contains('is-invalid')) validateGender(true);
+  });
+}
+
+const elNisn = document.getElementById('al_nisn');
+if (elNisn) {
+  elNisn.addEventListener('input', function() {
+    this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);
+    if (this.classList.contains('is-invalid')) validateNisn(true);
+  });
+  elNisn.addEventListener('blur', function() {
+    if (this.value.trim()) validateNisn(false);
+  });
+}
+
+const elTahun = document.getElementById('al_tahun');
+if (elTahun) {
+  elTahun.addEventListener('input', function() {
+    this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4);
+    if (this.classList.contains('is-invalid')) validateTahun(true);
+  });
+  elTahun.addEventListener('blur', function() {
+    if (this.value.trim()) validateTahun(false);
+  });
+}
+
+const elPerusahaan = document.getElementById('al_perusahaan');
+if (elPerusahaan) {
+  elPerusahaan.addEventListener('input', function() {
+    if (this.classList.contains('is-invalid')) validatePerusahaan(true);
+  });
+  elPerusahaan.addEventListener('blur', function() {
+    if (this.value.trim()) validatePerusahaan(false);
+  });
+}
+
+const elPosisi = document.getElementById('al_posisi');
+if (elPosisi) {
+  elPosisi.addEventListener('input', function() {
+    if (this.classList.contains('is-invalid')) validatePosisi(true);
+  });
+  elPosisi.addEventListener('blur', function() {
+    if (this.value.trim()) validatePosisi(false);
+  });
+}
+
+const elPesan = document.getElementById('al_pesan');
+if (elPesan) {
+  elPesan.addEventListener('input', function() {
+    updatePesanInfoAndValidity(elPesan.classList.contains('is-invalid'));
+  });
+  elPesan.addEventListener('blur', function() {
+    if (this.value.trim()) updatePesanInfoAndValidity(false);
+  });
+}
+
+/* ── Submit Form ── */
+function submitAlumniForm(e) {
+  e.preventDefault();
+
+  // Validasi seluruh kolom secara inline
+  const vNama       = validateNama(true);
+  const vEmail      = validateEmail(true);
+  const vGender     = validateGender(true);
+  const vNisn       = validateNisn(true);
+  const vTahun      = validateTahun(true);
+  const vPerusahaan = validatePerusahaan(true);
+  const vPosisi     = validatePosisi(true);
+  const vPesan      = updatePesanInfoAndValidity(true);
+
+  const isValid = vNama && vEmail && vGender && vNisn && vTahun && vPerusahaan && vPosisi && vPesan;
+
+  if (!isValid) {
+    const firstInvalid = document.querySelector('#formSayaAlumni .is-invalid');
+    if (firstInvalid) {
+      firstInvalid.focus();
+      firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    return;
+  }
+
+  // Simulasi loading submit
+  const btn = document.getElementById('btn-alumni-submit');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Mengirim...';
+
+  setTimeout(function() {
+    // Sembunyikan tombol submit & tampilkan sukses
+    btn.style.display = 'none';
+    document.getElementById('alumni-form-success').style.display = 'block';
+    document.getElementById('alumni-form-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    // Auto-close dan reset setelah 4 detik
+    setTimeout(function() {
+      closeAlumniModal();
+      resetAlumniForm();
+    }, 4000);
+  }, 1200);
+}
+</script>
+
+<!-- Interactive Filter & 8-Item Pagination Script (Sama seperti Berita & Galeri) -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const ITEMS_PER_PAGE = 8;
+  let currentPage = 1;
+  let currentFilter = 'all';
+
+  const filterButtons = document.querySelectorAll('.btn-filter-pill');
+  const allCards = Array.from(document.querySelectorAll('.alumni-card-item'));
+  const emptyState = document.getElementById('alumni-empty-state');
+  const pgWrap = document.getElementById('alumni-pagination');
+
+  function getFilteredCards() {
+    if (currentFilter === 'all') {
+      return allCards;
+    }
+    return allCards.filter(card => card.getAttribute('data-jurusan') === currentFilter);
+  }
+
+  function totalPages() {
+    return Math.ceil(getFilteredCards().length / ITEMS_PER_PAGE);
+  }
+
+  function render(page) {
+    currentPage = page;
+    const filtered = getFilteredCards();
+    const totalItems = filtered.length;
+    const total = totalPages() || 1;
+
+    if (currentPage > total) currentPage = total;
+    if (currentPage < 1) currentPage = 1;
+
+    allCards.forEach(card => card.classList.add('d-none'));
+
+    if (totalItems === 0) {
+      if (emptyState) emptyState.classList.remove('d-none');
+      if (pgWrap) pgWrap.innerHTML = '';
+      return;
+    }
+
+    if (emptyState) emptyState.classList.add('d-none');
+
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, totalItems);
+
+    for (let i = startIndex; i < endIndex; i++) {
+      const card = filtered[i];
+      card.classList.remove('d-none');
+      card.style.animation = 'fadeInUp 0.35s ease forwards';
+    }
+
+    renderPagination();
+
+    // Refresh trigger kalkulasi AOS agar footer dan elemen bawah tidak stuck tersembunyi
+    if (typeof AOS !== 'undefined') {
+      AOS.refresh();
+      setTimeout(function () {
+        AOS.refresh();
+      }, 120);
+    }
+  }
+
+  function renderPagination() {
+    const total = totalPages();
+    if (!pgWrap) return;
+    if (total <= 1) {
+      pgWrap.innerHTML = '';
+      return;
+    }
+
+    pgWrap.innerHTML = `
+      <div class="pagination-bar">
+        <button type="button" class="pg-btn pg-prev" onclick="window.__alumniPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>
+          <i class="fas fa-arrow-left"></i>
+          <span>Sebelumnya</span>
+        </button>
+        <div class="pg-info">
+          <span class="pg-current">${currentPage}</span>
+          <span class="pg-sep">/</span>
+          <span class="pg-total">${total}</span>
+        </div>
+        <button type="button" class="pg-btn pg-next" onclick="window.__alumniPage(${currentPage + 1})" ${currentPage === total ? 'disabled' : ''}>
+          <span>Selanjutnya</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>`;
+  }
+
+  window.__alumniPage = function (page) {
+    const total = totalPages();
+    if (page < 1 || page > total) return;
+    render(page);
+    const container = document.getElementById('alumni-cards-container');
+    if (container) {
+      const topOffset = container.getBoundingClientRect().top + window.pageYOffset - 100;
+      window.scrollTo({ top: topOffset, behavior: 'smooth' });
+    }
+  };
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', function () {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+
+      currentFilter = this.getAttribute('data-filter');
+      render(1);
+    });
+  });
+
+  // Inisialisasi awal
+  render(1);
+});
+</script>
+
+
+  <!-- ─── MAIN FOOTER ───────────────────────────────────────── -->
+  <footer class="main-footer">
+    <div class="container-fluid px-3 px-md-4 px-lg-5">
+      <div class="row justify-content-between g-4">
+
+        <!-- Column 1: School Identity (Pojok Kiri) -->
+        <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="0">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img src="/assets/img/logo/logo.png"
+                 onerror="this.onerror=null; this.src='/src/logos/logo22.png';"
+                 alt="Logo SMK Cerdas Satu Bangsa"
+                 style="height: 54px; width: auto; object-fit: contain;">
+            <div class="d-flex flex-column justify-content-center">
+              <span class="fw-bold text-white font-poppins" style="font-size: 1.15rem; letter-spacing: 0.5px; line-height: 1.2;">SMK CERDAS SATU BANGSA</span>
+              <span style="color: #38bdf8; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.3px; margin-top: 3px;">Siap Bertalenta dan Kerja</span>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <p class="mb-2" style="color: #cbd5e1; font-size: 0.92rem; font-weight: 500;">
+              Temukan kami di platform lainnya :
+            </p>
+            <div class="d-flex gap-2 flex-wrap">
+              <!-- Facebook (Warna Asli) -->
+              <button type="button" class="social-btn social-btn-fb" title="Facebook" onclick="showSosmedUnavailable('Facebook')">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+              <!-- Instagram (Warna Gradasi Asli) -->
+              <button type="button" class="social-btn social-btn-ig" title="Instagram" onclick="showSosmedUnavailable('Instagram')">
+                <i class="fab fa-instagram"></i>
+              </button>
+              <!-- YouTube (Warna Merah Asli) -->
+              <button type="button" class="social-btn social-btn-yt" title="YouTube" onclick="showSosmedUnavailable('YouTube')">
+                <i class="fab fa-youtube"></i>
+              </button>
+              <!-- TikTok (Warna Hitam + Aksen Neon Asli) -->
+              <button type="button" class="social-btn social-btn-tk" title="TikTok" onclick="showSosmedUnavailable('TikTok')">
+                <i class="fab fa-tiktok"></i>
+              </button>
+            </div>
+            <p class="mb-0 mt-3" style="color:#94a3b8; font-size:0.82rem;">
+              &copy; 2026              <strong style="color:#cbd5e1;">SMK Cerdas Satu Bangsa</strong>.
+              Hak Cipta Dilindungi Undang-Undang.
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 2 & 3: Tautan Cepat & Kontak Kami (Pojok Kanan) -->
+        <div class="col-lg-6 col-md-12">
+          <div class="row justify-content-lg-end g-4">
+
+            <!-- Column: Quick Links -->
+            <div class="col-sm-6 col-12 col-lg-5" data-aos="fade-up" data-aos-delay="80">
+              <h5 class="footer-title">Tautan Cepat</h5>
+              <ul class="footer-links">
+                <li><a href="/profil/sejarah.html"><i class="fas fa-chevron-right me-1 small"></i> Sejarah Sekolah</a></li>
+                <li><a href="/profil/visi-misi.html"><i class="fas fa-chevron-right me-1 small"></i> Visi &amp; Misi</a></li>
+                <li><a href="/profil/fasilitas.html"><i class="fas fa-chevron-right me-1 small"></i> Fasilitas</a></li>
+                <li><a href="/profil/sertifikasi.html"><i class="fas fa-chevron-right me-1 small"></i> Akreditasi</a></li>
+                <li><a href="/berita.html"><i class="fas fa-chevron-right me-1 small"></i> Berita Terbaru</a></li>
+              </ul>
+            </div>
+
+            <!-- Column: Contact Us -->
+            <div class="col-sm-6 col-12 col-lg-7" data-aos="fade-up" data-aos-delay="160">
+              <h5 class="footer-title">Kontak Kami</h5>
+              <ul class="footer-links">
+                <li class="d-flex align-items-start gap-2 mb-3">
+                  <i class="fas fa-map-marker-alt mt-1" style="color:#34d399;"></i>
+                  <span>Jl. Cirebon No.1, Pasar Baru, Medan Kota, Kota Medan, Sumatera Utara 20212</span>
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="fas fa-phone-alt" style="color:#34d399;"></i>
+                  <span>(061) 1234567</span>
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-2">
+                  <i class="fab fa-whatsapp" style="color:#34d399;"></i>
+                  <span>WhatsApp Hotline: 081234567890</span>
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <i class="fas fa-envelope" style="color:#34d399;"></i>
+                  <span>info@smkcerdassatubangsa.sch.id</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container-fluid -->
+  </footer>
+
+  <!-- ─── MODAL DI TENGAH LAYAR: NOTIFIKASI SOSMED BELUM TERSEDIA ─ -->
+  <div id="sosmed-modal-overlay" onclick="closeSosmedModal()" hidden>
+    <div class="sosmed-modal-box" onclick="event.stopPropagation()">
+      <!-- Baris Atas: Icon berdampingan dengan Tulisan Pemberitahuan -->
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <div class="sosmed-modal-icon">
+          <i class="fas fa-info-circle"></i>
+        </div>
+        <h6 class="fw-bold text-dark font-poppins mb-0" style="font-size: 1.05rem;">Pemberitahuan</h6>
+      </div>
+      <!-- Baris Bawah: Rata Kiri -->
+      <p id="sosmed-modal-text" class="text-muted text-start mb-0" style="font-size: 0.9rem; line-height: 1.5;">
+        saat ini belum tersedia...
+      </p>
+    </div>
+  </div>
+
+  <!-- ─── SCRIPTS ──────────────────────────────────────────── -->
+</div><!-- /#page-content-wrapper -->
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS – Animate on Scroll -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Custom JS Utama -->
+  <script src="/assets/js/script.js"></script>
+
+  <!-- Inline Styles & Scripts for Social Media Modal -->
+  <style>
+    /* ─── Tombol Media Sosial Minimalis & Sederhana ────────── */
+    .social-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: #ffffff !important;
+      font-size: 0.82rem;
+      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .social-btn:hover {
+      transform: translateY(-2px) !important;
+      opacity: 0.9;
+    }
+
+    /* Facebook */
+    .social-btn-fb {
+      background: #1877f2 !important;
+    }
+
+    /* Instagram */
+    .social-btn-ig {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+    }
+
+    /* YouTube */
+    .social-btn-yt {
+      background: #ff0000 !important;
+    }
+
+    /* TikTok */
+    .social-btn-tk {
+      background: #000000 !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+
+    /* ─── Modal Popup di Tengah Layar (Kompak & Modern) ─────── */
+    #sosmed-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    /* Mencegah popup sosial sempat terlihat saat HTML halaman baru pertama dimuat. */
+    #sosmed-modal-overlay[hidden] {
+      display: none !important;
+    }
+
+    #sosmed-modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    body.sosmed-modal-open {
+      overflow: hidden;
+    }
+
+    .sosmed-modal-box {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px 24px;
+      width: 90%;
+      max-width: 360px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+      transform: scale(0.88);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+    }
+
+    #sosmed-modal-overlay.active .sosmed-modal-box {
+      transform: scale(1);
+    }
+
+    .sosmed-modal-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #ecfdf5;
+      color: #059669;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+  </style>
+
+  <script>
+    let sosmedTimeout;
+    let sosmedHideTimeout;
+
+    function showSosmedUnavailable(platformName) {
+      const overlay = document.getElementById('sosmed-modal-overlay');
+      const textEl = document.getElementById('sosmed-modal-text');
+      if (textEl) {
+        textEl.innerHTML = platformName 
+          ? `Akun <strong>${platformName}</strong> saat ini belum tersedia...`
+          : `saat ini belum tersedia...`;
+      }
+      if (overlay) {
+        // Footer berada dalam pembungkus halaman. Pindahkan overlay ke body
+        // agar position: fixed selalu mengacu ke viewport yang sedang dilihat.
+        if (overlay.parentElement !== document.body) {
+          document.body.appendChild(overlay);
+        }
+        clearTimeout(sosmedHideTimeout);
+        overlay.hidden = false;
+        document.body.classList.add('sosmed-modal-open');
+        requestAnimationFrame(() => overlay.classList.add('active'));
+        clearTimeout(sosmedTimeout);
+        // Otomatis menghilang setelah 3 detik
+        sosmedTimeout = setTimeout(() => {
+          closeSosmedModal();
+        }, 3000);
+      }
+    }
+
+    function closeSosmedModal() {
+      const overlay = document.getElementById('sosmed-modal-overlay');
+      if (overlay) {
+        overlay.classList.remove('active');
+        document.body.classList.remove('sosmed-modal-open');
+        clearTimeout(sosmedTimeout);
+        clearTimeout(sosmedHideTimeout);
+        sosmedHideTimeout = setTimeout(() => {
+          if (!overlay.classList.contains('active')) overlay.hidden = true;
+        }, 260);
+      }
+    }
+
+    // Browser dapat memulihkan halaman dari cache (back/forward). Pastikan
+    // notifikasi lama tidak ikut muncul kembali pada halaman yang dipulihkan.
+    window.addEventListener('pageshow', closeSosmedModal);
+  </script>
+
+</body>
+</html>
