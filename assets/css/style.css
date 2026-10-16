@@ -236,26 +236,23 @@ body.menu-open .btn-ppdb-header {
 }
 
 /* Pop-up brosur pada halaman Beranda */
+/* === DESKTOP default (≥576px) — scrollbar di kanan layar, tampilan penuh === */
 .brosur-modal {
   position: fixed;
   inset: 0;
-  box-sizing: border-box;
   width: 100%;
   height: 100%;
   z-index: 10000;
   display: flex;
-  align-items: center;
+  align-items: flex-start;   /* Konten mulai dari atas agar scrollbar desktop terasa natural */
   justify-content: center;
-  /* TIDAK ada overflow-y di sini — overflow di container langsung merusak
-     position:fixed di mobile browser (backdrop tidak nutup navbar) */
-  padding: 16px;
+  overflow-y: auto;          /* Scrollbar di sisi kanan viewport — tampilan desktop */
+  overflow-x: hidden;
+  padding: 32px 16px;
   background: rgba(15, 23, 42, 0.82);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   animation: brosurBackdropIn 0.2s ease-out;
-  /* Mencegah halaman di bawah ikut scroll saat modal di-swipe */
-  overscroll-behavior: contain;
-  touch-action: none;
 }
 
 body.brosur-modal-open {
@@ -270,13 +267,10 @@ body.modal-biaya-open {
   position: relative;
   width: 100%;
   max-width: 620px;
-  max-height: 90vh;
-  margin: auto;
+  margin: auto;             /* Center vertikal di dalam flex container */
   display: flex;
   flex-direction: column;
-  overflow-y: auto;          /* Scroll ADA di sini, bukan di overlay */
-  overflow-x: hidden;
-  overscroll-behavior: contain;
+  overflow: visible;        /* Desktop: overlay yang scroll, bukan konten */
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.5);
@@ -288,7 +282,6 @@ body.modal-biaya-open {
   display: block;
   width: 100%;
   height: auto;
-  max-height: calc(100vh - 104px);
   object-fit: contain;
 }
 
@@ -301,6 +294,7 @@ body.modal-biaya-open {
   background: #ffffff;
   border-bottom: 1px solid #f1f5f9;
   flex-shrink: 0;
+  border-radius: 16px 16px 0 0;
 }
 
 .brosur-modal-close {
@@ -340,41 +334,64 @@ body.modal-biaya-open {
   to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-/* Tablet (576px - 991.98px) */
+/* === TABLET (576px - 991.98px) === */
 @media (min-width: 576px) and (max-width: 991.98px) {
   .brosur-modal {
-    padding: 20px;
+    padding: 24px 20px;
+    align-items: center;
   }
   .brosur-modal-content {
-    max-width: 540px;
-    max-height: 88vh;
-    margin: auto;
-  }
-  .brosur-modal-content img {
-    max-height: 75vh;
+    max-width: 500px;
   }
 }
 
-/* Mobile (< 576px) */
+/* =====================================================================
+   MOBILE (< 576px)
+   - Brosur ditampilkan sebagai card kecil di tengah layar
+   - Konten belakang di-blur
+   - TIDAK bisa di-geser kanan/kiri (overflow: hidden di overlay)
+   - Scroll hanya di dalam card jika konten lebih tinggi dari layar
+   ===================================================================== */
 @media (max-width: 575.98px) {
   .brosur-modal {
-    padding: 12px;
+    /* Kunci: hapus overflow-y dari overlay di mobile
+       agar backdrop nutup layar penuh (termasuk area navbar) */
+    overflow: hidden;
     align-items: center;
     justify-content: center;
+    padding: 20px 16px;
+    /* Cegah scroll & swipe halaman di bawah */
+    touch-action: none;
+    overscroll-behavior: contain;
   }
+
   .brosur-modal-content {
-    width: 100%;
-    max-width: 95vw;
-    max-height: 88vh;
+    /* Card lebih kecil — bukan full lebar layar */
+    width: 82vw;
+    max-width: 320px;
+    max-height: 76vh;
+    /* Scroll di dalam card jika gambar tinggi */
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
     border-radius: 14px;
-    margin: auto;
+    margin: 0 auto;
   }
+
   .brosur-modal-toolbar {
-    height: 44px;
-    padding: 0 12px;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 14px 14px 0 0;
   }
+
+  .brosur-modal-close {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
   .brosur-modal-content img {
-    max-height: 72vh;
+    max-height: 63vh;
     object-fit: contain;
   }
 }
