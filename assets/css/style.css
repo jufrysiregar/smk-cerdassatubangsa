@@ -54,6 +54,13 @@ body {
   overflow-x: hidden;
 }
 
+/* Skala otomatis 67% khusus untuk tampilan Desktop (layar lebar >= 992px) */
+@media (min-width: 992px) {
+  body {
+    zoom: 67%;
+  }
+}
+
 
 
 /* =====================================================
@@ -240,13 +247,18 @@ body.menu-open .btn-ppdb-header {
   position: fixed;
   inset: 0;
   box-sizing: border-box;
+  width: 100vw;
   height: 100vh;
   z-index: 10000;
-  display: block;
-  overflow-y: scroll;
-  overscroll-behavior: contain;
-  padding: 24px;
-  background: rgba(15, 23, 42, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 24px 16px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   animation: brosurBackdropIn 0.2s ease-out;
 }
 
@@ -260,48 +272,58 @@ body.modal-biaya-open {
 
 .brosur-modal-content {
   position: relative;
-  width: min(82vw, 1000px);
-  max-height: none;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 640px;
+  max-height: calc(100vh - 48px);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
-  animation: brosurContentIn 0.25s ease-out;
+  border-radius: 16px;
+  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.45);
+  animation: brosurContentIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .brosur-modal-content img {
   display: block;
   width: 100%;
   height: auto;
+  max-height: calc(100vh - 104px);
+  object-fit: contain;
 }
 
 .brosur-modal-toolbar {
-  height: 72px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 0 20px;
+  padding: 0 16px;
   background: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #f1f5f9;
+  flex-shrink: 0;
 }
 
 .brosur-modal-close {
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   margin: 0;
   border: 0;
-  border-radius: 0;
-  background: transparent;
-  color: #64748b;
-  font-size: 1.65rem;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 1.15rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: none;
+  transition: all 0.18s ease;
 }
 
 .brosur-modal-close:hover {
+  background: #e2e8f0;
   color: #0f172a;
-  background: transparent;
 }
 
 .brosur-modal.is-closing {
@@ -319,18 +341,43 @@ body.modal-biaya-open {
   to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
+/* Tablet (576px - 991.98px): Tepat di tengah layar vertikal & horizontal */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .brosur-modal {
+    padding: 24px 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .brosur-modal-content {
+    max-width: 540px;
+    max-height: calc(100vh - 64px);
+  }
+  .brosur-modal-content img {
+    max-height: calc(100vh - 120px);
+  }
+}
+
+/* Mobile (< 576px): Pas di tengah, pas di layar tanpa bisa geser horizontal */
 @media (max-width: 575.98px) {
   .brosur-modal {
-    padding: 14px;
+    padding: 16px 12px;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
   }
-
   .brosur-modal-content {
     width: 100%;
+    max-width: 95vw;
+    max-height: calc(100vh - 32px);
+    border-radius: 14px;
+    margin: auto;
   }
-
   .brosur-modal-toolbar {
-    height: 60px;
-    padding: 0 14px;
+    height: 46px;
+    padding: 0 12px;
+  }
+  .brosur-modal-content img {
+    max-height: calc(100vh - 84px);
   }
 }
 
@@ -1660,13 +1707,27 @@ body.menu-open #page-content-wrapper {
 
 /* Active state */
 .sp-menu-card.active {
-  background: #f0f9ff;
-  border-color: #bae6fd;
-  box-shadow: 0 3px 8px rgba(2, 132, 199, 0.1);
+  background: #eff6ff !important;
+  border: 1.5px solid #2563eb !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.16) !important;
 }
-.sp-menu-card.active .sp-card-title { color: #0284c7; }
-.sp-menu-card.active .sp-card-desc { color: #0369a1; }
-.sp-menu-card.active .sp-card-arrow { color: #0284c7; }
+.sp-menu-card.active .sp-card-title {
+  color: #1d4ed8 !important;
+  font-weight: 700 !important;
+}
+.sp-menu-card.active .sp-card-desc {
+  color: #2563eb !important;
+}
+.sp-menu-card.active .sp-card-arrow {
+  color: #ffffff !important;
+  background: #2563eb !important;
+}
+.sp-menu-card.active .sp-card-icon {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border: 1px solid #1d4ed8 !important;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.35) !important;
+}
 
 /* ─── Compact Sized-Down Icon Badge (30px x 30px) ─── */
 .sp-card-icon {
@@ -1739,8 +1800,8 @@ body.menu-open #page-content-wrapper {
   background: #e0f2fe;
 }
 .sp-menu-card.active .sp-card-arrow {
-  color: #0284c7;
-  background: #e0f2fe;
+  color: #ffffff;
+  background: #2563eb;
 }
 
 /* + / − Sign Icon specific */
@@ -1760,11 +1821,20 @@ body.menu-open #page-content-wrapper {
   font-weight: 700;
 }
 .side-nav-item.has-sub.expanded > .side-nav-row .sp-menu-card {
-  background: #f0f9ff;
-  border-color: #bae6fd;
+  background: #f8fafc;
+  border-color: #cbd5e1;
 }
-.side-nav-item.has-sub.expanded > .side-nav-row .sp-card-title {
-  color: #0284c7;
+.side-nav-item.has-sub.expanded > .side-nav-row .sp-menu-card.active {
+  background: #eff6ff !important;
+  border: 1.5px solid #3b82f6 !important;
+}
+.side-nav-item.has-sub.expanded > .side-nav-row .sp-menu-card.active .sp-card-title {
+  color: #1d4ed8 !important;
+  font-weight: 700 !important;
+}
+.side-nav-item.has-sub.expanded > .side-nav-row .sp-menu-card.active .sp-sub-sign {
+  color: #ffffff !important;
+  background: #2563eb !important;
 }
 
 /* ─── Submenu Accordion ─── */
@@ -1805,13 +1875,15 @@ body.menu-open #page-content-wrapper {
   position: relative;
 }
 .sp-sub-link:hover {
-  color: #0f172a;
-  background: #f1f5f9;
+  color: #1d4ed8;
+  background: #eff6ff;
 }
 .sp-sub-link.active {
-  color: #0f172a;
-  background: #f1f5f9;
-  font-weight: 700;
+  color: #1d4ed8 !important;
+  background: #dbeafe !important;
+  border-left: 3px solid #2563eb !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.12) !important;
 }
 .sp-sub-dot {
   font-size: 0.68rem;
@@ -1821,9 +1893,11 @@ body.menu-open #page-content-wrapper {
   flex-shrink: 0;
   transition: color 0.18s ease;
 }
-.sp-sub-link:hover .sp-sub-dot,
+.sp-sub-link:hover .sp-sub-dot {
+  color: #2563eb;
+}
 .sp-sub-link.active .sp-sub-dot {
-  color: #475569;
+  color: #2563eb !important;
 }
 
 /* ─── Panel Footer ─── */
