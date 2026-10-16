@@ -648,23 +648,33 @@ document.addEventListener('DOMContentLoaded', function () {
   const closeButton = document.getElementById('brosur-modal-close');
   if (!modal || !closeButton) return;
 
-  // Lepaskan dari pembungkus halaman agar position: fixed dan scrollbar
-  // benar-benar memakai viewport browser, bukan area konten beranda.
+  // Pindahkan modal ke body agar position:fixed mengacu viewport penuh
   if (modal.parentElement !== document.body) {
     document.body.appendChild(modal);
   }
 
+  // Simpan posisi scroll sebelum modal dibuka
+  var scrollY = window.scrollY || window.pageYOffset;
+
+  // Kunci scroll body & html (pakai top trick — paling reliable di iOS & Android)
+  document.documentElement.classList.add('brosur-modal-open');
   document.body.classList.add('brosur-modal-open');
+  document.body.style.top = '-' + scrollY + 'px';
 
   function closeBrosur() {
-    document.body.classList.remove('brosur-modal-open');
     modal.classList.add('is-closing');
     window.setTimeout(function () {
       modal.remove();
-      // Reset scroll & paksa repaint agar gray area tidak muncul di mobile
-      window.scrollTo(0, 0);
-      document.documentElement.style.overflow = '';
-      // Trigger reflow pada hero section
+
+      // Buka kembali kunci scroll
+      document.documentElement.classList.remove('brosur-modal-open');
+      document.body.classList.remove('brosur-modal-open');
+      document.body.style.top = '';
+
+      // Kembalikan posisi scroll ke semula
+      window.scrollTo(0, scrollY);
+
+      // Paksa repaint hero agar gray area tidak muncul di mobile
       var hero = document.querySelector('.hero-section') || document.querySelector('#hero');
       if (hero) { void hero.offsetHeight; }
     }, 180);
