@@ -1,0 +1,15 @@
+# Local PHP source files & partials (Hanya untuk ngoding lokal di Laragon/XAMPP)
+**/*.php
+*.php
+partials/
+data/
+
+# Script build lokal
+build.bat
+build.ps1
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
