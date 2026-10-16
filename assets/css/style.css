@@ -246,24 +246,16 @@ body.menu-open .btn-ppdb-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 24px 16px;
-  animation: brosurBackdropIn 0.2s ease-out;
-}
-
-/* Backdrop blur penuh yang terkunci di layar (tidak terpotong saat di-scroll ke bawah) */
-.brosur-modal::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(15, 23, 42, 0.78);
+  /* TIDAK ada overflow-y di sini — overflow di container langsung merusak
+     position:fixed di mobile browser (backdrop tidak nutup navbar) */
+  padding: 16px;
+  background: rgba(15, 23, 42, 0.82);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  pointer-events: none;
-  z-index: -1;
+  animation: brosurBackdropIn 0.2s ease-out;
+  /* Mencegah halaman di bawah ikut scroll saat modal di-swipe */
+  overscroll-behavior: contain;
+  touch-action: none;
 }
 
 body.brosur-modal-open {
@@ -278,11 +270,13 @@ body.modal-biaya-open {
   position: relative;
   width: 100%;
   max-width: 620px;
-  max-height: calc(100vh - 48px);
+  max-height: 90vh;
   margin: auto;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: auto;          /* Scroll ADA di sini, bukan di overlay */
+  overflow-x: hidden;
+  overscroll-behavior: contain;
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.5);
@@ -346,35 +340,32 @@ body.modal-biaya-open {
   to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-/* Tablet (576px - 991.98px): Tepat di tengah layar vertikal & horizontal */
+/* Tablet (576px - 991.98px) */
 @media (min-width: 576px) and (max-width: 991.98px) {
   .brosur-modal {
-    padding: 24px 20px;
-    align-items: center;
-    justify-content: center;
+    padding: 20px;
   }
   .brosur-modal-content {
     max-width: 540px;
-    max-height: calc(100vh - 60px);
+    max-height: 88vh;
     margin: auto;
   }
   .brosur-modal-content img {
-    max-height: calc(100vh - 116px);
+    max-height: 75vh;
   }
 }
 
-/* Mobile (< 576px): Pas di tengah, bisa scroll, tanpa geser horizontal */
+/* Mobile (< 576px) */
 @media (max-width: 575.98px) {
   .brosur-modal {
-    padding: 16px 12px;
+    padding: 12px;
     align-items: center;
     justify-content: center;
-    overflow-x: hidden;
   }
   .brosur-modal-content {
     width: 100%;
     max-width: 95vw;
-    max-height: calc(100vh - 32px);
+    max-height: 88vh;
     border-radius: 14px;
     margin: auto;
   }
@@ -383,7 +374,8 @@ body.modal-biaya-open {
     padding: 0 12px;
   }
   .brosur-modal-content img {
-    max-height: calc(100vh - 80px);
+    max-height: 72vh;
+    object-fit: contain;
   }
 }
 

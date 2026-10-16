@@ -659,7 +659,15 @@ document.addEventListener('DOMContentLoaded', function () {
   function closeBrosur() {
     document.body.classList.remove('brosur-modal-open');
     modal.classList.add('is-closing');
-    window.setTimeout(function () { modal.remove(); }, 180);
+    window.setTimeout(function () {
+      modal.remove();
+      // Reset scroll & paksa repaint agar gray area tidak muncul di mobile
+      window.scrollTo(0, 0);
+      document.documentElement.style.overflow = '';
+      // Trigger reflow pada hero section
+      var hero = document.querySelector('.hero-section') || document.querySelector('#hero');
+      if (hero) { void hero.offsetHeight; }
+    }, 180);
   }
 
   closeButton.addEventListener('click', closeBrosur);
