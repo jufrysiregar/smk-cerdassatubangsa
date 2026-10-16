@@ -54,13 +54,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Skala otomatis 67% khusus untuk tampilan Desktop (layar lebar >= 992px) */
-@media (min-width: 992px) {
-  body {
-    zoom: 67%;
-  }
-}
-
 
 
 /* =====================================================
@@ -247,8 +240,8 @@ body.menu-open .btn-ppdb-header {
   position: fixed;
   inset: 0;
   box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 10000;
   display: flex;
   align-items: center;
@@ -256,10 +249,21 @@ body.menu-open .btn-ppdb-header {
   overflow-y: auto;
   overflow-x: hidden;
   padding: 24px 16px;
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
   animation: brosurBackdropIn 0.2s ease-out;
+}
+
+/* Backdrop blur penuh yang terkunci di layar (tidak terpotong saat di-scroll ke bawah) */
+.brosur-modal::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  pointer-events: none;
+  z-index: -1;
 }
 
 body.brosur-modal-open {
@@ -273,7 +277,7 @@ body.modal-biaya-open {
 .brosur-modal-content {
   position: relative;
   width: 100%;
-  max-width: 640px;
+  max-width: 620px;
   max-height: calc(100vh - 48px);
   margin: auto;
   display: flex;
@@ -281,8 +285,9 @@ body.modal-biaya-open {
   overflow: hidden;
   background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.5);
   animation: brosurContentIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
 }
 
 .brosur-modal-content img {
@@ -294,7 +299,7 @@ body.modal-biaya-open {
 }
 
 .brosur-modal-toolbar {
-  height: 50px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -305,8 +310,8 @@ body.modal-biaya-open {
 }
 
 .brosur-modal-close {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   margin: 0;
   border: 0;
   border-radius: 50%;
@@ -350,14 +355,15 @@ body.modal-biaya-open {
   }
   .brosur-modal-content {
     max-width: 540px;
-    max-height: calc(100vh - 64px);
+    max-height: calc(100vh - 60px);
+    margin: auto;
   }
   .brosur-modal-content img {
-    max-height: calc(100vh - 120px);
+    max-height: calc(100vh - 116px);
   }
 }
 
-/* Mobile (< 576px): Pas di tengah, pas di layar tanpa bisa geser horizontal */
+/* Mobile (< 576px): Pas di tengah, bisa scroll, tanpa geser horizontal */
 @media (max-width: 575.98px) {
   .brosur-modal {
     padding: 16px 12px;
@@ -373,11 +379,11 @@ body.modal-biaya-open {
     margin: auto;
   }
   .brosur-modal-toolbar {
-    height: 46px;
+    height: 44px;
     padding: 0 12px;
   }
   .brosur-modal-content img {
-    max-height: calc(100vh - 84px);
+    max-height: calc(100vh - 80px);
   }
 }
 
@@ -447,11 +453,17 @@ body.modal-biaya-open {
   overflow: hidden;
 }
 
-/* Breadcrumb berada di sudut kanan atas hero. Judul halaman tetap terpusat. */
+.subpage-header .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Breadcrumb di sudut kanan atas pada desktop, di tengah bawah judul pada mobile & tablet */
 .subpage-header nav[aria-label="breadcrumb"] {
   position: absolute;
   top: 22px;
   right: clamp(16px, 2vw, 32px);
+  z-index: 10;
 }
 
 .subpage-header::before {
@@ -464,6 +476,8 @@ body.modal-biaya-open {
   background: radial-gradient(circle, rgba(5,150,105,0.15), transparent 70%);
   border-radius: 50%;
   animation: blobFloat 8s ease-in-out infinite;
+  pointer-events: none !important;
+  z-index: 1;
 }
 
 @keyframes blobFloat {
@@ -483,41 +497,61 @@ body.modal-biaya-open {
   margin: 0;
   font-size: 0.9rem;
   justify-content: flex-end;
+  position: relative;
+  z-index: 10;
+}
+
+.breadcrumb-custom .breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
 }
 
 .breadcrumb-custom a {
   color: #7dd3fc;
   text-decoration: none;
   transition: color var(--transition-fast);
+  display: inline-block;
+  padding: 4px 6px;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 15;
 }
 
-.breadcrumb-custom a:hover { color: #ffffff; }
+.breadcrumb-custom a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
 
 /* Item induk hanya penunjuk konteks, bukan tautan navigasi. */
 .breadcrumb-custom a[href="#"],
 .breadcrumb-custom a[href="javascript:void(0)"] {
-  color: rgba(255, 255, 255, 0.42);
-  cursor: default;
-  pointer-events: none;
+  color: rgba(255, 255, 255, 0.45);
+  cursor: default !important;
+  pointer-events: none !important;
+  text-decoration: none !important;
 }
 
 .breadcrumb-custom .breadcrumb-item + .breadcrumb-item::before {
   color: rgba(255, 255, 255, 0.5);
+  padding: 0 4px;
 }
 
 .breadcrumb-custom .active {
   color: #ffffff;
   font-weight: 500;
+  padding: 4px 6px;
 }
 
-@media (max-width: 575.98px) {
+/* Di layar tablet & mobile (< 992px): Letakkan breadcrumb di tengah agar mudah disentuh */
+@media (max-width: 991.98px) {
   .subpage-header nav[aria-label="breadcrumb"] {
-    position: static;
-    margin-top: 12px;
+    position: static !important;
+    margin-top: 14px !important;
   }
 
   .breadcrumb-custom {
-    justify-content: center;
+    justify-content: center !important;
   }
 }
 
