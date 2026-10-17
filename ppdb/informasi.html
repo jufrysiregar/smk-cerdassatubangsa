@@ -700,15 +700,58 @@
   }
 
   @media (max-width: 575.98px) {
-    .modal-biaya-pendidikan { padding: 10px; }
-    .modal-biaya-dialog { width: 100%; height: 96vh; border-radius: 13px; }
-    .modal-biaya-header { min-height: 66px; padding: 10px 12px; }
+    .modal-biaya-pendidikan { padding: 8px; }
+    .modal-biaya-dialog { width: 100%; height: 96vh; border-radius: 14px; }
+    .modal-biaya-header { min-height: 58px; padding: 10px 14px; }
+    .modal-biaya-header h2 { font-size: 0.98rem; }
     .modal-biaya-header p { display: none; }
-    .modal-biaya-tools { gap: 7px; padding: 8px; }
-    .btn-pdf-tool { padding: 0 9px; }
-    .btn-pdf-tool span { display: none; }
-    .pdf-page-controls { order: 3; width: 100%; justify-content: center; }
-    .modal-biaya-tools { flex-wrap: wrap; justify-content: space-between; }
+    .modal-biaya-close { width: 34px; height: 34px; }
+    .modal-biaya-tools {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      padding: 8px 10px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .modal-biaya-tools::-webkit-scrollbar { display: none; }
+    .pdf-zoom-controls {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      flex-shrink: 0;
+    }
+    .pdf-page-controls {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+      order: unset;
+      width: auto;
+    }
+    .btn-pdf-tool {
+      min-width: 32px;
+      height: 32px;
+      padding: 0 7px;
+      font-size: 0.76rem;
+      border-radius: 7px;
+    }
+    .pdf-page-nav-group .btn-pdf-tool:first-child { border-radius: 7px 0 0 7px; }
+    .pdf-page-nav-group .btn-pdf-tool:last-child { border-radius: 0 7px 7px 0; }
+    .pdf-zoom-level {
+      width: 36px;
+      font-size: 0.72rem;
+    }
+    .pdf-page-level {
+      min-width: 30px;
+      font-size: 0.72rem;
+    }
+    .pdf-viewer-stage img {
+      width: calc(100% - 20px);
+      margin: 12px auto;
+    }
   }
 </style>
 
