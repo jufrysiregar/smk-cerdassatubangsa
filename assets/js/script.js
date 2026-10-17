@@ -361,8 +361,91 @@
     }
 
     /* ========================================================
-       13. FORM SUBMIT SIMULATION (for demo pages)
+       13. FULLSCREEN SUCCESS TOAST OVERLAY & FORM SUBMIT HANDLERS
        ======================================================== */
+    window.showSuccessToast = function(message, title = 'Berhasil!') {
+      const overlay = document.getElementById('success-toast-overlay');
+      if (!overlay) return;
+
+      const msgEl = document.getElementById('success-toast-msg');
+      const titleEl = document.getElementById('success-toast-title');
+      const bar = document.getElementById('success-toast-bar-fill');
+
+      if (msgEl && message) msgEl.textContent = message;
+      if (titleEl && title) titleEl.textContent = title;
+
+      // Reset and trigger checkmark SVG animation
+      const check = overlay.querySelector('.success-checkmark');
+      const circle = overlay.querySelector('.success-checkmark__circle');
+      const checkPath = overlay.querySelector('.success-checkmark__check');
+      [check, circle, checkPath].forEach(el => {
+        if (el) {
+          el.style.animation = 'none';
+          void el.offsetHeight;
+          el.style.animation = '';
+        }
+      });
+
+      // Reset and trigger 5-second countdown progress bar
+      if (bar) {
+        bar.classList.remove('running');
+        void bar.offsetHeight;
+        bar.classList.add('running');
+      }
+
+      overlay.style.display = 'flex';
+      void overlay.offsetHeight;
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+      if (window.__successToastTimer) {
+        clearTimeout(window.__successToastTimer);
+      }
+
+      window.__successToastTimer = setTimeout(function() {
+        overlay.classList.remove('active');
+        setTimeout(() => {
+          overlay.style.display = 'none';
+          document.body.style.overflow = '';
+        }, 300);
+      }, 5000);
+    };
+
+    // Handler form kontak: tidak ada notifikasi di dalam form, melainkan Fullscreen Toast Overlay (Latar blur, ceklis hidup, 5 detik)
+    const formKontak = document.getElementById('form-kontak');
+    if (formKontak) {
+      formKontak.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (!formKontak.checkValidity()) {
+          formKontak.reportValidity();
+          return;
+        }
+
+        const btn = formKontak.querySelector('button[type="submit"]');
+        let origBtnContent = '';
+        if (btn) {
+          origBtnContent = btn.innerHTML;
+          btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Mengirim...';
+          btn.disabled = true;
+        }
+
+        setTimeout(() => {
+          if (btn) {
+            btn.innerHTML = origBtnContent;
+            btn.disabled = false;
+          }
+          formKontak.reset();
+
+          // Tampilkan Fullscreen Toast Notifikasi (Latar blur, ceklis hidup, 5 detik)
+          window.showSuccessToast(
+            'Pesan Anda berhasil terkirim. Terima kasih telah menghubungi kami!',
+            'Pesan Terkirim!'
+          );
+        }, 850);
+      });
+    }
+
     function handleSimulatedForm(formId, successMsg) {
       const form = document.getElementById(formId);
       if (!form) return;
@@ -404,10 +487,7 @@
       });
     }
 
-    handleSimulatedForm('form-ppdb',   'Pendaftaran PPDB Berhasil Dikirim! Tim kami akan segera memverifikasi data Anda.');
-
-    // form-kontak: handled by PHP (page reload) with fullscreen toast overlay
-    // DO NOT add handleSimulatedForm for form-kontak here
+    handleSimulatedForm('form-ppdb', 'Pendaftaran PPDB Berhasil Dikirim! Tim kami akan segera memverifikasi data Anda.');
 
 
     /* ========================================================

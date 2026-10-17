@@ -3555,6 +3555,23 @@ function submitLamaran(e) {
     </div>
   </div>
 
+  <!-- ─── FULLSCREEN SUCCESS TOAST OVERLAY (BLUR & ANIMATED CHECK) ─ -->
+  <div id="success-toast-overlay" class="success-toast-overlay" role="dialog" aria-modal="true" aria-label="Notifikasi berhasil" style="display:none;">
+    <div class="success-toast-card">
+      <div class="success-toast-icon-wrap">
+        <svg class="success-checkmark" viewBox="0 0 52 52" aria-hidden="true">
+          <circle class="success-checkmark__circle" cx="26" cy="26" r="25"/>
+          <path class="success-checkmark__check" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+      </div>
+      <h5 class="success-toast-title" id="success-toast-title">Berhasil!</h5>
+      <p class="success-toast-msg" id="success-toast-msg">Pesan Anda berhasil terkirim. Terima kasih telah menghubungi kami!</p>
+      <div class="success-toast-bar">
+        <div class="success-toast-bar-fill" id="success-toast-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- ─── SCRIPTS ──────────────────────────────────────────── -->
 </div><!-- /#page-content-wrapper -->
 
