@@ -405,7 +405,10 @@
     }
 
     handleSimulatedForm('form-ppdb',   'Pendaftaran PPDB Berhasil Dikirim! Tim kami akan segera memverifikasi data Anda.');
-    handleSimulatedForm('form-kontak', 'Pesan Anda berhasil terkirim. Terima kasih telah menghubungi kami!');
+
+    // form-kontak: handled by PHP (page reload) with fullscreen toast overlay
+    // DO NOT add handleSimulatedForm for form-kontak here
+
 
     /* ========================================================
        14. STATS SLIDER SCROLL NAVIGATION & END-STATE DETECTION (< & >)
