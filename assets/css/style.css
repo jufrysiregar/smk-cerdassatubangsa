@@ -92,6 +92,7 @@ body {
   width: auto;
   object-fit: contain;
   user-select: none;
+  transition: height 0.2s ease;
 }
 
 /* Identitas Sekolah di Navbar */
@@ -114,36 +115,129 @@ body {
   letter-spacing: 0.4px;
 }
 
-@media (max-width: 576px) {
-  .brand-school-name {
-    font-size: 0.88rem;
-  }
-  .brand-school-slogan {
-    font-size: 0.65rem;
-  }
-}
-
+/* Tombol PPDB Header di Seluruh Mode Tampilan */
 .btn-ppdb-header {
   background-color: #f97316 !important;
   color: #ffffff !important;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 0.88rem;
+  padding: 8px 18px;
   border: none;
   box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+  border-radius: 50rem;
   transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
               transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              max-width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              padding 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              margin 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-  max-width: 200px;
+              box-shadow 0.25s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-decoration: none;
 }
 
-/* Mobile: sembunyikan tombol PPDB — akses lewat side panel menu */
-@media (max-width: 576px) {
+.btn-ppdb-header i {
+  margin-right: 8px;
+  font-size: 0.95rem;
+}
+
+.btn-ppdb-header:hover {
+  background-color: #ea580c !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(249, 115, 22, 0.45);
+}
+
+.btn-ppdb-header:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
+}
+
+/* Penyesuaian Responsif Tablet (< 768px) */
+@media (max-width: 767.98px) {
+  .navbar-brand-logo {
+    height: 38px;
+  }
+  .brand-school-name {
+    font-size: 0.92rem;
+  }
+  .brand-school-slogan {
+    font-size: 0.68rem;
+  }
   .btn-ppdb-header {
-    display: none !important;
+    font-size: 0.82rem;
+    padding: 6px 14px;
+  }
+  .btn-ppdb-header i {
+    margin-right: 6px;
+    font-size: 0.88rem;
+  }
+}
+
+/* Penyesuaian Responsif Mobile (< 576px) */
+@media (max-width: 575.98px) {
+  .custom-navbar {
+    padding: 8px 0;
+  }
+  .custom-navbar .container-fluid {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  .navbar-brand-logo {
+    height: 34px;
+  }
+  .brand-school-name {
+    font-size: clamp(0.68rem, 2.5vw, 0.78rem);
+    letter-spacing: 0.1px;
+    line-height: 1.15;
+  }
+  .brand-school-slogan {
+    font-size: clamp(0.52rem, 1.8vw, 0.58rem);
+    letter-spacing: 0.2px;
+    line-height: 1.2;
+  }
+  .btn-ppdb-header {
+    font-size: clamp(0.68rem, 2.3vw, 0.76rem);
+    padding: 5px 10px;
+    box-shadow: 0 3px 10px rgba(249, 115, 22, 0.3);
+  }
+  .btn-ppdb-header i {
+    margin-right: 5px;
+    font-size: 0.76rem;
+  }
+  .hamburger-custom {
+    width: 26px;
+    height: 18px;
+  }
+  .hamburger-custom span {
+    height: 2.5px;
+  }
+}
+
+/* Penyesuaian Responsif Layar Sangat Kecil (< 380px) */
+@media (max-width: 379.98px) {
+  .custom-navbar .container-fluid {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  .navbar-brand-logo {
+    height: 28px;
+  }
+  .brand-school-name {
+    font-size: 0.64rem;
+  }
+  .brand-school-slogan {
+    font-size: 0.48rem;
+  }
+  .btn-ppdb-header {
+    font-size: 0.65rem;
+    padding: 4px 8px;
+  }
+  .btn-ppdb-header i {
+    margin-right: 4px;
+    font-size: 0.7rem;
+  }
+  .hamburger-custom {
+    width: 23px;
+    height: 16px;
   }
 }
 
@@ -157,6 +251,7 @@ body.menu-open .btn-ppdb-header {
   pointer-events: none !important;
   transform: scale(0.85) !important;
 }
+
 
 /* Efek Animasi Tetesan Hujan Berjeda (Raindrop Tik-Tik dengan Jeda Tempo) */
 .raindrop-text {
