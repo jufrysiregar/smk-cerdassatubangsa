@@ -529,6 +529,57 @@
   color: #64748b;
 }
 
+/* Registration Summary & Foto Layout */
+.doc-registration-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.doc-reg-table {
+  width: calc(100% - 130px);
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.doc-reg-lbl {
+  width: 35%;
+  padding: 4px 0;
+  font-weight: 600;
+  color: #334155;
+  white-space: nowrap;
+}
+
+.doc-reg-colon {
+  width: 5%;
+  padding: 4px 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.doc-reg-val {
+  padding: 4px 0;
+  color: #0f172a;
+}
+
+.doc-reg-highlight {
+  font-weight: 700;
+  color: #059669;
+}
+
+.doc-photo-box {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.doc-photo-caption {
+  font-size: 0.68rem;
+  color: #64748b;
+  margin-top: 3px;
+}
+
 /* Print Preview Table */
 .doc-table {
   width: 100%;
@@ -602,10 +653,12 @@
 }
 
 .doc-sign-line {
-  margin-top: 65px;
+  margin-top: 60px;
   border-bottom: 1px solid #0f172a;
   padding-bottom: 3px;
   font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
 }
 
 /* Modal Action Footer */
@@ -904,6 +957,254 @@
   .ppdb-form .form-section-card { padding: 1.25rem 1rem; }
   .ppdb-form .photo-upload-container { align-items: flex-start; gap: 1.2rem; }
   .ppdb-form .photo-preview-box { width: 115px; height: 150px; }
+}
+
+/* =====================================================
+   RESPONSIVE PREVIEW MODAL (TABLET & MOBILE)
+   ===================================================== */
+@media (max-width: 768px) {
+  /* Overlay & Content Container */
+  .modal-preview-overlay {
+    padding: 8px 6px !important;
+    align-items: center !important;
+  }
+
+  .modal-preview-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 94vh !important;
+    max-height: 94vh !important;
+    border-radius: 16px !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  .modal-preview-header {
+    padding: 12px 14px !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+
+  .modal-preview-header h6 {
+    font-size: 0.88rem !important;
+  }
+
+  .modal-preview-body {
+    padding: 10px 8px !important;
+    background: #f1f5f9 !important; /* Efek canvas preview kertas dokumen */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .modal-preview-footer {
+    padding: 10px 14px !important;
+    background: #ffffff !important;
+    border-top: 1px solid #e2e8f0 !important;
+  }
+
+  #btn-print-modal {
+    width: 100% !important;
+    padding: 11px 16px !important;
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 14px rgba(5, 150, 105, 0.28) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Lembar Kertas Dokumen Cetak */
+  #formulirCetak {
+    padding: 14px 10px !important;
+    background: #ffffff !important;
+    border-radius: 8px !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06) !important;
+    font-size: 11px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* KOP Surat */
+  .doc-kop {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 12px !important;
+    border-bottom: 2px double #0f172a !important;
+  }
+
+  .doc-kop-logo {
+    width: 48px !important;
+    height: 48px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .doc-kop-text {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  .doc-kop-school {
+    font-size: 0.86rem !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0.2px !important;
+  }
+
+  .doc-kop-slogan {
+    font-size: 0.65rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 2px !important;
+  }
+
+  .doc-kop-address {
+    font-size: 0.58rem !important;
+    line-height: 1.35 !important;
+    color: #475569 !important;
+  }
+
+  /* Judul Dokumen */
+  .doc-title-wrapper {
+    margin-bottom: 12px !important;
+  }
+
+  .doc-main-title {
+    font-size: 0.82rem !important;
+    line-height: 1.3 !important;
+    letter-spacing: 0.3px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .doc-sub-title {
+    font-size: 0.72rem !important;
+  }
+
+  /* Ringkasan Registrasi & Pas Foto 3x4 */
+  .doc-registration-summary {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .doc-reg-table {
+    width: auto !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    font-size: 0.74rem !important;
+    border-collapse: collapse !important;
+  }
+
+  .doc-reg-lbl {
+    width: auto !important;
+    padding: 3px 6px 3px 0 !important;
+    font-size: 0.72rem !important;
+    white-space: nowrap !important;
+    line-height: 1.3 !important;
+    color: #334155 !important;
+  }
+
+  .doc-reg-colon {
+    width: 6px !important;
+    padding: 3px 4px 3px 0 !important;
+    font-size: 0.72rem !important;
+    text-align: center !important;
+  }
+
+  .doc-reg-val {
+    padding: 3px 0 !important;
+    font-size: 0.72rem !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+
+  .doc-reg-highlight {
+    font-size: 0.75rem !important;
+  }
+
+  .doc-photo-box {
+    width: 68px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .doc-photo-preview {
+    width: 66px !important;
+    height: 88px !important;
+    border-radius: 4px !important;
+    padding: 1px !important;
+  }
+
+  .doc-photo-caption {
+    font-size: 0.6rem !important;
+    margin-top: 2px !important;
+  }
+
+  /* Tabel Data Siswa */
+  .doc-table {
+    font-size: 0.72rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  .doc-table th,
+  .doc-table td {
+    padding: 5px 6px !important;
+    vertical-align: middle !important;
+  }
+
+  .doc-table-section-head {
+    font-size: 0.72rem !important;
+    padding: 5px 6px !important;
+    letter-spacing: 0.2px !important;
+  }
+
+  .doc-table-label {
+    width: 36% !important;
+    font-size: 0.7rem !important;
+    line-height: 1.3 !important;
+    color: #475569 !important;
+    background: #f8fafc !important;
+  }
+
+  .doc-table-value {
+    font-size: 0.72rem !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+
+  /* Tanda Tangan */
+  .doc-sign-wrapper {
+    display: flex !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    margin-top: 16px !important;
+    padding: 0 4px !important;
+    width: 100% !important;
+  }
+
+  .doc-sign-box {
+    width: 48% !important;
+    font-size: 0.68rem !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+
+  .doc-sign-line {
+    margin-top: 36px !important;
+    font-size: 0.68rem !important;
+    padding-bottom: 2px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    border-bottom: 1px solid #0f172a !important;
+  }
+
+  /* Catatan Kaki */
+  .doc-footer-notes {
+    font-size: 0.62rem !important;
+    line-height: 1.35 !important;
+    margin-top: 10px !important;
+    padding-top: 6px !important;
+  }
 }
 
 @media print {

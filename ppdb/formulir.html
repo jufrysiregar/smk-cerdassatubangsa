@@ -25,7 +25,7 @@
 </head>
 <body>
 <!-- Additional CSS Khusus Formulir -->
-<link rel="stylesheet" href="/assets/css/formulir.css?v=1791994216">
+<link rel="stylesheet" href="/assets/css/formulir.css?v=1792217404">
 
 
 <!-- ─── MAIN NAVBAR ──────────────────────────────────────────── -->
@@ -591,7 +591,7 @@
 
 <!-- ─── FULLSCREEN PREVIEW & PRINT MODAL ─────────────────────── -->
 <div id="modalPreviewFormulir" class="modal-preview-overlay" style="display: none;">
-  <div class="modal-preview-content" style="background: #ffffff !important; display: flex !important; position: relative !important; z-index: 10000 !important; opacity: 1 !important; visibility: visible !important; width: 90% !important; max-width: 860px !important; max-height: 90vh !important;">
+  <div class="modal-preview-content">
     
     <!-- Modal Header Top Toolbar -->
     <div class="modal-preview-header no-print">
@@ -630,34 +630,34 @@
       </div>
 
       <!-- 3. IDENTITAS REGISTRASI & FOTO -->
-      <div class="d-flex justify-content-between align-items-start gap-4 mb-3 doc-registration-summary">
-        <table style="width: calc(100% - 130px); border-collapse: collapse; font-size: 0.88rem;">
+      <div class="doc-registration-summary">
+        <table class="doc-reg-table">
           <tr>
-            <td style="width: 35%; padding: 4px 0; font-weight: 600;">No. Registrasi</td>
-            <td style="width: 5%;">:</td>
-            <td style="font-weight: 700; color: #059669;" id="doc-reg-num">REG-2026-XXXX</td>
+            <td class="doc-reg-lbl">No. Registrasi</td>
+            <td class="doc-reg-colon">:</td>
+            <td class="doc-reg-val doc-reg-highlight" id="doc-reg-num">REG-2026-XXXX</td>
           </tr>
           <tr>
-            <td style="padding: 4px 0; font-weight: 600;">Tanggal Pendaftaran</td>
-            <td>:</td>
-            <td id="doc-reg-date">-</td>
+            <td class="doc-reg-lbl">Tanggal Pendaftaran</td>
+            <td class="doc-reg-colon">:</td>
+            <td class="doc-reg-val" id="doc-reg-date">-</td>
           </tr>
           <tr>
-            <td style="padding: 4px 0; font-weight: 600;">Jalur Pendaftaran</td>
-            <td>:</td>
-            <td style="font-weight: 700;" id="doc-jalur">-</td>
+            <td class="doc-reg-lbl">Jalur Pendaftaran</td>
+            <td class="doc-reg-colon">:</td>
+            <td class="doc-reg-val fw-bold" id="doc-jalur">-</td>
           </tr>
           <tr>
-            <td style="padding: 4px 0; font-weight: 600;">Pilihan Program Keahlian</td>
-            <td>:</td>
-            <td style="font-weight: 700; color: #0f172a;" id="doc-jurusan">-</td>
+            <td class="doc-reg-lbl">Pilihan Program Keahlian</td>
+            <td class="doc-reg-colon">:</td>
+            <td class="doc-reg-val fw-bold text-dark" id="doc-jurusan">-</td>
           </tr>
         </table>
 
         <!-- Pas Foto Preview -->
-        <div class="text-center">
+        <div class="doc-photo-box text-center">
           <img id="doc-photo-img" src="https://placehold.co/300x400?text=Foto+3x4" alt="Pas Foto Siswa" class="doc-photo-preview">
-          <div class="doc-photo-caption" style="font-size: 0.68rem; color: #64748b; margin-top: 3px;">Pas Foto 3x4</div>
+          <div class="doc-photo-caption">Pas Foto 3x4</div>
         </div>
       </div>
 
@@ -772,13 +772,13 @@
         <div class="doc-sign-box">
           <div>Mengetahui,</div>
           <div id="doc-sign-parent-label">Orang Tua / Wali Siswa</div>
-          <div class="doc-sign-line">( ............................................ )</div>
+          <div class="doc-sign-line">( ........................................ )</div>
         </div>
 
         <div class="doc-sign-box">
-          <div>Jakarta, <span id="doc-sign-date">10 Oktober 2026</span></div>
+          <div>Medan, <span id="doc-sign-date">10 Oktober 2026</span></div>
           <div>Calon Peserta Didik Baru</div>
-          <div class="doc-sign-line" id="doc-sign-student">( ............................................ )</div>
+          <div class="doc-sign-line" id="doc-sign-student">( ........................................ )</div>
         </div>
       </div>
 
