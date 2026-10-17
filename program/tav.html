@@ -578,20 +578,25 @@
   pointer-events: none;
 }
 .jurusan-breadcrumb-nav {
-  position: static;
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 0;
-  z-index: 5;
+  position: absolute;
+  top: 22px;
+  right: clamp(16px, 2vw, 32px);
+  z-index: 10;
+  margin: 0 !important;
 }
-
-@media (max-width: 768px) {
+.jurusan-breadcrumb-nav .breadcrumb-custom {
+  justify-content: flex-end !important;
+}
+@media (max-width: 991.98px) {
   .jurusan-breadcrumb-nav {
-    position: static;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 16px;
+    position: static !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0 !important;
+  }
+  .jurusan-breadcrumb-nav .breadcrumb-custom {
+    justify-content: center !important;
   }
 }
 
