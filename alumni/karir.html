@@ -2354,13 +2354,17 @@
   overflow: hidden;
 }
 .karir-hero-section .karir-container-wide {
+  position: static;
+}
+.karir-hero-title,
+.karir-hero-subtitle {
   position: relative;
   z-index: 2;
 }
 .karir-breadcrumb-nav {
   position: absolute;
-  top: 22px;
-  right: clamp(16px, 2vw, 32px);
+  top: 18px;
+  right: clamp(20px, 3vw, 42px);
   z-index: 10;
   margin: 0 !important;
 }
@@ -2368,12 +2372,17 @@
   justify-content: flex-end !important;
 }
 @media (max-width: 991.98px) {
+  .karir-hero-section .karir-container-wide {
+    position: relative;
+  }
   .karir-breadcrumb-nav {
     position: static !important;
     display: flex !important;
     justify-content: center !important;
     margin-top: 10px !important;
     margin-bottom: 0 !important;
+    top: auto !important;
+    right: auto !important;
   }
   .karir-breadcrumb-nav .breadcrumb-custom {
     justify-content: center !important;
