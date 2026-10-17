@@ -411,9 +411,26 @@
       }, 5000);
     };
 
-    // Handler form kontak: tidak ada notifikasi di dalam form, melainkan Fullscreen Toast Overlay (Latar blur, ceklis hidup, 5 detik)
+    // Handler form kontak: Dynamic placeholder kategori & Formspree Submission + Fullscreen Toast Overlay
     const formKontak = document.getElementById('form-kontak');
     if (formKontak) {
+      const kategoriSelect = document.getElementById('kontak-kategori');
+      const pesanTextarea = document.getElementById('kontak-pesan');
+
+      const kategoriPlaceholderMap = {
+        'Pertanyaan Informasi Umum / PPDB': 'Tuliskan pertanyaan atau informasi yang ingin Anda sampaikan...',
+        'Kritik & Saran': 'Berikan kritik konstruktif atau saran perbaikan untuk sekolah/website...',
+        'Ide / Inovasi Program Sekolah': 'Jelaskan gagasan atau ide inovasi baru yang ingin Anda usulkan...',
+        'Kendala Teknis Website': 'Jelaskan error/kendala teknis yang Anda temukan di halaman website...',
+        'Lainnya': 'Tuliskan pesan Anda di sini...'
+      };
+
+      if (kategoriSelect && pesanTextarea) {
+        kategoriSelect.addEventListener('change', function () {
+          pesanTextarea.placeholder = kategoriPlaceholderMap[this.value] || 'Tuliskan pesan Anda di sini...';
+        });
+      }
+
       formKontak.addEventListener('submit', function (e) {
         e.preventDefault();
 
@@ -430,19 +447,50 @@
           btn.disabled = true;
         }
 
-        setTimeout(() => {
+        const actionUrl = formKontak.action || 'https://formspree.io/f/xaeqvyqo';
+        const formData = new FormData(formKontak);
+
+        fetch(actionUrl, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(function (response) {
           if (btn) {
             btn.innerHTML = origBtnContent;
             btn.disabled = false;
           }
-          formKontak.reset();
 
-          // Tampilkan Fullscreen Toast Notifikasi (Latar blur, ceklis hidup, 5 detik)
-          window.showSuccessToast(
-            'Pesan Anda berhasil terkirim. Terima kasih telah menghubungi kami!',
-            'Pesan Terkirim!'
-          );
-        }, 850);
+          if (response.ok) {
+            formKontak.reset();
+            if (pesanTextarea) {
+              pesanTextarea.placeholder = 'Tuliskan pesan Anda di sini...';
+            }
+
+            // Tampilkan Fullscreen Toast Notifikasi (Latar blur, ceklis hidup, 5 detik)
+            window.showSuccessToast(
+              'Pesan Anda berhasil terkirim. Terima kasih telah menghubungi kami!',
+              'Pesan Terkirim!'
+            );
+          } else {
+            return response.json().then(function (data) {
+              let errMsg = 'Terjadi kendala saat mengirim pesan. Silakan coba lagi.';
+              if (data && data.errors && data.errors.length) {
+                errMsg = data.errors.map(err => err.message).join(', ');
+              }
+              alert(errMsg);
+            });
+          }
+        })
+        .catch(function () {
+          if (btn) {
+            btn.innerHTML = origBtnContent;
+            btn.disabled = false;
+          }
+          alert('Terjadi kendala koneksi saat mengirim pesan. Silakan periksa jaringan Anda dan coba lagi.');
+        });
       });
     }
 
