@@ -324,12 +324,48 @@
     }
 
     nameFields.forEach((field) => {
-      field.addEventListener('input', () => {
-        field.value = field.value.replace(/[^A-Za-zÀ-ÿ\s.']/g, '').toUpperCase();
+      let isComposing = false;
+
+      field.addEventListener('compositionstart', () => {
+        isComposing = true;
+      });
+
+      field.addEventListener('compositionend', () => {
+        isComposing = false;
+        sanitizeNameInput(field);
         validateNames(false);
       });
-      field.addEventListener('blur', () => validateNames(true));
+
+      function sanitizeNameInput(el) {
+        const raw = el.value;
+        const start = el.selectionStart;
+        // Bersihkan karakter selain huruf abjad, spasi, titik, dan petik satu, ubah ke UPPERCASE
+        const cleaned = raw.replace(/[^A-Za-zÀ-ÿ\s.']/g, '').toUpperCase();
+        if (raw !== cleaned) {
+          el.value = cleaned;
+          try {
+            const diff = raw.length - cleaned.length;
+            const newCursor = Math.max(0, start - (diff > 0 ? diff : 0));
+            el.setSelectionRange(newCursor, newCursor);
+          } catch (err) {}
+        }
+      }
+
+      field.addEventListener('input', (e) => {
+        if (isComposing || (e && e.isComposing)) {
+          validateNames(false);
+          return;
+        }
+        sanitizeNameInput(field);
+        validateNames(false);
+      });
+
+      field.addEventListener('blur', () => {
+        field.value = field.value.replace(/[^A-Za-zÀ-ÿ\s.']/g, '').toUpperCase().trim();
+        validateNames(true);
+      });
     });
+
 
     if (nikField) {
       nikField.addEventListener('input', () => {
@@ -349,7 +385,11 @@
 
     if (birthPlaceField) {
       birthPlaceField.addEventListener('input', () => {
-        birthPlaceField.value = birthPlaceField.value.replace(/[^A-Za-zÀ-ÿ\s]/g, '');
+        const raw = birthPlaceField.value;
+        const cleaned = raw.replace(/[^A-Za-zÀ-ÿ\s]/g, '');
+        if (raw !== cleaned) {
+          birthPlaceField.value = cleaned;
+        }
         validateBirthPlace(false);
       });
       birthPlaceField.addEventListener('blur', () => validateBirthPlace(true));
