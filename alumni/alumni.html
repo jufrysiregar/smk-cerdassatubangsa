@@ -1784,16 +1784,11 @@ function submitAlumniForm(e) {
   btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Mengirim...';
 
   setTimeout(function() {
-    // Sembunyikan tombol submit & tampilkan sukses
-    btn.style.display = 'none';
-    document.getElementById('alumni-form-success').style.display = 'block';
-    document.getElementById('alumni-form-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-    // Auto-close dan reset setelah 4 detik
-    setTimeout(function() {
-      closeAlumniModal();
-      resetAlumniForm();
-    }, 4000);
+    // Tutup modal alumni, lalu tampilkan toast overlay fullscreen
+    closeAlumniModal();
+    showSuccessToast("Data berhasil dikirim, silahkan tunggu respon operator melalui email. Terimakasih atas masukan anda dan tetap semangat.");
+    // Reset form setelah toast hilang
+    setTimeout(function() { resetAlumniForm(); }, 5200);
   }, 1200);
 }
 </script>
@@ -1910,6 +1905,94 @@ document.addEventListener('DOMContentLoaded', function () {
   // Inisialisasi awal
   render(1);
 });
+</script>
+
+<!-- ═══ Success Toast Overlay ═══ -->
+<style>
+  .success-toast-overlay {
+    position: fixed; inset: 0; z-index: 99999;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    display: none; align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .success-toast-overlay.active { display: flex !important; }
+  .success-toast-card {
+    background: #fff; border-radius: 20px; padding: 40px 36px 30px;
+    max-width: 420px; width: 100%; text-align: center;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.25);
+    animation: toastSlideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  @keyframes toastSlideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  .success-checkmark { width: 80px; height: 80px; display: block; margin: 0 auto 18px; }
+  .success-checkmark__circle {
+    stroke: #059669; stroke-width: 2; fill: none;
+    stroke-dasharray: 166; stroke-dashoffset: 166;
+    animation: strokeDraw 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  }
+  .success-checkmark__check {
+    stroke: #059669; stroke-width: 2.5; fill: none;
+    stroke-linecap: round; stroke-linejoin: round;
+    stroke-dasharray: 48; stroke-dashoffset: 48;
+    animation: strokeDraw 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.65s forwards;
+  }
+  @keyframes strokeDraw { to { stroke-dashoffset: 0; } }
+  .success-toast-title {
+    font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 700;
+    color: #059669; margin-bottom: 8px;
+  }
+  .success-toast-msg {
+    font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400;
+    color: #475569; line-height: 1.65; margin-bottom: 22px;
+  }
+  .success-toast-bar { height: 4px; background: #e2e8f0; border-radius: 4px; overflow: hidden; }
+  .success-toast-bar-fill { height: 100%; background: #059669; border-radius: 4px; width: 100%; }
+  .success-toast-bar-fill.animated { animation: countdown 5s linear forwards; }
+  @keyframes countdown { from { width: 100%; } to { width: 0%; } }
+</style>
+
+<div id="success-toast-overlay" class="success-toast-overlay" role="dialog" aria-modal="true" aria-label="Notifikasi berhasil">
+  <div class="success-toast-card">
+    <svg class="success-checkmark" viewBox="0 0 52 52" aria-hidden="true">
+      <circle class="success-checkmark__circle" cx="26" cy="26" r="25"/>
+      <path class="success-checkmark__check" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+    </svg>
+    <p class="success-toast-title">Data Terkirim!</p>
+    <p class="success-toast-msg" id="success-toast-msg"></p>
+    <div class="success-toast-bar"><div class="success-toast-bar-fill" id="success-toast-bar-fill"></div></div>
+  </div>
+</div>
+
+<script>
+function showSuccessToast(message) {
+  var overlay = document.getElementById('success-toast-overlay');
+  var msgEl   = document.getElementById('success-toast-msg');
+  var bar     = document.getElementById('success-toast-bar-fill');
+  if (!overlay) return;
+  if (msgEl) msgEl.textContent = message;
+
+  /* Reset SVG animation */
+  overlay.querySelectorAll('.success-checkmark__circle, .success-checkmark__check').forEach(function(el) {
+    el.style.animation = 'none';
+    void el.offsetHeight;
+    el.style.animation = '';
+  });
+
+  /* Reset progress bar */
+  if (bar) {
+    bar.classList.remove('animated');
+    void bar.offsetHeight;
+    bar.classList.add('animated');
+  }
+
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  setTimeout(function() {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }, 5000);
+}
 </script>
 
 
@@ -2189,3 +2272,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </body>
 </html>
+
