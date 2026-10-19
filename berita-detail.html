@@ -22,6 +22,9 @@
   
   <!-- Custom CSS Utama -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Master Data Berita -->
+  <script src="/assets/js/berita-data.js"></script>
 </head>
 <body>
 
@@ -248,32 +251,31 @@
 
           <!-- Hero Image full-width -->
           <div class="berita-detail-hero">
-            <img src="/assets/img/berita-artikel/berita-7.jpg" alt="Penerimaan Peserta Didik Baru (PPDB) SMK Cerdas Satu Bangsa T.A. 2026/2027 Resmi Dibuka!" loading="eager">
+            <img id="berita-detail-hero-img" src="/assets/img/berita-artikel/berita-7.jpg" alt="Penerimaan Peserta Didik Baru (PPDB) SMK Cerdas Satu Bangsa T.A. 2026/2027 Resmi Dibuka!" loading="eager">
           </div>
 
           <!-- Konten artikel -->
           <div class="berita-detail-content">
 
-            <div class="berita-detail-meta-top">
+            <div class="berita-detail-meta-top" id="berita-detail-meta-top">
               <span><i class="far fa-calendar-alt"></i> Rabu, 01 Oktober 2026</span>
               <span><i class="far fa-user"></i> Panitia PPDB</span>
             </div>
 
-            <h1 class="berita-detail-title">Penerimaan Peserta Didik Baru (PPDB) SMK Cerdas Satu Bangsa T.A. 2026/2027 Resmi Dibuka!</h1>
+            <h1 class="berita-detail-title" id="berita-detail-title">Penerimaan Peserta Didik Baru (PPDB) SMK Cerdas Satu Bangsa T.A. 2026/2027 Resmi Dibuka!</h1>
 
-            <div class="berita-detail-body">
-              
-          <p>JAKARTA — SMK Cerdas Satu Bangsa secara resmi membuka Penerimaan Peserta Didik Baru (PPDB) untuk Tahun Ajaran 2026/2027. Sekolah kejuruan terakreditasi A ini hadir mencetak lulusan yang cerdas, kompeten, dan siap bersaing di dunia kerja maupun wirausaha.</p>
-          <p>SMK Cerdas Satu Bangsa menghadirkan <strong>4 program keahlian unggulan berstandar industri:</strong></p>
-          <ul>
-            <li><strong>Teknik Komputer &amp; Jaringan (TKJ)</strong> — Ahli dalam administrator jaringan, sistem keamanan komputer, dan infrastruktur IT.</li>
-            <li><strong>Rekayasa Perangkat Lunak (RPL)</strong> — Menguasai pemrograman, pengembangan aplikasi, serta sistem basis data modern.</li>
-            <li><strong>Desain Komunikasi Visual (DKV)</strong> — Unggul dalam dunia videografi, sinematografi, desain grafis, dan industri kreatif digital.</li>
-            <li><strong>Teknik Audio Video (TAV)</strong> — Spesialis dalam perakitan sistem audio-video, elektronika terapan, hingga teknologi rumah pintar (Smart Home berbasis IoT).</li>
-          </ul>
-          <p>Didukung oleh fasilitas laboratorium praktik berteknologi tinggi, pengajar berpengalaman, serta jaminan kelulusan berlisensi BNSP, SMK Cerdas Satu Bangsa siap menjadi pijakan terbaik menuju karir impianmu.</p>
-          <p>Kuota pendaftaran setiap jurusannya sangat terbatas! <a href="/ppdb/informasi.html" class="berita-link-ppdb">Ayo daftar sekarang juga, selamatkan kursi masa depanmu!</a></p>
-                    </div>
+            <div class="berita-detail-body" id="berita-detail-body">
+              <p>JAKARTA — SMK Cerdas Satu Bangsa secara resmi membuka Penerimaan Peserta Didik Baru (PPDB) untuk Tahun Ajaran 2026/2027. Sekolah kejuruan terakreditasi A ini hadir mencetak lulusan yang cerdas, kompeten, dan siap bersaing di dunia kerja maupun wirausaha.</p>
+              <p>SMK Cerdas Satu Bangsa menghadirkan <strong>4 program keahlian unggulan berstandar industri:</strong></p>
+              <ul>
+                <li><strong>Teknik Komputer &amp; Jaringan (TKJ)</strong> — Ahli dalam administrator jaringan, sistem keamanan komputer, dan infrastruktur IT.</li>
+                <li><strong>Rekayasa Perangkat Lunak (RPL)</strong> — Menguasai pemrograman, pengembangan aplikasi, serta sistem basis data modern.</li>
+                <li><strong>Desain Komunikasi Visual (DKV)</strong> — Unggul dalam dunia videografi, sinematografi, desain grafis, dan industri kreatif digital.</li>
+                <li><strong>Teknik Audio Video (TAV)</strong> — Spesialis dalam perakitan sistem audio-video, elektronika terapan, hingga teknologi rumah pintar (Smart Home berbasis IoT).</li>
+              </ul>
+              <p>Didukung oleh fasilitas laboratorium praktik berteknologi tinggi, pengajar berpengalaman, serta jaminan kelulusan berlisensi BNSP, SMK Cerdas Satu Bangsa siap menjadi pijakan terbaik menuju karir impianmu.</p>
+              <p>Kuota pendaftaran setiap jurusannya sangat terbatas! <a href="/ppdb/informasi.html" class="berita-link-ppdb">Ayo daftar sekarang juga, selamatkan kursi masa depanmu!</a></p>
+            </div>
 
             <div class="berita-detail-footer">
               <a href="/berita.html" class="btn-back-berita">
@@ -281,9 +283,9 @@
               </a>
               <div class="berita-share">
                 <span>Bagikan:</span>
-                <span class="berita-share-btn"><i class="fab fa-facebook-f"></i></span>
-                <span class="berita-share-btn"><i class="fab fa-x-twitter"></i></span>
-                <span class="berita-share-btn"><i class="fab fa-whatsapp"></i></span>
+                <button type="button" class="berita-share-btn border-0" onclick="shareBerita('facebook')" title="Bagikan ke Facebook" style="cursor: pointer;"><i class="fab fa-facebook-f"></i></button>
+                <button type="button" class="berita-share-btn border-0" onclick="shareBerita('twitter')" title="Bagikan ke X / Twitter" style="cursor: pointer;"><i class="fab fa-x-twitter"></i></button>
+                <button type="button" class="berita-share-btn border-0" onclick="shareBerita('whatsapp')" title="Bagikan ke WhatsApp" style="cursor: pointer;"><i class="fab fa-whatsapp"></i></button>
               </div>
             </div>
 
@@ -293,41 +295,117 @@
 
       <!-- Sidebar -->
       <div class="col-lg-4">
-        <aside class="berita-sidebar">
+        <aside class="berita-sidebar" id="berita-detail-sidebar">
           <h5 class="berita-sidebar__title">Berita Lainnya</h5>
-                      <a href="/berita-detail.html?id=2" class="berita-sidebar__item">
-              <div class="berita-sidebar__thumb">
-                <img src="/assets/img/berita-artikel/berita-2.jpg" alt="Gemilang Prestasi! Tim Cerdas Cermat Pelajar Raih Juara 1 Tingkat Nasional 2026">
-              </div>
-              <div class="berita-sidebar__info">
-                <span class="berita-sidebar__date"><i class="far fa-calendar-alt me-1"></i>Kamis, 15 Oktober 2025</span>
-                <p class="berita-sidebar__item-title">Gemilang Prestasi! Tim Cerdas Cermat Pelajar Raih Juara 1 Tingkat...</p>
-              </div>
-            </a>
-                      <a href="/berita-detail.html?id=6" class="berita-sidebar__item">
-              <div class="berita-sidebar__thumb">
-                <img src="/assets/img/berita-artikel/berita-6.jpg" alt="Sudut Pandang Kreatif: Tim DKV Luncurkan Iklan Komersial Promotif untuk Produk UMKM dengan Kualitas Cinematic">
-              </div>
-              <div class="berita-sidebar__info">
-                <span class="berita-sidebar__date"><i class="far fa-calendar-alt me-1"></i>Kamis, 17 Oktober 2024</span>
-                <p class="berita-sidebar__item-title">Sudut Pandang Kreatif: Tim DKV Luncurkan Iklan Komersial Promotif...</p>
-              </div>
-            </a>
-                      <a href="/berita-detail.html?id=3" class="berita-sidebar__item">
-              <div class="berita-sidebar__thumb">
-                <img src="/assets/img/berita-artikel/berita-3.jpg" alt="Peduli Hak Asasi Manusia, Ratusan Siswa SMK Ikuti Bimbingan Konseling Bersama Dinas HAM Indonesia">
-              </div>
-              <div class="berita-sidebar__info">
-                <span class="berita-sidebar__date"><i class="far fa-calendar-alt me-1"></i>Kamis, 14 November 2024</span>
-                <p class="berita-sidebar__item-title">Peduli Hak Asasi Manusia, Ratusan Siswa SMK Ikuti Bimbingan Konse...</p>
-              </div>
-            </a>
-                  </aside>
+          <div id="berita-sidebar-items">
+            <!-- Diisi secara dinamis oleh JavaScript -->
+          </div>
+        </aside>
       </div>
 
     </div>
   </div>
 </section>
+
+<!-- ─── LOGIKA SCRIPT BERITA DETAIL DINAMIS ───────────────────── -->
+<script>
+  function renderBeritaDetail() {
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const rawId = urlParams.get('id');
+      const order = window.BERITA_LIST_ORDER || [7, 5, 2, 3, 6, 4, 1];
+      const data = window.BERITA_DATA || {};
+
+      let newsId = parseInt(rawId, 10);
+      if (!newsId || !data[newsId]) {
+        newsId = order[0] || 7;
+      }
+
+      const currentNews = data[newsId];
+      if (!currentNews) return;
+
+      // 1. Update Title Dokumen & Meta Tag
+      document.title = currentNews.judul + ' – SMK Cerdas Satu Bangsa';
+
+      // 2. Update Hero Image
+      const heroImg = document.getElementById('berita-detail-hero-img');
+      if (heroImg) {
+        heroImg.src = currentNews.gambar;
+        heroImg.alt = currentNews.judul;
+      }
+
+      // 3. Update Meta Top (Tanggal & Penulis)
+      const metaTop = document.getElementById('berita-detail-meta-top');
+      if (metaTop) {
+        metaTop.innerHTML = `<span><i class="far fa-calendar-alt"></i> ${currentNews.tanggal}</span><span><i class="far fa-user"></i> ${currentNews.penulis}</span>`;
+      }
+
+      // 4. Update Judul
+      const titleEl = document.getElementById('berita-detail-title');
+      if (titleEl) {
+        titleEl.textContent = currentNews.judul;
+      }
+
+      // 5. Update Isi Konten
+      const bodyEl = document.getElementById('berita-detail-body');
+      if (bodyEl) {
+        bodyEl.innerHTML = currentNews.isi;
+      }
+
+      // 6. Update Sidebar "Berita Lainnya"
+      const sidebarContainer = document.getElementById('berita-sidebar-items');
+      if (sidebarContainer) {
+        const otherIds = order.filter(function(id) { return id !== newsId; });
+        if (otherIds.length === 0) {
+          sidebarContainer.innerHTML = '<p class="berita-sidebar__empty">Belum ada berita lainnya.</p>';
+        } else {
+          const displayIds = otherIds.slice(0, 3);
+          let itemsHtml = '';
+          displayIds.forEach(function(id) {
+            const item = data[id];
+            if (!item) return;
+            const shortTitle = item.judul.length > 65 ? item.judul.substring(0, 65) + '...' : item.judul;
+            itemsHtml += `
+              <a href="/berita-detail.html?id=${item.id}" class="berita-sidebar__item">
+                <div class="berita-sidebar__thumb">
+                  <img src="${item.gambar}" alt="${item.judul.replace(/"/g, '&quot;')}" loading="lazy">
+                </div>
+                <div class="berita-sidebar__info">
+                  <span class="berita-sidebar__date"><i class="far fa-calendar-alt me-1"></i>${item.tanggal}</span>
+                  <p class="berita-sidebar__item-title">${shortTitle}</p>
+                </div>
+              </a>
+            `;
+          });
+          sidebarContainer.innerHTML = itemsHtml;
+        }
+      }
+    } catch (err) {
+      console.error('Error saat memuat detail berita:', err);
+    }
+  }
+
+  function shareBerita(platform) {
+    const url = encodeURIComponent(window.location.href);
+    const titleText = document.getElementById('berita-detail-title')?.textContent || document.title;
+    const title = encodeURIComponent(titleText);
+    let target = '';
+    if (platform === 'facebook') target = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+    if (platform === 'twitter') target = 'https://twitter.com/intent/tweet?text=' + title + '&url=' + url;
+    if (platform === 'whatsapp') target = 'https://api.whatsapp.com/send?text=' + title + '%20' + url;
+    if (target) window.open(target, '_blank', 'noopener,noreferrer');
+  }
+
+  // Jalankan segera saat file diparse atau setelah DOM siap
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderBeritaDetail);
+  } else {
+    renderBeritaDetail();
+  }
+
+  // Dukung tombol navigasi browser maju/mundur
+  window.addEventListener('popstate', renderBeritaDetail);
+</script>
 
 
   <!-- ─── MAIN FOOTER ───────────────────────────────────────── -->

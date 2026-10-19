@@ -162,6 +162,16 @@
   overflow: hidden;
 }
 
+.berita-card__title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.berita-card__title a:hover {
+  color: #059669;
+}
+
 /* ── Excerpt ── */
 .berita-card__excerpt {
   font-size: 0.845rem;
