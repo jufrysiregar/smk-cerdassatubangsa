@@ -256,6 +256,13 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: opacity 0.25s ease;
+}
+
+.berita-detail-hero img:not([src]),
+.berita-detail-hero img[src=""] {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @media (max-width: 576px) {

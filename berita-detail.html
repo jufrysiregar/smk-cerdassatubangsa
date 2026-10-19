@@ -25,6 +25,30 @@
 
   <!-- Master Data Berita -->
   <script src="/assets/js/berita-data.js"></script>
+  <script>
+    (function () {
+      try {
+        var urlParams = new URLSearchParams(window.location.search);
+        var rawId = urlParams.get('id');
+        var order = window.BERITA_LIST_ORDER || [7, 5, 2, 3, 6, 4, 1];
+        var data = window.BERITA_DATA || {};
+        var newsId = parseInt(rawId, 10);
+        if (!newsId || !data[newsId]) {
+          newsId = order[0] || 7;
+        }
+        var cur = data[newsId];
+        if (cur) {
+          document.title = cur.judul + ' – SMK Cerdas Satu Bangsa';
+          // Preload hero image sedini mungkin dari header
+          var preload = document.createElement('link');
+          preload.rel = 'preload';
+          preload.as = 'image';
+          preload.href = cur.gambar;
+          document.head.appendChild(preload);
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -251,31 +275,17 @@
 
           <!-- Hero Image full-width -->
           <div class="berita-detail-hero">
-            <img id="berita-detail-hero-img" src="/assets/img/berita-artikel/berita-7.jpg" alt="Penerimaan Peserta Didik Baru (PPDB) SMK Cerdas Satu Bangsa T.A. 2026/2027 Resmi Dibuka!" loading="eager">
+            <img id="berita-detail-hero-img" alt="" loading="eager">
           </div>
 
           <!-- Konten artikel -->
           <div class="berita-detail-content">
 
-            <div class="berita-detail-meta-top" id="berita-detail-meta-top">
-              <span><i class="far fa-calendar-alt"></i> Rabu, 01 Oktober 2026</span>
-              <span><i class="far fa-user"></i> Panitia PPDB</span>
-            </div>
+            <div class="berita-detail-meta-top" id="berita-detail-meta-top"></div>
 
-            <h1 class="berita-detail-title" id="berita-detail-title">Penerimaan Peserta Didik Baru (PPDB) SMK Cerdas Satu Bangsa T.A. 2026/2027 Resmi Dibuka!</h1>
+            <h1 class="berita-detail-title" id="berita-detail-title"></h1>
 
-            <div class="berita-detail-body" id="berita-detail-body">
-              <p>JAKARTA — SMK Cerdas Satu Bangsa secara resmi membuka Penerimaan Peserta Didik Baru (PPDB) untuk Tahun Ajaran 2026/2027. Sekolah kejuruan terakreditasi A ini hadir mencetak lulusan yang cerdas, kompeten, dan siap bersaing di dunia kerja maupun wirausaha.</p>
-              <p>SMK Cerdas Satu Bangsa menghadirkan <strong>4 program keahlian unggulan berstandar industri:</strong></p>
-              <ul>
-                <li><strong>Teknik Komputer &amp; Jaringan (TKJ)</strong> — Ahli dalam administrator jaringan, sistem keamanan komputer, dan infrastruktur IT.</li>
-                <li><strong>Rekayasa Perangkat Lunak (RPL)</strong> — Menguasai pemrograman, pengembangan aplikasi, serta sistem basis data modern.</li>
-                <li><strong>Desain Komunikasi Visual (DKV)</strong> — Unggul dalam dunia videografi, sinematografi, desain grafis, dan industri kreatif digital.</li>
-                <li><strong>Teknik Audio Video (TAV)</strong> — Spesialis dalam perakitan sistem audio-video, elektronika terapan, hingga teknologi rumah pintar (Smart Home berbasis IoT).</li>
-              </ul>
-              <p>Didukung oleh fasilitas laboratorium praktik berteknologi tinggi, pengajar berpengalaman, serta jaminan kelulusan berlisensi BNSP, SMK Cerdas Satu Bangsa siap menjadi pijakan terbaik menuju karir impianmu.</p>
-              <p>Kuota pendaftaran setiap jurusannya sangat terbatas! <a href="/ppdb/informasi.html" class="berita-link-ppdb">Ayo daftar sekarang juga, selamatkan kursi masa depanmu!</a></p>
-            </div>
+            <div class="berita-detail-body" id="berita-detail-body"></div>
 
             <div class="berita-detail-footer">
               <a href="/berita.html" class="btn-back-berita">
@@ -396,12 +406,8 @@
     if (target) window.open(target, '_blank', 'noopener,noreferrer');
   }
 
-  // Jalankan segera saat file diparse atau setelah DOM siap
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', renderBeritaDetail);
-  } else {
-    renderBeritaDetail();
-  }
+  // Jalankan segera secara sinkron saat elemen selesai diparse
+  renderBeritaDetail();
 
   // Dukung tombol navigasi browser maju/mundur
   window.addEventListener('popstate', renderBeritaDetail);
